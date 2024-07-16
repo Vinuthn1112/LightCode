@@ -1,0 +1,250 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="header">
+            <a href="se_home.php" class="logo"><b>Light</b><b style="color:aqua">Code</b></a>
+            <nav class="navbar">
+                <a href="python.html" >Introduction</a>
+                <a href="flow_control.html" >Flow control</a>
+                <a href="python_functions.html" >Functions</a>
+                
+                <a href="filehandling.html" >File Handling</a>
+                <a href="class&objects.html" >class&objects</a>
+                
+                <a href="python_ex.html" >Examples</a>
+               
+            </nav>
+        </header>
+        <div class="sidebar">
+            <h3>Python Flow Control</h3>
+            <ul class="nav" type="circle">
+                <li ><a href="#e1">Python if else</a></li>
+                <li ><a href="#e2">For Loops</a></li>
+                <li ><a href="#e3">While Lopp</a></li>
+                <li ><a href="#e4">Break Statement</a></li>
+                <li ><a href="#e5">Continue Statement</a></li>
+                <li ><a href="#e6">Pass Statement</a></li>
+                
+            </ul>
+        </div>
+        <div class="main" style="color:rgb(85, 34, 133)">
+            <div class="d1" id="e1">
+                <h2 class="d1_h2">Python if else</h2><br><br>
+                <p>
+                    There are situations in real life when we need to make some decisions and based on these decisions, we decide what we should do next.<br><br>
+                    Similar situations arise in programming also where we need to make some decisions and based on these decisions we will execute the next block of code.<br><br>
+                    Conditional statements in Python languages decide the direction(Control Flow) of the flow of program execution.<br><br>
+                </p>
+                <b style="font-size:x-large">Types of Control Flow in Python</b><br><br>
+                <p>
+                    Python control flow statements are as follows:<br><br>
+
+                    1.The if statement<br><br>
+                    2.The if-else statement<br><br>
+                    3.The nested-if statement<br><br>
+                    4.The if-elif-else ladder<br><br>
+
+                </p>
+                <b style="font-size:22px">if statement</b><br><br>
+                The if statement is the most simple decision-making statement.<br><br>
+                It is used to decide whether a certain statement or block of statements will be executed or not.<br><br>
+                <b style="font-size:19px">Syntax:</b><br><br>
+                <div style="color:rgb(80, 150, 173)">
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if condition:<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Statements to execute if<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# condition is true<br><br>
+                </div>
+                Here, the condition after evaluation will be either true or false.<br><br>
+                 if the statement accepts boolean values - if the value is true then it will execute the block of statements below it otherwise not.<br><br>
+
+                As we know, python uses indentation to identify a block.<br><br> 
+                So the block under an if statement will be identified as shown in the below example: <br><br>
+                <div style="color:rgb(80, 150, 173)">
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if condition:<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;statement1<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;statement2<br><br>
+                 
+                 
+                 
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Here if the condition is true, if block <br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# will consider only statement1 to be inside <br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# its block<br><br>
+                </div>
+                <b style="font-size:19px">Flowchart of Python if statement:</b><br><br>
+                <img src="ifelse1.png" style="margin-left:300px"><br><br>
+                <b style="font-size:19px">Example of Python if statement</b><br><br>
+                <img src="ifelse2.png" style="margin-left:150px"><br><br>
+                <b style="font-size:18px;margin-left:150px">Output:</b><br><br>
+                
+                <p style="font-size:18px;margin-left:150px;color:rgb(80, 150, 173)" >I am Not in if</p><br><br>
+                <b style="font-size:22px">if-Else statement</b><br><br>
+                The if statement alone tells us that if a condition is true it will execute a block of statements and if the condition is false it won’t.<br><br>
+                But if we want to do something else if the condition is false, we can use the else statement with if statement to execute a block of <br><br>
+                code when the if condition is false. <br><br>
+                <b style="font-size:19px">Syntax:</b><br><br>
+                <div style="color:rgb(80, 150, 173)">
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if (condition):<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Executes this block if<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# condition is true<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;else:<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Executes this block if<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# condition is false<br><br>
+                </div> <b style="font-size:19px">Flowchart of Python if-else statement:</b><br><br>
+
+                <img src="ifelse3.png"  style="margin-left:300px"> <br><br>
+                <b style="font-size:19px">Example of Python if-else statement</b><br><br>
+                <img src="ifelse4.png" style="margin-left:150px"><br><br>
+                <b style="font-size:18px;margin-left:150px">Output:</b><br><br>
+
+                <p style="font-size:18px;margin-left:170px;color:rgb(80, 150, 173)" >i is greater than 15<br><br>
+                    i'm in else Block<br><br>
+                    i'm not in if and not in else Block
+                </p><br><br>
+                <b style="font-size:22px">Nested-if statement</b><br><br>
+                A nested if is an if statement that is the target of another if statement.<br><br>
+                Nested if statements mean an if statement inside another if statement.<br><br>
+                Yes, Python allows us to nest if statements within if statements. <br><br>
+                i.e., we can place an if statement inside another if statement.<br><br>
+                <b style="font-size:19px">Syntax:</b><br><br>
+                <div style="color:rgb(80, 150, 173)">
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if (condition1):<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Executes when condition1 is true<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if (condition2):<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Executes when condition2 is true<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# if Block is end here<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# if Block is end here<br><br>
+                </div> 
+                <b style="font-size:19px">Flowchart of Python Nested-if statement:</b><br><br>
+                <img src="nestedif4.png"  style="margin-left:200px"> <br><br>
+                <b style="font-size:19px">Example of Python Nested-if statement</b><br><br>
+                <img src="nestedif3.png" style="margin-left:150px"><br><br>
+                <b style="font-size:18px;margin-left:150px">Output:</b><br><br>
+                <p style="font-size:18px;margin-left:170px;color:rgb(80, 150, 173)" >i is smaller than 15<br><br>
+                    i is smaller than 12 too
+                   
+                </p><br><br>
+                <b style="font-size:22px">if-else-if statement</b><br><br>
+                Here, a user can decide among multiple options. The if statements are executed from the top down. 
+                <br><br>As soon as one of the conditions controlling the if is true, the statement associated with that if is executed, and the rest of the ladder is bypassed.<br><br>
+                 If none of the conditions is true, then the final else statement will be executed.<br><br>
+                 <b style="font-size:19px">Syntax:</b><br><br>
+                 <div style="color:rgb(80, 150, 173)">
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if (condition):<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;statement<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;elif (condition):<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;statement<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;.<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;.<br><br>
+                    
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;else<br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;statement<br><br>
+                </div> 
+                <b style="font-size:19px">Flowchart of Python if-else-if statement:</b><br><br>
+                <img src="nestedif1.png"  style="margin-left:200px"> <br><br>
+                <b style="font-size:19px">Example of Python if-else-if statement</b><br><br>
+                <img src="nestedif2.png" style="margin-left:150px"><br><br>
+                <b style="font-size:18px;margin-left:150px">Output:</b><br><br>
+                <p style="font-size:18px;margin-left:170px;color:rgb(80, 150, 173)" >i is 20
+                   
+                   
+                </p><br><br>
+            </div>
+            <div class="d1" id="e2">
+                <h2 class="d1_h2">For Loop</h2><br><br>
+                <p>
+                    In computer programming, loops are used to repeat a block of code.<br><br>
+
+                    For example, if we want to show a message 100 times, then we can use a loop. <br><br>
+                    It's just a simple example; you can achieve much more with loops.<br><br>
+
+                    There are 2 types of loops in Python:<br><br>
+                    
+                    <ul type="circle" style="margin-left:80px;color:rgb(7, 105, 105);font-size:17px;">
+                        <li>for loop</li><br><br>
+                        <li>while loop</li><br><br>
+                    </ul>
+                    <b style="font-size:19px">Syntax:</b><br><br>
+                    <img src="forloop1.png"  style="margin-left:100px"> <br><br>
+                    Here, val accesses each item of sequence on each iteration.<br><br>
+                    The loop continues until we reach the last item in the sequence.<br><br>
+                    <b style="font-size:19px">Flowchart of Python For Loop:</b><br><br>
+                    <img src="forloop2.png"  style="margin-left:200px"> <br><br>
+                    <b style="font-size:19px">Example of Python For Loop</b><br><br>
+                    In Python, a for loop is used to iterate over sequences such as lists, tuples, string, etc.<br><br>
+                    For example,<br><br>
+                    <img src="forloop3.png" style="margin-left:150px"><br><br>
+                    <b style="font-size:18px;margin-left:150px">Output:</b><br><br>
+                    <img src="forloop4.png" style="margin-left:150px"><br><br>
+
+                    
+                </p>
+            </div>
+            <div class="d1" id="e3">
+                <h2 class="d1_h2">While Loop</h2><br><br>
+                <p>
+                    In programming, loops are used to repeat a block of code.<br><br>
+                    For example, if we want to show a message 100 times, then we can use a loop. <br><br>
+                    It's just a simple example, we can achieve much more with loops.<br><br>
+
+                    In the previous tutorial, we learned about Python for loop. <br><br>
+                    Now we will learn about the while loop.<br><br>
+                    <b style="font-size:19px">Syntax:</b><br><br>
+                    Python while loop is used to run a block code until a certain condition is met.<br><br>
+                    <img src="whileloop1.png"  style="margin-left:100px"> <br><br>
+                    <b style="font-size:19px">Flowchart of Python while Loop:</b><br><br>
+                    <img src="whileloop2.png"  style="margin-left:200px"> <br><br>
+                    <b style="font-size:19px">Example of Python While Loop</b><br><br>
+                    <img src="whileloop3.png" style="margin-left:150px"><br><br>
+                    <b style="font-size:18px;margin-left:150px">Output:</b><br><br>
+                    <img src="whileloop4.png" style="margin-left:150px"><br><br>
+                </p>
+            </div>   
+            <div class="d1" id="e4">
+                <h2 class="d1_h2">Break Statement</h2><br><br>
+                <p>
+                    The break statement is used to terminate the loop immediately when it is encountered.<br><br>
+                    syntax of the break statement is:<br><br>
+                    <b style="font-size:19px">Syntax:</b><br><br>
+                    <img src="break1.png"  style="margin-left:100px"> <br><br>
+                    <b style="font-size:19px">Example of Python While Loop</b><br><br>
+                    <img src="break2.png" style="margin-left:150px"><br><br>
+                    <b style="font-size:18px;margin-left:150px">Output:</b><br><br>
+                    <img src="break3.png" style="margin-left:150px"><br><br>
+                </p>
+
+            </div> 
+            <div class="d1" id="e5">
+                <h2 class="d1_h2">Continue Statement</h2><br><br>
+                The continue statement is used to skip the current iteration of the loop and the control flow of the program goes to the next iteration.<br><br>
+                <b style="font-size:19px">Syntax:</b><br><br>
+                <img src="continue1.png"  style="margin-left:100px"> <br><br>
+                <b style="font-size:19px">Example of Python While Loop</b><br><br>
+                <img src="continue2.png" style="margin-left:150px"><br><br>
+                <b style="font-size:18px;margin-left:150px">Output:</b><br><br>
+                <img src="continue3.png" style="margin-left:150px"><br><br>
+
+            </div>
+            <div class="d1" id="e6">
+                <h2 class="d1_h2">Pass Statement</h2><br><br>
+                In Python programming, the pass statement is a null statement which can be used as a placeholder for future code.<br><br>
+
+                Suppose we have a loop or a function that is not implemented yet, but we want to implement it in the future.<br><br>
+                In such cases, we can use the pass statement.<br><br>
+                <b style="font-size:19px">Syntax:</b><br><br>
+                <img src="pass1.png"  style="margin-left:100px"> <br><br>
+                <b style="font-size:19px">Example of Python While Loop</b><br><br>
+                <img src="pass2.png" style="margin-left:150px"><br><br>
+                <p style="margin-left:150px">Here, notice that we have used the pass statement inside the if statement.<br><br>
+
+                However, nothing happens when the pass is executed. It results in no operation (NOP).<br><br></p>
+                <b style="font-size:18px;margin-left:150px">Output:</b><br><br>
+                <p style="margin-left:150px">Hello</p>
+
+            </div>
+            
+            
+        </div>
+    </body>
+</html>

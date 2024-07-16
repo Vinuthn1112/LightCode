@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SQL SELECT(I)</title>
+        <style>
+/*-----------------navbar--------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    background: rgb(169, 51, 216);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+.logo{
+    margin-left:20px;
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700px;
+
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;
+    
+    
+    
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+} 
+.navbar a:hover::before{
+    width: 100%;
+    
+
+}
+/*------------------menu bar--------------------------*/
+
+
+.sidebar{
+    position: fixed;
+    background:rgb(238, 222, 238);
+    width: 250px;
+    height: 100%;
+    top: 75px;
+    left: 0;
+    z-index:1;
+    padding-top:18px;
+}  
+.sidebar h3{
+    text-align:center;
+    font-size:19px;
+    text-transform: uppercase;
+    color:rgb(143, 11, 143);
+    
+}
+.sidebar li{
+    margin-left: 20px;
+    margin-top:35px;
+}
+.sidebar ul li a:hover{
+    color:rgb(204, 130, 56);
+    transition: 0.4s;
+    margin-left: 20px;
+}
+.main{
+
+    margin-top:76px;
+    margin-left: 250px;
+    background-color: rgb(238, 230, 238);
+    padding-left:15px;
+    padding-top: 20px;
+}
+.d1{
+    padding-top: 80px;
+}
+.d1_h2{
+    margin-bottom: 20px;
+    font-size: 38px;
+}
+.image1{
+    margin-left:70px;
+}
+.application{
+    margin-left:70px;
+}
+.keywords{
+    margin-left:70px;
+}
+.comments{
+	color: green;
+}
+            body{
+                color: rgb(85,34,133);
+                overflow-x: hidden;
+                background-color:  rgb(238, 230, 238);;
+            }
+            h1,h2,h3{
+                color: rgb(85,34,133);
+            }
+            h1{
+                font-weight: 900;
+                font-size: 33px;
+            }
+            h2{
+                font-weight: 800;
+                font-size: 25px;
+            }
+            h3{
+                font-weight: 700;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <a href="se_home.php" class="logo">Light<span style="color:aqua;">Code</span></a>
+            <nav class="navbar">
+                <a href="sql_intro.html">Introduction</a>
+                <a href="sql_sel1.html">SQL SELECT(I)</a>
+                <a href="sql_sel2.html" >SQL SELECT(II)</a>
+                <a href="sql_join.html" >SQL JOIN</a>
+                <a href="sql_database.html" >SQL Database</a>
+                <a href="sql_in_del.html" >SQL Insert and Delete</a>
+		<a href="sql_join.html">Examples</a>
+            </nav>
+        </header>
+        <div class="sidebar">
+            <h3>SQL SELECT(I)</h3>
+            <ul class="nav" type="circle">
+                <li><a href="#d1">SQL SELECT</a></li>
+                <li><a href="#d2">SQL AND,OR,NOT</a></li>
+                <li><a href="#d3">SQL SELECT DISTINCT</a></li>
+                <li><a href="#d4">SQL LIMIT</a></li>
+                <li><a href="#d5">SQL IN Operator</a></li>
+                <li><a href="#d6">SQL BETWEEN Operator</a></li>
+                <li><a href="#d7">SQL Aggregate Functions</a></li>
+            </ul>
+        </div>
+        <!--D1-->
+        <div class="main">
+            <div class="d1" id="d1">
+                <h1>SQL SELECT</h1><br>
+                The SQL SELECT statement is used to select (retrieve) data from a database table.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color:magenta">
+SELECT column1, column2, ...
+FROM table;
+
+                </pre>
+                <pre>
+Here,
+
+column1, column2, ... are the table columns
+
+table is the table name from where we select the data
+
+                </pre>
+                <h3>Example:</h3><br>
+                <pre style="color:magenta">
+<span class="comments">
+-- select first_name and last_name columns from Customers table    
+</span>      
+SELECT first_name, last_name
+FROM Customers;
+
+</pre>
+
+            <center><img src="sel1/Screenshot from 2023-12-17 10-46-16.png"></center><br><br>
+            <b>Output:</b><br><br>
+            <center><img src="sel1/Screenshot from 2023-12-17 10-57-04.png"></center><br><br>
+            <h2>SQL SELECT ALL</h2><br>
+            To select all columns from a database table, we use the * character. For example,<br>
+            <pre style="color:magenta">
+<span class="comments">
+-- select all columns from Customers table 
+</span>  
+SELECT *
+FROM Customers;
+
+            </pre>
+            <b>Output:</b><br><br>
+            <center><img src="sel1/Screenshot from 2023-12-17 11-00-33.png"></center><br><br>
+            <h2>SQL SELECT WHERE Clause</h2><br>
+            A SELECT statement can have an optional WHERE clause. The WHERE clause allows us to fetch records from a database table that matches specified condition(s). For example,<br><br>
+            <pre style="color:magenta">
+<span class="comments">
+-- select all columns from the customers table with last_name 'Doe'    
+</span>                
+SELECT *
+FROM Customers
+WHERE last_name = 'Doe';
+
+            </pre>
+            <b>Output:</b><br><br>
+            <center><img src="sel1/Screenshot from 2023-12-17 11-04-51.png"></center><br><br>
+            <h2>SQL Operators</h2><br>
+            The WHERE clause uses operators to construct conditions. Some of the commonly used operators are:<br><br>
+            <h3>Equal Operator(=)</h3>
+            <pre style="color:magenta">
+<span class="comments">
+-- select all columns from Customers table with first name 'John'
+</span>                
+SELECT *
+FROM Customers
+WHERE first_name = 'John';
+
+            </pre>
+            <h3>Greater than(>)</h3>
+            <pre style="color:magenta">
+<span class="comments">
+-- select all columns from Customers table with age greater than 25    
+</span>                
+SELECT *
+FROM Customers
+WHERE age > 25;
+
+            </pre>
+            <h3>AND Operator (AND)</h3>
+            <pre style="color:magenta">
+<span class="comments">
+-- select all columns from Customers table with last_name 'Doe' and country 'USA'
+</span>
+SELECT *
+FROM Customers
+WHERE last_name = 'Doe' AND country = 'USA';
+
+            </pre>
+            </div>
+            <!--D2-->
+            <div class="d1" id="d2">
+                <h1>SQL AND,OR and NOT Operator</h1><br>
+                The AND, OR, and NOT operators in SQL are used with the WHERE or HAVING clauses.<br><br>
+                <h2>SQL AND Operator</h2><br>
+                The SQL AND operator selects data if all conditions are TRUE. For example,<br>
+                <pre style="color:magenta">
+<span class="comments">
+-- select the first_name and last_name of all customers
+-- who live in 'USA' and have the last name 'Doe'
+</span>     
+SELECT first_name, last_name
+FROM Customers
+WHERE country = 'USA' AND last_name = 'Doe';
+
+</pre>
+            <b>Output:</b><br><br>
+            <center><img src="sel1/Screenshot from 2023-12-17 11-43-10.png"></center><br><br>
+            <h2>SQL OR Operator</h2><br>
+            The SQL OR operator selects data if any one condition is TRUE. For example,<br>
+            <pre style="color:magenta">
+<span class="comments">
+-- select first and last name of customers
+-- who either live in the USA
+-- or have the last name 'Doe'    
+</span>
+SELECT first_name, last_name
+FROM Customers
+WHERE country = 'USA' OR last_name = 'Doe';
+
+</pre>
+            <b>Output:</b><br><br>
+            <center><img src="sel1/Screenshot from 2023-12-17 11-46-10.png"></center><br><br>
+            <h2>SQL NOT Operator</h2><br>
+            The SQL NOT operator selects data if the given condition is FALSE. For example,<br>
+            <pre style="color:magenta">
+<span class="comments">
+-- select customers who don't live in the USA
+</span>                
+SELECT first_name, last_name
+FROM Customers
+WHERE NOT country = 'USA';
+
+            </pre>
+            <b>Output:</b><br><br>
+            <center><img src="sel1/Screenshot from 2023-12-17 11-48-26.png"></center><br><br>
+            <h2>Combining Multiple Operators</h2><br>
+            It is also possible to combine multiple AND, OR and NOT operators in an SQL statement.<br><br>
+
+For example, let's suppose we want to select customers where country is either USA or UK, and age is less than 26.<br>
+            <pre style="color:magenta">
+<span class="comments">
+-- select customers who live in either USA or UK and whose age is less than 26    
+</span>       
+SELECT *
+FROM Customers
+WHERE (country = 'USA' OR country = 'UK') AND age < 26;
+
+            </pre>
+            <center><img src="sel1/Screenshot from 2023-12-17 10-46-16.png"></center><br><br>
+            <b>Output:</b><br><br>
+            <center><img src="sel1/Screenshot from 2023-12-17 11-51-22.png"></center><br><br>
+            </div>
+            <!--D3-->
+            <div class="d1" id="d3">
+                <h1>SQL SELECT DISTINCT Statement</h1><br>
+                The SQL SELECT DISTINCT statement retrieves distinct values from a database table.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color:magenta">
+SELECT DISTINCT column1, column2 ...
+FROM table;                    
+
+                </pre>
+                <pre>
+Here,
+
+column1, column2, ... are the table columns
+
+table is the table name from where we retrieve the distinct columns
+
+                </pre>
+                <h3>Example:</h3>
+                <pre style="color:magenta">
+<span class="comments">
+-- select the unique countries from the customers table    
+</span>                    
+SELECT DISTINCT country
+FROM Customers;
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel1/Screenshot from 2023-12-17 11-55-29.png"></center><br><br>
+                <h2>SQL DISTINCT With Multiple Columns</h2><br>
+                We can also use SELECT DISTINCT with multiple columns.<br><br>
+                <h3>Example:</h3>
+                <pre style="color:magenta">
+<span class="comments">
+-- select rows if the first name and country of a customer is unique
+</span>                    
+SELECT DISTINCT country, first_name
+FROM Customers;
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel1/Screenshot from 2023-12-17 11-58-58.png"></center><br><br>
+            </div>
+            <!--D4-->
+            <div class="d1" id="d4">
+                <h1>SQL LIMIT</h1><br>
+                The SQL LIMIT keyword allows us to specify the number of records in the result set.<br><br>
+                <h3>Example:</h3><br>
+                <pre style="color: magenta;">
+SELECT first_name, age
+FROM Customers
+LIMIT 2;                    
+
+</pre>
+Here, the SQL command selects the first 2 rows from the table.<br><br>
+            <h2>SQL LIMIT With OFFSET Clause</h2><br>
+            The OFFSET keyword is used with LIMIT to specify the starting rows from where to select the data. For example,<br>
+            <pre style="color: magenta;">
+<span class="comments">
+-- LIMIT 2 selects two results
+-- OFFSET 3 excludes the first three results    
+</span>                
+SELECT first_name, last_name
+FROM Customers
+LIMIT 2 OFFSET 3;
+
+</pre>
+            <b>Output:</b><br><br>
+            <center><img src="sel1/Screenshot from 2023-12-17 12-06-22.png"></center><br><br>
+            </div>
+            <!--D5-->
+            <div class="d1" id="d5">
+                <h1>SQL IN Operator</h1><br>
+                The IN operator is used with the WHERE clause to match values in a list.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color:magenta">
+SELECT column1, column2, ...  
+FROM table
+WHERE column IN (value1, value2, ...);                    
+
+                </pre>
+                <pre>
+Here,
+
+column1, column2, ... are the table columns
+
+table is the table name from where we select the data
+
+column is where the values are compared against
+
+IN operator specifies values that the column value should be compared against
+
+value1, value2, ... are the values the column value is compared against
+                    
+                </pre>
+                <h3>Example:</h3>
+                <pre style="color:magenta">
+<span class="comments">
+-- select rows if the country is either USA or UK    
+</span>                    
+SELECT first_name, country
+FROM Customers
+WHERE country IN ('USA', 'UK');
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel1/Screenshot from 2023-12-17 12-14-01.png"></center><br><br>
+                <h2>SQL IN Operator With Columns</h2><br>
+                The IN operator can also be used to select rows in which a certain value exists in the given field. Let's see an example to clarify it.<br>
+                <pre style="color:magenta">
+<span class="comments">
+-- select rows with value 'USA' in the country column    
+</span>                    
+SELECT first_name, country
+FROM Customers
+WHERE 'USA' IN (country);
+
+</pre>
+            <b>Output:</b><br><br>
+            <center><img src="sel1/Screenshot from 2023-12-17 12-16-25.png"></center><br><br>
+            <h2>SQL NOT IN Operator</h2><br>
+            The NOT IN operator is used to exclude the rows that match values in the list. It returns all the rows except the excluded rows. For example,<br>
+            <pre style="color:magenta">
+<span class="comments">
+-- select rows where country is not UK or UAE    
+</span>
+SELECT first_name, country
+FROM Customers
+WHERE country NOT IN ('UK', 'UAE');
+
+</pre>
+            <b>Output:</b><br><br>
+            <center><img src="sel1/Screenshot from 2023-12-17 12-18-50.png"></center><br><br>
+            </div>
+            <!--D6-->
+            <div class="d1" id="d6">
+                <h1>SQL BETWEEN Operator</h1><br>
+                In SQL, the BETWEEN operator is used with the WHERE clause to match values in a range.<br><br>
+                <h3>Sytntax:</h3><br>
+                <pre style="color:magenta">
+SELECT column1, column2, ...
+FROM table
+WHERE column BETWEEN value1 AND value2;                    
+
+                </pre>
+                <pre>
+Here,
+
+column1, column2, ... are the columns you want to filter
+
+table is the name of the table
+
+column is the name of the column where we want to specify a range of values
+
+BETWEEN is an operator used to specify a range of values for the column
+
+value1 and value2 are the lower and upper bounds of the range
+
+                </pre>
+                <h3>Example:</h3>
+                <pre style="color:magenta">
+
+SELECT item, amount
+FROM Orders
+WHERE amount BETWEEN 300 AND 500;
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel1/Screenshot from 2023-12-17 12-25-29.png"></center><br><br>
+                <h2>SQL BETWEEN OPERATOR With Texts</h2><br>
+                The BETWEEN operator also works with texts. For example,<br>
+                <pre style="color:magenta">
+<span class="comments">
+-- select rows where items begin with letters between 'I' and 'L'
+-- exclude all items beginning with 'L' followed by other characters    
+</span>                    
+SELECT item, amount
+FROM Orders
+WHERE item BETWEEN 'I' AND 'L';
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel1/Screenshot from 2023-12-17 12-27-52.png"></center><br><br>
+            </div>
+            <!--D7-->
+            <div class="d1" id="d7">
+                <h1>Aggregate Functions</h1><br>
+                <h2>1.SQL MAX()</h2><br>
+                The MAX() function returns the maximum value of a column.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color:magenta">
+SELECT MAX(columnn)
+FROM table;
+
+</pre>
+            <pre>
+Here,
+
+column is the name of the column you want to filter
+
+table is the name of the table to fetch the data from
+
+            </pre>
+            <h3>Example:</h3><br>
+            <pre style="color:magenta">
+SELECT MAX(age)
+FROM Customers;                
+
+            </pre>
+            <b>Output:</b><br><br>
+            <center><img src="sel1/Screenshot from 2023-12-17 12-53-54.png"></center><br><br>
+            <h2>2.SQL MIN() Function</h2><br>
+            The MIN() function returns the minimum value of a column.<br><br>
+            <h3>Syntax:</h3><br>
+            <pre style="color:magenta">
+SELECT MIN(columnn)
+FROM table;                
+
+            </pre>
+            <pre>
+Here,
+
+column is the name of the column you want to filter
+
+table is the name of the table to fetch the data from
+                
+            </pre>
+            <h3>Example:</h3><br>
+            <pre style="color:magenta">
+SELECT MIN(age)
+FROM Customers;
+
+            </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel1/Screenshot from 2023-12-17 13-00-06.png"></center><br><br>
+                <h2>3.SQL COUNT()</h2><br>
+                The SQL COUNT() function returns the number of records returned by a query.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color:magenta">
+SELECT COUNT(expression)
+FROM table_name;                    
+
+                </pre>
+                <pre>
+Here,
+
+expression can be *, column name or expression such as DISTINCT column_name
+
+table_name is the name of the table
+
+                </pre>
+                <h3>Example:</h3>
+                <pre style="color:magenta">
+<span class="comments">
+-- returns the number of rows in the Customers table
+</span>                    
+SELECT COUNT(*)
+FROM Customers;
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel1/Screenshot from 2023-12-17 14-16-45.png"></center><br><br>
+                <h2>COUNT() With DISTINCT</h2><br>
+                If we need to count the number of unique rows, we can use the COUNT() function with the DISTINCT clause. For example,<br>
+                <pre style="color:magenta">
+<span class="comments">
+-- count the unique countries in Customers table    
+</span>                    
+SELECT COUNT(DISTINCT country)
+FROM Customers;
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel1/Screenshot from 2023-12-17 14-20-23.png"></center><br><br>
+                <h2>COUNT() With NULL Values</h2><br>
+                <pre>
+SELECT COUNT(*) returns the count of all records in the result set regardless of NULL values.
+
+SELECT COUNT(column_name) returns the count of records containing non-NULL values of the specified column.
+
+                </pre>
+                <h2>4.SQL SUM()</h2><br>
+                The SQL SUM() function is used to calculate the cumulative sum of numeric values in a column. It has the following syntax:<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color:magenta">
+SELECT SUM(column_name)
+FROM table;                    
+
+                </pre>
+                <pre>
+Here,
+
+SUM is the function that returns the cumulative sum of numeric values
+
+column_name is the column to which we apply the SUM function
+
+table is the name of the table to fetch the data from      
+
+                </pre>
+                <h3>Example:</h3>
+                <pre style="color:magenta">
+<span class="comments">
+--select the sum of amount from Orders table    
+</span>                    
+SELECT SUM(amount) AS total_sales
+FROM Orders;
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel1/Screenshot from 2023-12-17 14-45-41.png"></center><br><br>
+                <h2>5.SQL AVG()</h2><br>
+                The SQL AVG() function is used to calculate the average of numeric values in a column. It has the following syntax:<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color:magenta">
+SELECT AVG(column_name)
+FROM table;                    
+
+                </pre>
+                <pre>
+Here,
+
+AVG is the function that returns the aggregate of numeric values
+
+column_name is the column to which we apply the AVG function
+
+table is the name of the table to fetch the data from
+
+                </pre>
+                <h3>Example:</h3>
+                <pre style="color:magenta">
+<span class="comments">
+-- get average age of customers    
+</span>                    
+SELECT AVG(age) AS average_age
+FROM Customers;
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel1/Screenshot from 2023-12-17 14-49-31.png"></center><br><br>
+            </div>
+        </div>
+    </body>
+</html>

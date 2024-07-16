@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    background: rgb(169, 51, 216);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+.logo{
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    position: relative;
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+} 
+.navbar a:hover::before{
+    width: 100%;
+} 
+.intro .para{
+    margin-top: 145px;
+    margin-left: 70px;
+    font-size: 20px;
+    color: blue;
+}
+.list ul li{
+    margin-left: 450px;
+    font-size: 20px;
+}
+.interview h1{
+    margin-left: 240px;
+    margin-top: 35px;
+    text-decoration: underline;
+}
+.interview h4{
+    margin-top: 10px;
+    margin-left: 70px;
+    color: rgb(85,34,133);
+    font-size: 30px;
+}
+.interview p{
+    margin-top: 10px;
+    color: black;
+    margin-left: 70px;
+    font-size: 20px;
+}
+.interview li{
+    margin-left: 80px;
+    font-size: 20px;
+}
+.interview .box{
+    background-color: white;
+    width: 700px;
+    border: 5px solid black;
+    padding: 30px;
+    margin: 20px;
+    margin-left: 280px;
+    color: rgb(169, 51, 216);
+}

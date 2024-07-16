@@ -1,0 +1,423 @@
+<html>
+    <head>
+        <title>Java Interview Questions</title>
+        <link rel="stylesheet" href="style2.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo">Light<span style="color: aqua;">Code</span></a>
+            <nav class="navbar">
+                <a href="java.html" class="active">Introduction</a>
+                <a href="java_con.html" >Control Statements</a>
+                <a href="java_object.html" >Object Class</Object></a>
+                <a href="java_inheritence.html" >Inheritance</a>
+                <a href="polymorphism.html" >Polymorphism</a>
+                <a href="Abstraction.html" >Abstraction</a>
+                <a href="Encapsulation.html" >Encapsulation</a>
+                <a href="#" >Examples</a>
+            </nav>
+       </header>
+
+        <div class="intro" id="d1">
+            <p class="para">
+                Java is one of the most popular programming languages in the world, known for its versatility, portability, and wide range of applications. Whether you are a fresher, a graduate, or an experienced candidate with several years of Java programming experience – preparation for a java Interview is a daunting task. In this article, we will provide a comprehensive guide to Java Interview Questions, tailored for both <b>freshers</b> and <b>experienced</b> professionals.<br><br>
+                Java is the most used language in top companies such as Uber, Airbnb, Google, Netflix, Instagram, Spotify, Amazon, and many more because of its features and performance. To get into these companies and other software companies, you need to master some important Core Java interview questions to crack their Java Online Assessment round and Java Technical interview.
+                This Java programming interview questions article is written under the guidance of the masters of Java and by getting ideas through the experience of students’ recent Java interviews.<br><br>
+                Here, we’ve covered a wide range of topics, including <b>core Java concepts, Object-Oriented Programming (OOP), multithreading, exception handling, design patterns, Java Collections</b>, and more that will surely help you to crack Java interviews.<br><br>
+                So, if you’re preparing for a Java interview – you must check out these handpicked <b>Java Interview Questions</b> to sharpen your Java skills and ensure you’re well-prepared for any Java-related job opportunity.
+            </p>
+        </div> <br><br>
+        
+        <div class="list">
+            <ul>
+                <li type="circle"><a href="#d1">Java Interview Questions For Freshers </a></li>     <br>
+                <li type="circle"><a href="#d2">Intermediate Interview Questions</a></li>   <br>
+                <li type="circle"><a href="#">Advanced Interview Questions</a></li>       <br>
+            </ul>
+        </div>
+        
+        <div class="interview">
+        <h1 id="d1"> Java Interview Questions For Freshers</h1> <br><br>
+
+        <h4>Q1:Is Java Platform Independent if then how?</h4>
+        <p>Yes, Java is a Platform Independent language. Unlike many programming languages javac compiler compiles the program to form a bytecode or .class file. This file is independent of the software or hardware running but needs a JVM(Java Virtual Machine) file preinstalled in the operating system for further execution of the bytecode. Although JVM is platform dependent, the bytecode can be created on any System and can be executed in any other system despite hardware or software being used which makes Java platform independent.</p>
+
+        <h4>Q2:What are the top Java Features?</h4>
+        <p>Java is one the most famous and most used language in the real world, there are many features in Java that makes it better than any other language some of them are mentioned below:<br>
+                <img src="feature.jpg" width="800px" height="400px">
+            <ul>
+                 <li><b>Simple:</b> Java is quite simple to understand and the syntax</li> 
+                 <li><b>Platform Independent:</b> Java is platform independent means we can run the same program in any software and hardware and will get the same result.</li>
+                  <li><b>Interpreted:</b> Java is interpreted as well as a compiler-based language. </li>
+                  <li><b>Robust:</b> features like Garbage collection, exception handling, etc that make the language robust.</b>
+                  <li><b>Object-Oriented:</b> Java is an object-oriented language that supports the concepts of class,  objects, four pillars of OOPS, etc. </li>
+                  <li><b>Secured:</b> As we can directly share an application with the user without sharing the actual program makes Java a secure language. </li>
+                  <li><b>High Performance:</b>  faster than other traditional interpreted programming languages.</li>
+                  <li><b>Dynamic:</b> supports dynamic loading of classes and interfaces.Distributed: feature of Java makes us able to access files by calling the methods from any machine connected.</li>
+                  <li><b>Multithreaded:</b> deal with multiple tasks at once by defining multiple threads</li>
+                  <li><b>Architecture Neutral:</b> it is not dependent on the architecture.</li>
+
+            </ul>
+        </p>
+
+        <h4>Q3:What is JVM?</h4>
+        <p>JVM stands for Java Virtual Machine it is a Java interpreter. It is responsible for loading, verifying, and executing the bytecode created in Java. Although it is platform dependent which means the software of JVM is different for different Operating Systems it plays a vital role in making Java platform Independent. <br>
+            <img src="jvm.jpg" width="800px" height="400px">
+        </p>
+
+        <h4>Q4:What is JIT?</h4>
+        <p>JIT stands for (Just-in-Time) compiler is a part of JRE(Java Runtime Environment), it is used for better performance of the Java applications during run-time. The use of JIT is mentioned in step by step process mentioned below:<br><br> 
+            <ol type="1">
+                <li>Source code is compiled with javac compiler to form bytecode</li>
+                <li>Bytecode is further passed on to JVM </li>
+                <li>JIT is a part of JVM, JIT is responsible for compiling bytecode into native machine code at run time.</li>
+                <li>The JIT compiler is enabled throughout, while it gets activated when a method is invoked. For a compiled method, the JVM directly calls the compiled code, instead of interpreting it.</li>
+                <li>As JVM calls the compiled code that increases the performance and speed of the execution.</li>  <br>
+            </ol> 
+            <img src="jit.jpg" width="900px" height="400px">
+        </p>
+
+        <h4>Q5:What are Memory storages available with JVM?</h4>
+        <p>JVM consists of a few memory storages as mentioned below:<br><br>
+            <ol type="1">
+                <li>Class(Method) Area: stores class-level data of every class such as the runtime constant pool, field, and method data, and the code for methods.</li>
+                    <li>Heap: Objects are created or objects are stored. It is used to allocate memory to objects during run time.</li>
+                    <li> Stack: stores data and partial results which will be needed while returning value for method and performing dynamic linking</li>
+                    <li>Program Counter Register: stores the address of the Java virtual machine instruction currently being executed.</li>
+                    <li>Native Method Stack: stores all the native methods used in the application.</li> <br>
+            </ol>
+            <img src="memory.jpg " width="900px" height="400px">
+        </p>
+
+        <h4>Q6:What is a classloader?</h4>
+        <p>Classloader is the part of JRE(Java Runtime Environment), during the execution of the bytecode or created .class file classloader is responsible for dynamically loading the java classes and interfaces to JVM(Java Virtual Machine). Because of classloaders Java run time system does not need to know about files and file systems.</p>
+
+        <h4>Q7:Difference between JVM, JRE, and JDK.</h4>
+        <p>
+            <b>JVM:</b> JVM also known as Java Virtual Machine is a part of JRE. JVM is a type of interpreter responsible for converting bytecode into machine-readable code. JVM itself is platform dependent but it interprets the bytecode which is the platform-independent reason why Java is platform-independent. <br>
+            <b>JRE:</b> JRE stands for Java Runtime Environment, it is an installation package that provides an environment to run the Java program or application on any machine.  <br>
+            <b>JDK:</b> JDK stands for Java Development Kit which provides the environment to develop and execute Java programs. JDK is a package that includes two things Development Tools to provide an environment to develop your Java programs and, JRE to execute Java programs or applications.
+        </p>
+
+        <h4>Q8:Explain public static void main(String args[]) in Java.</h4>
+        <p>
+            <img src="psvm.jpg" width="900px" height="400px">   <br>
+            Unlike any other programming language like C, C++, etc. In Java, we declared the main function as a public static void main (String args[]). The meanings of the terms are mentioned below:<br><br>
+            <ol>
+                <li><b>public:</b> the public is the access modifier responsible for mentioning who can access the element or the method and what is the limit.  It is responsible for making the main function globally available. It is made public so that JVM can invoke it from outside the class as it is not present in the current class.</li>
+                <li><b>static:</b> static is a keyword used so that we can use the element without initiating the class so to avoid the unnecessary allocation of the memory. </li>
+                <li><b>void:</b> void is a keyword and is used to specify that a method doesn’t return anything. As the main function doesn’t return anything we use void.</li>
+                <li><b>main:</b> main represents that the function declared is the main function. It helps JVM to identify that the declared function is the main function.</li>
+                <li><b>String args[]:</b> It stores Java command-line arguments and is an array of type java.lang.String class.</li>
+           
+            </ol>
+        </p>
+
+        <h4>Q9:What is Java String Pool?</h4>
+        <p>A Java String Pool is a place in heap memory where all the strings defined in the program are stored. A separate place in a stack is there where the variable storing the string is stored. Whenever we create a new string object, JVM checks for the presence of the object in the String pool, If String is available in the pool, the same object reference is shared with the variable, else a new object is created.<br>
+            <img src="pool.jpg" width="900px" height="400px"> 
+            <p class="box">
+                String str1="Hello";    <br>
+                // "Hello" will be stored in String Pool    <br>
+                // str1 will be stored in stack memory      <br>
+            </p>
+        </p>
+
+        <h4>Q10:What will happen if we declare don’t declare the main as static?</h4>
+        <p>We can declare the main method without using static and without getting any errors. But, the main method will not be treated as the entry point to the application or the program.</p>
+
+        <h4>Q11:What are Packages in Java?</h4>
+        <p>Packages in Java can be defined as the grouping of related types of classes, interfaces, etc providing access to protection and namespace management.</p>
+
+        <h4>Q12:Why Packages are used?</h4>
+        <p>Packages are used in Java in order to prevent naming conflicts, control access, and make searching/locating and usage of classes, interfaces, etc easier.</p>
+
+        <h4>Q13:What are the advantages of Packages in Java?</h4>
+        <p>There are various advantages of defining packages in Java.<br>
+            <ul>
+                <li>Packages avoid name clashes.</li>
+                <li>The Package provides easier access control.</li>
+                <li>We can also have the hidden classes that are not visible outside and are used by the package.</li>
+                <li>It is easier to locate the related classes.</li>
+            </ul>
+        </p>
+
+        <h4>Q14: How many types of packages are there in Java?</h4>
+        <p>There are two types of packages in Java<br>
+            <ul>
+                <li>User-defined packages</li>
+                <li>Build In packages</li>
+            </ul>
+        </p>
+
+        <h4>Q15:What is the Wrapper class in Java?</h4>
+        <p>
+            Wrapper, in general, is referred to a larger entity that encapsulates a smaller entity. Here in Java, the wrapper class is an object class that encapsulates the primitive data types. <br>
+            The primitive data types are the ones from which further data types could be created. For example, integers can further lead to the construction of long, byte, short, etc. On the other hand, the string cannot, hence it is not primitive. <br>
+            Getting back to the wrapper class, Java contains 8 wrapper classes. They are Boolean, Byte, Short, Integer, Character, Long, Float, and Double. Further, custom wrapper classes can also be created in Java which is similar to the concept of Structure in the C programming language. We create our own wrapper class with the required data types<br>
+        </p>
+
+        <h4>Q16:Why do we need wrapper classes?</h4>
+        <p>The wrapper class is an object class that encapsulates the primitive data types, and we need them for the following reasons:<br>
+            <ul>
+                <li>Wrapper classes are final and immutable</li>
+                <li>Provides methods like valueOf(), parseInt(), etc.</li>
+                <li>It provides the feature of autoboxing and unboxing.</li>
+            </ul>
+        </p> <br><br>
+
+             <h1 id="d2"> Java Interview Questions For Intermediates</h1> <br><br>
+            
+             <h4>Q1:Explain the FailFast iterator and FailSafe iterator along with examples for each.</h4>
+             <p>A FailFast iterator is an iterator that throws a ConcurrentModificationException if it detects that the underlying collection has been modified while the iterator is being used. This is the default behavior of iterators in the Java Collections Framework. For example, the iterator for a HashMap is FailFast.
+                <p class="box">
+                     // Java Program to demonstrate FailFast iterator   <br>
+                        import java.io.*;   <br>
+                        import java.util.HashMap;   <br>
+                        import java.util.Iterator; <br>
+                        import java.util.Map; <br>
+                        class GFG {     <br>
+                            public static void main(String[] args) <br>
+                            {       <br>
+                                HashMap<Integer, String> map = new HashMap<>(); <br>
+                                map.put(1, "one"); <br>
+                                map.put(2, "two"); <br>
+                                Iterator<Map.Entry<Integer, String> > iterator  <br>
+                                    = map.entrySet().iterator(); <br>
+                                while (iterator.hasNext()) {    <br>
+                                    Map.Entry<Integer, String> entry    <br>
+                                        = iterator.next(); <br>
+                                    // this will throw a    <br>
+                                    // ConcurrentModificationException  <br>
+                                    if (entry.getKey() == 1) {  <br>
+                                        map.remove(1);  <br>
+                                    }   <br>
+                                }   <br>
+                            }   <br>
+                        }   <br>
+
+                </p>
+                <p>Output:<br>
+                    Exception in thread "main" java.util.ConcurrentModificationException
+                </p>
+                <p>A FailSafe iterator does not throw a ConcurrentModificationException if the underlying collection is modified while the iterator is being used. Alternatively, it creates a snapshot of the collection at the time the iterator is created and iterates over the snapshot. For example, the iterator for a ConcurrentHashMap is FailSafe.</p>
+                <p class="box">
+                         // Java Program to demonstrate FailSafe <br>
+                        import java.io.*;  <br>
+                        import java.util.Iterator; <br>
+                        import java.util.Map; <br>
+                        import java.util.concurrent.ConcurrentHashMap; <br>
+                        class GFG {     <br>
+                            public static void main(String[] args) <br>
+                            {   <br>
+                                ConcurrentHashMap<Integer, String> map  
+                                    = new ConcurrentHashMap<>();    
+                                map.put(1, "one"); <br>
+                                map.put(2, "two"); <br>
+                                Iterator<Map.Entry<Integer, String> > iterator 
+                                    = map.entrySet().iterator(); <br>
+                                while (iterator.hasNext()) { <br>
+                                    Map.Entry<Integer, String> entry = iterator.next(); <br>
+                                    // this will not throw an exception <br>
+                                    if (entry.getKey() == 1) { <br>
+                                        map.remove(1); <br>
+                                    } <br>
+                                } <br>
+                            } <br>
+                        }<br>
+
+                </p>
+             </p>
+
+             <h4>Q2:What is Exception Handling?</h4>
+             <p>An Exception is an Event that interrupts the normal flow of the program and requires special processing. During the execution of a program, errors and unplanned occurrences can be dealt with by using the Java Exception Handling mechanism. Below are some reasons why Exceptions occur in Java:<br>
+                <ul>
+                    <li>Device failure</li>
+                    <li>Loss of Network Connection</li>
+                    <li>Code Errors</li>
+                    <li>Opening an Unavailable file</li>
+                    <li>Invalid User Input</li>
+                    <li>Physical Limitations (out of disk memory)</li>
+                </ul>
+             </p>
+
+             <h4>Q3:How many types of exceptions can occur in a Java program?</h4>
+             <p><b>There are generally two types of exceptions in Java:</b><br>
+                <ul>
+                    <li><b>Built-in Exceptions:</b> Built-in exceptions in Java are provided by the Java Libraries. These exceptions can be further divided into two subcategories i.e., checked and unchecked Exceptions. Below are some of the built-in exceptions in Java:</li>
+                    <ul>
+                        <li>ArrayIndexOutOfBoundsExceptions</li>
+                        <li>ClassNotFoundException</li>
+                        <li>FileNotFoundException</li>
+                        <li>IOException</li>
+                        <li>NullPointerException</li>
+                        <li>ArithmeticException</li>
+                        <li>InterruptedException</li>
+                        <li>RuntimeException</li>
+                    </ul>
+                    <li><b>User-Defined Exceptions:</b> User-defined exceptions are defined by the programmers themselves to handle some specific situations or errors which are not covered by built-in exceptions. To define user-defined exceptions a new class that extends the appropriate exception class must be defined. User-defined Exceptions in Java are used when the built-in exceptions are in Java.</li>
+                </ul> <br>
+                <img src="exception.png" width="900px" height="400px">
+            </p>
+
+             <h4>Q4:Explain the hierarchy of Java Exception classes.</h4>
+             <p><img src="heirarchy.png" width="900px" height="400px"><br>
+                All exception and error types in Java are subclasses of the class throwable, which is the base class of the hierarchy. This class is then used for exceptional conditions that user programs should catch. NullPointerException is an example of such an exception. Another branch, error is used by the Java run-time system to indicate errors having to do with the JRE. StackOverflowError is an example of one of such error.
+            </p>
+
+             <h4>Q5:What is NullPointerException?</h4>
+             <p>It is a type of run-time exception that is thrown when the program attempts to use an object reference that has a null value. The main use of NullPointerException is to indicate that no value is assigned to a reference variable, also it is used for implementing data structures like linked lists and trees. </p>
+
+             <h4>Q6:Explain Runtime Exceptions.</h4>
+             <p>Runtime Exceptions are exceptions that occur during the execution of a code, as opposed to compile-time exceptions that occur during compilation. Runtime exceptions are unchecked exceptions, as they aren’t accounted for by the JVM.<br>
+                Examples of runtime exceptions in Java include:
+                <ul>
+                    <li>NullPointerException: This occurs when an application attempts to use a null object reference.</li>
+                    <li>ArrayIndexOutOfBoundsException: This occurs when an application attempts to access an array index that is out of bounds.</li>
+                    <li>ArithmeticException: This occurs when an application attempts to divide by zero.</li>
+                    <li>IllegalArgumentException: This occurs when a method is passed on an illegal or inappropriate argument.</li>
+                </ul>
+               <p> Unlike checked exceptions, runtime exceptions do not require a declaration in the throws clause or capture in a try-catch block. However, handling runtime exceptions is advisable in order to provide meaningful error messages and prevent a system crash. Because runtime exceptions provide more specific information about the problem than checked exceptions, they enable developers to detect and correct programming errors more easily and quickly.</p>
+             </p>
+
+             <h4>Q7: When is the ArrayStoreException thrown?</h4>
+             <p>ArrayStoreException is thrown when an attempt is made to store the wrong type of object in an array of objects.
+                <p class="box">
+                    / Java Program to implement <br>
+                    // ArrayStoreException <br>
+                    public class GFG { <br>
+                        public static void main(String args[]) <br>
+                        { <br>
+                            // Since Double class extends Number class <br>
+                            // only Double type numbers <br>
+                            // can be stored in this array <br>
+                            Number[] a = new Double[2]; <br>
+                            // Trying to store an integer value <br>
+                            // in this Double type array <br>
+                            a[0] = new Integer(4); <br>
+                        } <br>
+                    } <br>
+                </p>
+             </p>
+
+             <h4>Q8: What is the difference between Checked Exception and Unchecked Exception?</h4>
+             <p>
+                <b>Checked Exception:</b>
+                 Checked Exceptions are the exceptions that are checked during compile time of a program. In a program, if some code within a method throws a checked exception, then the method must either handle the exception or must specify the exception using the throws keyword. <br>
+                Checked exceptions are of two types: 
+                    <ul>
+                        <li>Fully checked exceptions: all its child classes are also checked, like IOException, and InterruptedException.</li>
+                        <li>Partially checked exceptions: some of its child classes are unchecked, like an Exception. </li>
+                    </ul>
+                   <p><b> Unchecked Exception:</b>
+                    Unchecked are the exceptions that are not checked at compile time of a program. Exceptions under Error and RuntimeException classes are unchecked exceptions, everything else under throwable is checked. </p>
+            </p>
+
+             <h4>Q9:What is the base class for Error and Exception?</h4>
+             <p> <img src="error.png" width="900px" height="400px"><br>
+                Error is an illegal operation performed by the user which causes abnormality in the program. Exceptions are the unexpected events or conditions that comes while running the program, exception disrupts the normal flow of the program’s instructions.
+                Errors and Exceptions both have a common parent class which is java.lang.Throwable class.<br>
+            </p>
+
+             <h4>Q10:Is it necessary that each try block must be followed by a catch block?</h4>
+             <p>No, It is not necessary to use catch block after try block in Java as we can create another combination with finally block. Finally is the block which runs despite the fact that the exception is thrown or not.</p>
+
+             <h4>Q11:What is exception propagation?</h4>
+             <p>Exception propagation is a process in which the exception is dropped from to the top to the bottom of the stack. If not caught once, the exception again drops down to the previous method, and so on until it gets caught or until it reaches the very bottom of the call stack.</p>
+
+             <h4>Q12:What will happen if you put System.exit(0) on the try or catch block? Will finally block execute?</h4>
+             <p>System.exit(int) has the capability to throw SecurityException. So, if in case of security, the exception is thrown then finally block will be executed otherwise JVM will be closed while calling System. exit(0) because of which finally block will not be executed.</p>
+
+             <h4>Q13:What do you understand by Object Cloning and how do you achieve it in Java?</h4>
+             <p>It is the process of creating an exact copy of any object. In order to support this, a java class has to implement the Cloneable interface of java.lang package and override the clone() method provided by the Object class the syntax of which is: <br>
+                Protected Object clone() throws CloneNotSupportedException{ return (Object)super.clone();}In case the Cloneable interface is not implemented and just the method is overridden, it results in CloneNotSupportedException in Java.
+            </p>
+
+             <h4>Q14:How do exceptions affect the program if it doesn’t handle them?</h4>
+             <p>Exceptions are responsible for abruptly terminating the running of the program while executing and the code written after the exception occurs is not executed.</p>
+
+             <h4>Q15:What is the use of the final keyword?</h4>
+             <p>The final keyword is used to make functions non-virtual. By default, all the functions are virtual so to make it non-virtual we use the final keyword.
+            </p><br><br>
+
+            <h1 id="d3">Java Interview Questions For Experienced</h1> <br><br>
+            <h4>Q1:What are the different types of Thread Priorities in Java? And what is the default priority of a thread assigned by JVM?</h4>
+            <p>Priorities in threads is a concept where every thread is having a priority which in layman’s language one can say every object is having priority here which is represented by numbers ranging from 1 to 10. There are different types of thread properties in Java mentioned below:<br>
+                <ul>
+                    <li>MIN_PRIORITY</li>
+                    <li>MAX_PRIORITY</li>
+                    <li>NORM_PRIORITY </li>
+                </ul>
+                <p>By default, the thread is assigned NORM_PRIORITY.</p>
+            </p>
+
+            <h4>Q2:Why Garbage Collection is necessary in Java?</h4>
+            <p>For Java, Garbage collection is necessary to avoid memory leaks which can cause the program to crash and become unstable. There is no way to avoid garbage collection in Java. Unlike C++, Garbage collection in Java helps programmers to focus on the development of the application instead of managing memory resources and worrying about memory leakage. Java Virtual Machine (JVM) automatically manages the memory periodically by running a garbage collector which frees up the unused memory in the application. Garbage collection makes Java memory efficient because it removes unreferenced objects from the heap memory.</p>
+
+            <h4>Q3:What is the drawback of Garbage Collection?</h4>
+            <p>Apart from many advantages, Garbage Collector has certain drawbacks mentioned below:<br>
+                <ol>
+                    <li>The main drawback to Garbage collection is that it can cause pauses in an application’s execution as it works to clear the memory which slows down the performance of the application. </li>
+                    <li>The Process of Garbage collection is non-deterministic which makes it difficult to predict when garbage collection occurs which causes unpredictable behavior in applications. For Example, if we write any program then it is hard for programmers to decide if the issue is caused by garbage collection or by any other factors in the program.</li>
+                    <li>Garbage collection can also increase memory usage if the program creates and discards a lot of short-lived objects.</li>
+                </ul>
+            </p>
+
+            <h4>Q4:Explain the difference between a minor, major, and full garbage collection.</h4>
+            <p>The Java Virtual Machine (JVM) removes objects that are no longer in use using a garbage collector which periodically checks and removes these objects. There are different types of garbage collection in the JVM, each with different characteristics and performance implications. The main types of garbage collection are:
+                <ul>
+                    <li><b>Minor garbage collection:</b> Also known as young generation garbage collection, this type of garbage collection is used to collect and reclaim memory that is used by short-lived objects (objects that are quickly created and discarded). </li>
+                    <li><b>Major garbage collection:</b> Also known as old-generation garbage collection, this type of garbage collection is used to collect and reclaim memory that is used by long-lived objects (objects that survive multiple minor garbage collections and are promoted to the old generation).</li>
+                    <li><b>Full garbage collection:</b> During full garbage collection, memories from all generations are collected and reclaimed, including memories of young and old. A full garbage collection normally takes longer to complete than a minor or major garbage collection which causes that app to pause temporarily.</li>
+                </ul>
+            </p>
+
+            <h4>Q5:How will you identify major and minor garbage collections in Java?</h4>
+            <p>Major garbage collection works on the survivor space and Minor garbage collection works on the Eden space to perform a mark-and-sweep routine. And we can identify both of them based on the output where the minor collection prints “GC”, whereas the major collection prints “Full GC” for the case where the garbage collection logging is enabled with “-XX:PrintGCDetails” or “verbose:gc”.</p>
+
+            <h4>Q6:What is a memory leak, and how does it affect garbage collection?</h4>
+            <p>In Java Memory leaks can be caused by a variety of factors, such as not closing resources properly, holding onto object references longer than necessary, or creating too many objects unnecessarily. There are situations in which garbage collector does not collect objects because there is a reference to those objects. In these situations where the application creates lots of objects and does not use them and every object has some valid references, a Garbage collector in Java cannot destroy the objects. These useless objects which do not provide any value to the program are known as Memory leaks. Memory leaks can impact garbage collection negatively by preventing the garbage collector from reclaiming unused memory. This behavior will lead to slow performance or sometimes system failure. In a program, it is important to avoid memory leaks by managing resources and object references properly. </p>
+
+            <h4>Q7:Name some classes present in java.util.regex package.</h4>
+            <p>Regular Expressions or Regex in Java is an API used for searching and manipulating of strings in Java. It creates String patterns that can extract the data needed from the strings or can generalize a pattern.<br>
+               There are 3 Classes present in java.util.regex mentioned below:<br>
+               <ul>
+                <li>Pattern Class: Can define patterns</li>
+                <li>Matcher Class: Can perform match operations on text using patterns</li>
+                <li>PatternSyntaxException Class: Can indicate a syntax error in a regular expression pattern.</li>
+               </ul>
+               <p>Also, apart from the 3 classes package consists of a single interface MatchResult Interface which can be used for representing the result of a match operation.</p>
+            </p>
+
+            <h4>Q8:What is JDBC?</h4>
+            <p>JDBC standard API is used to link Java applications and relational databases. It provides a collection of classes and interfaces that let programmers to use the Java programming language to communicate with the database. The classes and interface of JDBC allow the application to send requests which are made by users to the specified database. There are generally four components of JDBC by which it interacts with the database:
+                <ul>
+                    <li>JDBC API</li>
+                    <li>JDBC Driver manager</li>
+                    <li>JDBC Test Suite</li>
+                    <li>JDBC-ODBC Bridge Drivers</li>
+                </ul>
+                <img src="jdbc.png" width="900px" height="400px">
+            </p>
+
+            <h4>Q9:What is JDBC Driver?</h4>
+            <p>JDBC Driver is a software component that is used to enable a Java application to interact with the database. JDBC provides the implementation of the JDBC API for a specific database management system, which allows it to connect the database, execute SQL statements and retrieve data. There are four types of JDBC drivers:<br>
+                <ul>
+                    <li>JDBC-ODBC Bridge driver</li>
+                    <li>Native-API driver</li>
+                    <li>Network Protocol driver</li>
+                    <li>Thin driver</li>
+                </ul>
+                <img src="jdbc1.png" width="900px" height="400px">
+            </p>
+
+            <h4>Q10:What does the JDBC ResultSet interface?</h4>
+            <p>JDBC ResultSet interface is used to store the data from the database and use it in our Java Program. We can also use ResultSet to update the data using updateXXX() methods. ResultSet object points the cursor before the first row of the result data. Using the next() method, we can iterate through the ResultSet.<br><br>
+            </p>
+
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,362 @@
+<html>
+    <head>
+        <style>
+	*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+
+}
+p{
+    font-size: 19px;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    background: rgb(169, 51, 216);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+.logo{
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;
+    
+    
+    
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+} 
+.navbar a:hover::before{
+    width: 100%;
+    
+
+}
+/*------------------menu bar--------------------------*/
+
+
+.sidebar{
+    position: fixed;
+    background:rgb(238, 222, 238);
+    width: 250px;
+    height: 100%;
+    top: 75px;
+    left: 0;
+    z-index:1;
+    padding-top:18px;
+}  
+.sidebar h3{
+    
+    font-size:19px;
+    text-transform: uppercase;
+    color:rgb(143, 11, 143);
+    
+}
+.sidebar li{
+    margin-left: 20px;
+    margin-top:35px;
+}
+.sidebar ul li a:hover{
+    color:rgb(204, 130, 56);
+    transition: 0.4s;
+    margin-left: 20px;
+}
+.main{
+    margin-top:76px;
+    margin-left: 250px;
+    background-color: rgb(238, 230, 238);
+    padding-left:15px;
+    padding-top: 20px;
+}
+.d1_h2{
+    margin-bottom: 20px;
+    
+}.obj-content{
+    font-size: 19px;
+    margin-left: 270px;
+}
+.obj-box{
+    box-sizing: border-box;
+    height: 70px;
+    width: 770px;
+    border: 2px solid gray;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(238, 237, 236);
+}
+.obj-box span{
+    color:rgb(77, 148, 7);
+}
+.object{
+    display: flex;
+}
+.methods span{
+    color: blueviolet;
+    font-weight: 30px;
+}
+.object-img{
+    margin-left: 70px;
+    margin-top: 40px;
+}
+    
+</style>
+    <title>Java class&objects</title>
+    </head>
+    <body>
+        <header class="header">
+            <a href="se_home.php" class="logo">Light<span style="color:aqua">Code</span></a>
+            <nav class="navbar">
+                 <a href="java.html">Introduction</a>
+                <a href="java_con.html">Flow Control</a>
+                <a href="java_object.html" >Object Class</Object></a>
+                <a href="java_inheritence.html" >Inheritance</a>
+                <a href="polymorphism.html" >Polymorphism</a>
+                <a href="Abstraction.html" >Abstraction</a>
+                <a href="Encapsulation.html" >Encapsulation</a>
+                <a href="java_ex.html" >Examples</a>
+            </nav>
+        </header>
+        <div class="sidebar">
+            <h3>Object Class</h3>
+            <ul class="nav" type="circle">
+                <li ><a href="#1">Java Object Class</a></li>
+                <li ><a href="#2">Object and Class</a></li>
+                <li ><a href="#3">Method</a></li>
+                <li ><a href="#4">Constructor</a></li>
+                <li ><a href="#5">Static Keyword</a></li>
+                <li ><a href="#6">this keyword</a></li>
+                <li ><a href="#7">final keyword</a></li>
+            </ul>
+        </div>
+        <br><br><br><br><br><br>
+        <div class="obj-content">
+            <h2 class="d1_h2" id="1" style="color: rgb(85,34,133);">Object class in Java</h2><br>
+            <p>
+                The <b>Object class</b> is the parent class of all the classes in java by default. In other words, it is the topmost class of java.<br><br>
+                The Object class is beneficial if you want to refer any object whose type you don't know. Notice that parent class reference variable can refer the child class object, know as upcasting.<br><br>
+                Let's take an example, there is getObject() method that returns an object but it can be of any type like Employee,Student etc, we can use Object class reference to refer that object. For example:<br><br>
+                <div class="obj-box">
+                    <b>Object obj=getObject();</b><span>//we don't know what object will be returned from this method </span>
+                </div>
+            </p><br><br>
+
+            <h2 class="d1_h2" style="color: rgb(85,34,133);">Methods of Object Class</h2><br><br>
+            <p>The Object class provides many methods. They are as follows: </p><br><br>
+
+            <div class="methods">
+                <p><span class="key">public final Class getClass():</span>   returns the Class class object of this object. The Class class can further be used to get the  <p style="margin-top: 5px;">metadata of this class.</p></p><br>
+                <p><span class="key">public int hashCode():</span>   returns the hashcode number for this object.</p><br>
+                <p><span class="key">public boolean equals(Object obj):</span>   compares the given object to this object.</p><br>
+                <p><span class="key">protected Object clone() throws CloneNotSupportedException:</span>   creates and returns the exact copy (clone) of this object.</p><br>
+                <p><span class="key">public String toString():</span>   returns the string representation of this object.</p><br>
+                <p><span class="key">public final void notify():</span>   wakes up single thread, waiting on this object's monitor.</p><br>
+                <p><span class="key">public final void notifyAll():</span>   wakes up all the threads, waiting on this object's monitor.</p><br>
+                <p><span class="key">public final void wait(long timeout)throws InterruptedException:</span>   causes the current thread to wait for the specified  <p style="margin-top: 5px;">milliseconds, until another thread notifies (invokes notify() or notifyAll() method).</p></p><br>
+                <p><span class="key">public final void wait(long timeout,int nanos)throws InterruptedException:</span>   causes the current thread to wait for the specified  <p style="margin-top: 5px;">milliseconds and nanoseconds, until another thread notifies (invokes notify() or notifyAll() method).</p></p><br>
+                <p><span class="key">public final void wait()throws InterruptedException:</span>   causes the current thread to wait, until another thread notifies (invokes  <p style="margin-top: 5px;">notify() or notifyAll() method).</p></p><br>
+                <p><span class="key">protected void finalize()throws Throwable:</span>   is invoked by the garbage collector before object is being garbage collected</p><br>
+            </div><br><br>
+
+            <div class="object">
+                <div class="object-text">
+                    <h2 class="d1_h2" id="2" style="color: rgb(85,34,133);">What is an object in Java</h2><br>
+                    <p>An entity that has state and behavior is known as<p style="margin-top: 5px;">an object.g., chair, bike, marker, pen, table, car,</p><p style="margin-top: 5px;">etc. It can be physical or logical (tangible and </p> <p style="margin-top: 5px;">intangible). The example of an intangible object </p><p style="margin-top: 5px;">is the banking system. </p></p></p> </p>
+                    <br>
+                    <p>An object has three characteristics:</p>
+                    <br><br>
+                    <p><b>State:</b>represents the data (value) of an object.</p><br>
+                    <p><b>Behavior:</b>represents the behavior (functionality) of an object <p style="margin-top: 5px;">such as deposit, withdraw, etc.</p></p><br>
+                    <p><b>Identity:</b>An object identity is typically implemented via a unique ID. <p style="margin-top: 5px;">The value of the ID is not visible to the external user. However, it is </p><p style="margin-top: 5px;">used internally by the JVM to identify each object uniquely.</p></p>
+                </div>
+                <div class="object-img">
+                    <h3 class="d1_h2" id="1"><b>Objects:Real World Examples</b></h3><br>
+                    <img src="o1.png" height="300" width="300">
+                </div>
+            </div>
+            <br><br>
+            <p><b>An object is an instance of a class.</b>A class is a template or blueprint from which objects are created. So, an object is the instance(result) of a class. </p><br>
+            <p><b>Object Definitions:</b></p><br>
+            <div style="margin-left: 30px;">
+                <p> An object is a real-world entity.</p><br>
+                <p> An object is a runtime entity.</p><br>
+                <p> The object is an entity which has state and behavior.</p><br>
+                <p> The object is an instance of a class.</p>
+
+            </div>
+            <br><br>
+
+            <h2 class="d1_h2" style="color: rgb(85,34,133);">What is a class in Java</h2><br>
+            <p>A class is a group of objects which have common properties. It is a template or blueprint from which objects are created. It is a logical entity. It can't be physical.</p><br><br>
+            <h4 style="color: blueviolet;">Syntax to declare a class:</h4><br>
+            <img src="o2.png"><br><br>
+
+
+            <h3 class="d1_h2" style="color: rgb(85,34,133);">Instance variable in Java</h3><br>
+            <p>A variable which is created inside the class but outside the method is known as an instance variable. Instance variable doesn't get memory at compile time. It gets memory at runtime when an object or instance is created. That is why it is known as an instance variable.</p>
+            <br><br><br>
+
+
+            <h2 class="d1_h2" id="3" style="color: rgb(85,34,133);">Method in Java</h2><br>
+            <p>In Java, a method is like a function which is used to expose the behavior of an object.</p><br>
+
+
+            <h4 style="color: blueviolet;">Advantage of Method</h4><br>
+            <div style="margin-left: 30px;">
+                <p>Code Reusability</p>
+                <p>Code Optimization</p>
+            </div><br><br>
+
+            <h2 class="d1_h2"  style="color: rgb(85,34,133);">What is a Method in Java</h2><br>
+            <p>A Java method is a collection of statements that are grouped together to perform an operation. When you call the System.out.println() method, for example, the system actually executes several statements in order to display a message on the console.</p><br><br>
+            <h4 style="color: blueviolet;">The syntax to declare a method is:</h4><br>
+            <img src="o3.png"><br><br>
+            <p>Here,</p><br>
+            <div style="margin-left: 30px;">
+                <p><b>returnType:</b> It specifies what type of value a method returns For example if a method has an int return type then it returns an integer value.</p><br>
+                <p><b>methodName:</b>  It is an identifier that is used to refer to the particular method in a program.</p><br>
+                <p><b>method body:</b> It includes the programming statements that are used to perform some tasks. The method body is enclosed inside the curly braces { }</p><br><br>
+                
+            </div>
+
+            <h3 class="d1_h2"  style="color: rgb(85,34,133);">Calling a Method in Java</h3><br>
+            <p>Here's is how we can call the method.</p><br>
+            <img src="o4.png"><br>
+            <h4 style="color: blueviolet;">Example 1: Java Methods</h4><br>
+            <img src="o5.png"><br><br>
+            <p><b>Output:</b></p><br>
+            <img src="o6.png"><br><br><br><br>
+
+            <h2 class="d1_h2" id="4" style="color: rgb(85,34,133);">Constructor in Java</h2><br>
+            <p>Constructor in java is used to create the instance of the class. Constructors are almost similar to methods except for two things - its name is the same as the class name and it has no return type. Sometimes constructors are also referred to as special methods to initialize an object.</p><br>
+            <img src="o7.png"><br><br>
+            <p>Here the first one is a constructor, notice that there is no return type and no return statement. The second one is a normal method where we are again calling the first constructor to get Employee instance and return it. It’s recommended to not have method name same as the class name because it creates confusion.</p><br>
+
+            <h3 class="d1_h2"  style="color: rgb(85,34,133);">Types of Constructor</h3><br>
+            <p>There are three types of constructor in java.</p><br>
+            <div style="margin-left: 30px;">
+                    <p>1. Default Constructor</p><br>
+                    <p>2. No-Args constructor</p><br>
+                    <p>3. Parameterized constructor</p><br>
+            </div><br><br>
+            <h3 class="d1_h2"  style="color: rgb(85,34,133);">Default Constructor in Java</h3><br>
+            <p>It’s not required to always provide a constructor implementation in the class code. If we don’t provide a constructor, then java provides default constructor implementation for us to use. Let’s look at a simple program where default constructor is being used since we will not explicitly define a constructor.</p><br>
+            <img src="o8.png"><br><br><br>
+
+            <h3 class="d1_h2"  style="color: rgb(85,34,133);">No-Args Constructor</h3><br>
+            <p>Constructor without any argument is called a no-args constructor. It’s like overriding the default constructor and used to do some pre-initialization stuff such as checking resources, network connections, logging, etc. Let’s have a quick look at the no-args constructor in java.</p><br>
+            <img src="o9.png"><br><br><br>
+
+            <h3 class="d1_h2"  style="color: rgb(85,34,133);">Parameterized Constructor</h3><br>
+            <p>Constructor with arguments is called parameterized constructor. Let’s look at the example of parameterized constructor in java.</p><br>
+            <img src="o10.png"><br><br><br>
+
+
+            <h2 class="d1_h2" id="5" style="color: rgb(85,34,133);">Java Static Keyword</h2><br><br>
+            <h3 class="d1_h2" style="color: rgb(85,34,133);">What is a static keyword in Java?</h3><br>
+            <p>In Java, if we want to access class members, we must first create an instance of the class. But there will be situations where we want to access class members without creating any variables.</p><br>
+            <p>In those situations, we can use the <b>static</b> keyword in Java. If we want to access class members without creating an instance of the class, we need to declare the class members static.</p><br>
+
+            <h4>Example:</h4><br>
+            <img src="o11.png"><br><br>
+            <h4>Output:</h4><br>
+            <img src="o12.png"><br><br><br>
+
+            <h3 class="d1_h2"  style="color: rgb(85,34,133);">Static Methods</h3><br>
+            <p>Static methods are also called class methods. It is because a static method belongs to the class rather than the object of a class.</p><br>
+            <h4>Example:</h4><br>
+            <img src="o13.png"><br><br><br>
+            
+
+            <h3 class="d1_h2"  style="color: rgb(85,34,133);">Static Variables</h3><br>
+            <p>In Java, when we create objects of a class, then every object will have its own copy of all the variables of the class. For example,.</p><br>
+            <img src="o13.png"><br><br>
+
+            <h4>Example:Java static and non-static Variables</h4><br>
+            <img src="o14.png"><br><br><br>
+
+
+            <h2 class="d1_h2" id="6" style="color: rgb(85,34,133);">Java this Keyword</h2><br><br>
+
+            <h3 class="d1_h2"  style="color: rgb(85,34,133);">this Keyword in Java</h3><br>
+            <p>In Java, the "this" keyword refers to the current object of a class. It is used to refer to a class’s current instance variable. It may also be used to call a function constructor of a class from another constructor of the same class.</p><br>
+            <p>Every object in Java has a reference to itself, which may be retrieved with the "this" keyword. When you use "this" in a method, it refers to the class’s instance variable, not the method’s local variable. This makes it easy to distinguish between a class’s instance variables and local variables.</p><br>
+            <h4>Example:Demonstrating the use of this Keyword in Java</h4><br>
+            <img src="o16.png"><br><br>
+            <h4>Output:</h4><br>
+            <img src="o15.png"><br><br>
+
+            <h4>Explanation</h4><br>
+            <p>In the above code, in printDetails() method, we use this keyword in java to access the name and age instance variables of the current Person object. This is necessary because the method has its own name and age parameters that would otherwise shadow the instance variables.</p><br><br>
+
+
+            <h4>Example2:use of this Keyword in Java</h4><br>
+            <p>Using this Keyword in Java to invoke another constructor in the same class</p><br>
+            <img src="o17.png"><br><br>
+            <h4>Output:</h4><br>
+            <img src="o18.png"><br><br>
+            <h4>Explanation:</h4><br>
+            <p>The Rectangle class has two constructors, one that takes a single argument for a square and another that takes separate arguments for width and height. In the constructor that takes a single argument, we use this to call the other constructor with the same width and height. This avoids duplicating the initialization code for the width and height instance variables.</p><br><br>
+
+
+            <h2 class="d1_h2" id="7" style="color: rgb(85,34,133);">Final Keyword In Java</h2><br>
+            <p>The <b>final</b> keyword in java is used to restrict the user. The java final keyword can be used in many context. Final can be:</p><br>
+            <div style="margin-left: 30px;">
+                <p>1.variable</p>
+                <p>2.method</p>
+                <p>.class</p>
+            </div><br><br>
+            <p>The final keyword can be applied with the variables, a final variable that have no value it is called blank final variable or uninitialized final variable. It can be initialized in the constructor only. The blank final variable can be static also which will be initialized in the static block only. We will have detailed learning of these. Let's first learn the basics of final keyword. </p><br>
+            <h3 class="d1_h2" style="color: rgb(85,34,133);">1.Java final variable</h3><br>
+            <p>If you make any variable as final, you cannot change the value of final variable(It will be constant).</p><br>
+            <h4>Example of final variable</h4><br>
+            <p>There is a final variable speedlimit, we are going to change the value of this variable, but It can't be changed because final variable once assigned a value can never be changed. </p><br>
+            <img src="o19.png"><br><br>
+            <h4>Output</h4><br>
+            <img src="o20.png"><br><br>
+
+            <h3 class="d1_h2" style="color: rgb(85,34,133);">2.Java final method</h3><br>
+            <p>If you make any method as final, you cannot override it.</p><br>
+            <h4>Example of final method</h4><br>
+            
+            <img src="o22.png"><br><br>
+            <h4>Output</h4><br>
+            <img src="o21.png"><br><br>
+
+
+            <h3 class="d1_h2" style="color: rgb(85,34,133);">3.Java final class</h3><br>
+            <p>If you make any class as final, you cannot extend it.</p><br>
+            <h4>Example of final class</h4><br>
+            
+            <img src="o23.png"><br><br>
+            <h4>Output</h4><br>
+            <img src="o24.png"><br><br>
+            <br><br>
+            
+        </div>
+
+    </body>
+<html>

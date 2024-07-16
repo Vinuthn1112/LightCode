@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SQL Crash Course</title>
+      
+        <style>
+	/*-----------------navbar--------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    background: rgb(169, 51, 216);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+.logo{
+    margin-left:20px;
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700px;
+
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;
+    
+    
+    
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+} 
+.navbar a:hover::before{
+    width: 100%;
+    
+
+}
+/*------------------menu bar--------------------------*/
+
+
+.sidebar{
+    position: fixed;
+    background:rgb(238, 222, 238);
+    width: 250px;
+    height: 100%;
+    top: 75px;
+    left: 0;
+    z-index:1;
+    padding-top:18px;
+}  
+.sidebar h3{
+    text-align:center;
+    font-size:19px;
+    text-transform: uppercase;
+    color:rgb(143, 11, 143);
+    
+}
+.sidebar li{
+    margin-left: 20px;
+    margin-top:35px;
+}
+.sidebar ul li a:hover{
+    color:rgb(204, 130, 56);
+    transition: 0.4s;
+    margin-left: 20px;
+}
+.main{
+
+    margin-top:76px;
+    margin-left: 250px;
+    background-color: rgb(238, 230, 238);
+    padding-left:15px;
+    padding-top: 20px;
+}
+.d1{
+    padding-top: 80px;
+}
+.d1_h2{
+    margin-bottom: 20px;
+    font-size: 38px;
+}
+.image1{
+    margin-left:70px;
+}
+.application{
+    margin-left:70px;
+}
+.keywords{
+    margin-left:70px;
+}
+.comments{
+	color: green;
+}
+            body{
+                color: rgb(85,34,133);
+                overflow-x: hidden;
+                background-color:  rgb(238, 230, 238);;
+            }
+            h1,h2,h3{
+                color: rgb(85,34,133);
+            }
+            h1{
+                font-weight: 900;
+                font-size: 33px;
+            }
+            h2{
+                font-weight: 800;
+                font-size: 25px;
+            }
+            h3{
+                font-weight: 700;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <a href="se_home.php" class="logo">Light<span style="color:aqua;">Code</span></a>
+            <nav class="navbar">
+                <a href="sql_intro.html">Introduction</a>
+                <a href="sql_sel1.html">SQL SELECT(I)</a>
+                <a href="sql_sel2.html" >SQL SELECT(II)</a>
+                <a href="sql_join.html" >SQL JOIN</a>
+                <a href="sql_database.html" >SQL Database</a>
+                <a href="sql_in_del.html" >SQL Insert and Delete</a>
+		<a href="sql_join.html">Examples</a>
+            </nav>
+        </header>
+        <div class="sidebar">
+            <h3>SQL Introduction</h3>
+            <ul class="nav" type="circle">
+                <li ><a href="#d1">SQL Introduction</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div id="d1" class="d1">
+                <h2>Database:</h2><br>A database is an organized collection of data.<br><br><br>
+            <h2>Types of Databases</h2><br>
+            <ul style="padding-left:30px;">
+                <li>Non-Relational</li><br>
+                <li>Relational</li>
+            </ul><br><br>
+            <h2>Non-Relational Database</h2><br>
+            In a non-relational database, data is stored in key-value pairs. For example:<br><br>
+            <center><img src="Screenshot from 2023-12-16 22-22-50.png"></center><br><br>
+            Here, customers' data are stored in key-value pairs.<br><br>
+
+            Commonly used non-relational database management systems (Non-RDBMS) are MongoDB, Amazon DynamoDB, Redis, etc.<br><br>
+            <h2>Relational Database</h2><br>
+            In a relational database, data is stored in tabular format. For example,<br><br>
+            <center><img src="Screenshot from 2023-12-16 22-24-54.png"></center><br><br>
+            <pre>
+Here, customers is a table inside the database.
+
+The first row is the attributes of the table. Each row after that contains the data of a customer.
+
+In a relational database, two or more tables may be related to each other. Hence the term "Relational". For example,
+
+            </pre>
+            <center><img src="Screenshot from 2023-12-16 22-29-04.png"></center>
+            <center><img src="Screenshot from 2023-12-16 22-29-52.png"></center>
+            <pre>
+
+Here, orders and customers are related through customer_id.
+
+Commonly used relational database management systems (RDBMS) are MySQL, PostgreSQL, MSSQL, Oracle etc.
+
+</pre>
+        <h2>Introduction to SQL</h2><br>
+        Structured Query Language (SQL) is a standard query language that is used to work with relational databases.<br><br>
+        We use SQL to<br><br>
+        <ul style="padding-left:50px;">
+            <li>create databases</li><br>
+            <li>create tables in a database</li><br>
+            <li>read data from a table</li><br>
+            <li>insert data in a table</li><br>
+            <li>update data in a table</li><br>
+            <li>delete database tables</li><br>
+            <li>delete data from a table</li><br>
+            <li>delete databases</li><br>
+        </ul><br><br>
+            </div>
+        </div>
+    </body>
+</html>

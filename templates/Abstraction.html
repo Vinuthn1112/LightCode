@@ -1,0 +1,191 @@
+<html>
+<head>
+    <title>Java Abstarction</title>
+     <style>
+	*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+
+}
+p{
+    font-size: 19px;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    background: rgb(169, 51, 216);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+.logo{
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;
+    
+    
+    
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+} 
+.navbar a:hover::before{
+    width: 100%;
+    
+
+}
+/*------------------menu bar--------------------------*/
+
+
+.sidebar{
+    position: fixed;
+    background:rgb(238, 222, 238);
+    width: 300px;
+    height: 100%;
+    top: 75px;
+    left: 0;
+    z-index:1;
+    padding-top:18px;
+}  
+.sidebar h3{
+    
+    font-size:19px;
+    text-transform: uppercase;
+    color:rgb(143, 11, 143);
+    
+}
+.sidebar li{
+    margin-left: 20px;
+    margin-top:35px;
+}
+.sidebar ul li a:hover{
+    color:rgb(204, 130, 56);
+    transition: 0.4s;
+    margin-left: 20px;
+}
+.abstraction{
+    margin-top: 150px;
+    margin-left: 320px;
+}
+</style>
+</head>
+<body>
+    <header class="header">
+        <a href="se_home.php" class="logo">Light<span style="color:aqua;">Code</style></a>
+        <nav class="navbar">
+             <a href="java.html">Introduction</a>
+                <a href="java_con.html">Flow Control</a>
+                <a href="java_object.html" >Object Class</Object></a>
+                <a href="java_inheritence.html" >Inheritance</a>
+                <a href="polymorphism.html" >Polymorphism</a>
+                <a href="Abstraction.html" >Abstraction</a>
+                <a href="Encapsulation.html" >Encapsulation</a>
+                <a href="java_ex.html" >Examples</a>
+
+        </nav>
+    </header>
+    
+        <div class="sidebar">
+            <h3>JAVA Abstraction</h3>
+            <ul class="nav" type="circle">
+                <li ><a href="#1">Abstraction</a></li>
+                <li ><a href="#2">Abstract classes and methods</a></li>
+                <li ><a href="#3">Advantages</a></li>
+                <li ><a href="#4">Disadvantages</a></li>
+            </ul>
+        </div>
+
+        <div id="1" class="Abstraction">
+            <h2 class="d1_h2" id="1" style="color: rgb(85,34,133);">Abstraction in Java</h2><br>
+            <p>Abstraction in Java refers to hiding the implementation details of a code and exposing only the necessary information to the user. It provides the ability to simplify complex systems by ignoring irrelevant details and reducing complexity. Java provides many in-built abstractions and few tools to create our own.</p><br>
+            <h3>Abstraction in Java can be achieved using the following tools it provides :</h3><br>
+            <p>Abstract classes</p><br>
+            <p>Interfaces</p><br><br>
+
+            <h4>Abstraction Real-Life Example:</h4><br>
+            <div style="margin-left: 30px;">
+                <p>Consider a real-life example of a man driving a car. The man only knows that pressing the accelerators will increase the speed of a car or applying brakes will stop the car, but he does not know how on pressing the accelerator the speed is actually increasing, he does not know about the inner mechanism of the car or the implementation of the accelerator, brakes, etc in the car. This is what abstraction is. </p>
+            </div><br><br>
+
+            <h3 id="2" style="font-size: 22px;">Java Abstract classes and Java Abstract methods</h3><br>
+            <p>1.An abstract class is a class that is declared with an abstract keyword.</p><br>
+            <p>2.An abstract method is a method that is declared without implementation.</p><br>
+            <p>3.An abstract class may or may not have all abstract methods. Some of them can be concrete methods</p><br>
+            <p>4.A method-defined abstract must always be redefined in the subclass, thus making overriding compulsory or making the subclass itself abstract.</p><br>
+            <p>5.Any class that contains one or more abstract methods must also be declared with an abstract keyword.</p><br>
+            <p>6.There can be no object of an abstract class. That is, an abstract class can not be directly instantiated with the new operator.</p><br>
+            <p>7.An abstract class can have parameterized constructors and the default constructor is always present in an abstract class.</p><br><br>
+
+
+            <h2 class="d1_h2"  style="color: rgb(85,34,133);">When to use abstract classes and abstract methods?</h2><br>
+            <p>There are situations in which we will want to define a superclass that declares the structure of a given abstraction without providing a complete implementation of every method. Sometimes we will want to create a superclass that only defines a generalization form that will be shared by all of its subclasses, leaving it to each subclass to fill in the details.</p><br>
+            <p>Consider a classic “shape” example, perhaps used in a computer-aided design system or game simulation. The base type is “shape” and each shape has a color, size, and so on. From this, specific types of shapes are derived(inherited)-circle, square, triangle, and so on — each of which may have additional characteristics and behaviours. For example, certain shapes can be flipped. Some behaviours may be different, such as when you want to calculate the area of a shape. The type hierarchy embodies both the similarities and differences between the shapes.</p><br><br>
+            <img src="a1.png"><br><br>
+
+
+            <h2 class="d1_h2" style="color: rgb(85,34,133);">Interface</h2><br>
+            <p>Interfaces are another method of implementing abstraction in Java. The key difference is that, by using interfaces, we can achieve 100% abstraction in Java classes. In Java or any other language, interfaces include both methods and variables but lack a method body. Apart from abstraction, interfaces can also be used to implement interfaces in Java.</p><br><br>
+
+            <h3>Example:</h3><br>
+            <img src="a2.png"><br><br>
+
+            <h3>Output:</h3><br>
+            <img src="a3.png"><br><br><br><br>
+
+            <h4 id="3" style="font-size: 22px;">Advantages of Abstraction</h4><br>
+            <p>1.It reduces the complexity of viewing things.</p><br>
+            <p>2.Avoids code duplication and increases reusability.</p><br>
+            <p>3.Helps to increase the security of an application or program as only essential details are provided to the user.</p><br>
+            <p>4.It improves the maintainability of the application. </p><br>
+            <p>5.It improves the modularity of the application. </p><br>
+            <p>6.The enhancement will become very easy because without affecting end-users we can able to perform any type of changes in our internal system. </p><br>
+            <p>7.mproves code reusability and maintainability. </p><br>
+            <p>8.Hides implementation details and exposes only relevant information.</p><br>
+            <p>9.Provides a clear and simple interface to the user.</p><br>
+            <p>10.Increases security by preventing access to internal class details.</p><br><br>
+
+
+            <h4 id="4" style="font-size: 22px;">Disadvantages of Abstraction in Java</h4><br>
+            <p>1.Abstraction can make it more difficult to understand how the system works.</p><br>
+            <p>2.It can lead to increased complexity, especially if not used properly.</p><br>
+            <p>3.This may limit the flexibility of the implementation.</p><br>
+            <p>4.Abstraction can add unnecessary complexity to code if not used appropriately, leading to increased development time and effort.</p><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+</body>
+</html>

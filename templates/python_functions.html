@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <tilte>Python functions</tilte>
+    </head>
+    <body>
+        <header class="header">
+            <a href="se_home.php" class="logo">Light<span style="color:aqua;">Code</span></a>
+            <nav class="navbar">
+                <a href="python.html" >Introduction</a>
+                <a href="flow_control.html" >Flow control</a>
+                <a href="python_functions.html" >Functions</a>
+                
+                <a href="filehandling.html" >File Handling</a>
+                <a href="class&objects.html" >class&objects</a>
+                
+                <a href="python_ex.html" >Examples</a>
+              
+
+            </nav>
+        </header>
+        <div class="sidebar">
+            <h3>Python Functions</h3>
+            <ul class="nav" type="circle">
+                <li ><a href="#f1">Python Function</a></li>
+                <li ><a href="#f2">Function Argument</a></li>
+                <li ><a href="#f3">Python Recursion</a></li>
+                <li ><a href="#f4">Anonym0us Function</a></li>
+                <li ><a href="#f5">Local,Global and NonLocal</a></li>
+                
+            </ul>
+        </div>
+        <div class="main" style="color:rgb(85, 34, 133)">
+            <div class="d1" id="f1">
+                <h2 class="d1_h2">Python Function</h2><br><br>
+                <p>
+                    A function is a block of code that performs a specific task.<br><br>
+
+                    Suppose, you need to create a program to create a circle and color it.<br><br> You can create two functions to solve this problem:<br><br>
+                    <ul style="margin-left:50px" >
+                        <li>create a circle function</li><br>
+                        <li>create a color function</li><br><br>
+                    </ul>
+                    Dividing a complex problem into smaller chunks makes our program easy to understand and reuse.<br><br>
+                    <b style="font-size:x-large">Python Function Declaration</b><br><br>
+                    The syntax to declare a function is:<br><br>
+                    <img src="function1.png" style="margin-left:150px"><br><br>
+                    <b style="font-size:19px">Types of Python Functions:</b><br><br>
+                    <ul style="margin-left:50px">
+                        <li><b>Built-in library function:</b></li><br>These are Standard functions in Python that are available to use.<br><br>
+                        <li><b>User-defined function: </b></li><br>We can create our own functions based on our requirements.<br><br>
+
+                    </ul>
+                    <b style="font-size:x-large">Creating a Function in Python: </b><br><br>
+                    We can create a user-defined function in Python, using the <b>def </b>keyword.<br><br>
+                    We can add any type of functionalities and properties to it as we require.<br><br>
+                    <img src="fun2.png" style="margin-left:150px"><br><br>
+                    <b>Output:</b><br><br>
+                    <p style="margin-left:60px;color:green">Welcome to GFG</p>
+                 </p>
+            </div>  
+            <div class="d1" id="f2">
+                <h2 class="d1_h2">Function Argument</h2><br><br>
+                <p>
+                    Arguments are the values passed inside the parenthesis of the function.<br><br> A function can have any number of arguments separated by a comma.<br><br>
+
+                    In this example, we will create a simple function in Python to check whether<br><br> the number passed as an argument to the function is even or odd.<br><br>
+                    <b style="font-size:19px">Types of Python Function Arguments</b><br><br>
+                    <ul style="margin-left:50px" >
+                        <li>Default argument</li><br><br>
+                            
+                        <li>Keyword arguments (named arguments)</li> <br><br>   
+                        <li>Positional arguments</li>    <br><br>
+                        <li>Arbitrary arguments (variable-length arguments *args and **kwargs)</li> <br><br>
+
+                        
+                    </ul>
+                    <img src="fun3.png" style="margin-left:150px"><br><br>
+                    <b>Output:</b><br><br>
+                    <p style="margin-left:60px;color:green">first == Geeks<br><br>
+                    mid == for<br><br>
+                    last == Geeks<br><br>
+                    </p>
+                </p>
+            </div>
+            <div class="d1" id="f3">
+                <h2 class="d1_h2">Python Recursion</h2><br><br>
+                <p>
+                    Recursion is the process of defining something in terms of itself.<br><br>
+
+                    A physical world example would be to place two parallel mirrors facing each other.<br><br>
+                    Any object in between them would be reflected recursively.<br><br>
+                    <b style="font-size:19px">Python Recursive Function</b><br><br>
+                    In Python, we know that a function can call other functions. It is even possible for the function to call itself. <br><br>
+                    These types of construct are termed as recursive functions.<br><br>
+
+                    The following image shows the working of a recursive function called recurse.<br><br>
+                    <img src="fun5.png" style="margin-left:150px"><br><br>
+                    Following is an example of a recursive function to find the factorial of an integer.<br><br>
+                    Factorial of a number is the product of all the integers from 1 to that number.<br><br>
+                    For example, the factorial of 6 (denoted as 6!) is 1*2*3*4*5*6 = 720.<br><br>
+                    <b style="font-size:19px">Example Of Recursive Function</b><br><br>
+                    <img src="fun6.png" style="margin-left:150px"><br><br>
+                    <b>Output:</b><br><br>
+                    <img src="fun7.png" style="margin-left:150px"><br><br>
+                </p>
+            </div>
+            <div class="d1" id="f4">
+                <h2 class="d1_h2">Anonymous Function</h2><br><br>
+                <p>
+                    In Python, an anonymous function means that a function is without a name. <br><br>
+                    As we already know the def keyword is used to define the normal functions and the lambda keyword is used to create anonymous functions.<br><br>
+                </p>
+                <img src="fun4.png" style="margin-left:150px"><br><br>
+                <b>Output:</b><br><br>
+                <p style="margin-left:60px;color:green">
+                343<br><br>
+                343<br><br>
+                </p>
+
+            </div>
+            <div class="d1" id="f5">
+                <h2 class="d1_h2">Python Variable Scope</h2><br><br>
+                <p>
+                    In Python, we can declare variables in three different scopes: local scope, global, and nonlocal scope.<br><br>
+
+                    A variable scope specifies the region where we can access a variable.<br><br>
+                    Based on the scope, we can classify Python variables into three types:<br><br>
+                    <o1 type="1">
+                        <li> Local Variables</li><br><br>
+                        <li>Global Variables</li><br><br>
+                        <li>Nonlocal Variables</li><br><br>
+                    </o1>
+                    <b style="font-size:19px">Python Local Variables</b><br><br>
+                    When we declare variables inside a function, these variables will have a local scope (within the function). <br><br>
+                    We cannot access them outside the function.
+
+                    These types of variables are called local variables.<br><br>
+                    For example,<br><br>
+                    <img src="loc1.png" style="margin-left:150px"><br><br>
+                    <b>Output:</b><br><br>
+                    <img src="loc2.png" style="margin-left:150px"><br><br>
+                    <b style="font-size:19px">Python Global Variables</b><br><br>
+                    In Python, a variable declared outside of the function or in global scope is known as a global variable. <br><br>
+                    This means that a global variable can be accessed inside or outside of the function.<br><br>
+
+                    Let's see an example of how a global variable is created in Python.<br><br>
+                    For example,<br><br>
+                    <img src="glo1.png" style="margin-left:150px"><br><br>
+                    <b>Output:</b><br><br>
+                    <img src="glob2.png" style="margin-left:150px"><br><br>
+                    <b style="font-size:19px">Python Non-Local Variables</b><br><br>
+                    In Python, nonlocal variables are used in nested functions whose local scope is not defined. <br><br>
+                    This means that the variable can be neither in the local nor the global scope.
+
+                    We use the nonlocal keyword to create nonlocal variables.<br><br>For example,<br><br>
+                    <img src="non1.png" style="margin-left:150px"><br><br>
+                    <b>Output:</b><br><br>
+                    <img src="non2.png" style="margin-left:150px"><br><br>
+                </p>
+            </div>    
+        </div>
+    </body>
+</html> 

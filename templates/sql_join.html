@@ -1,0 +1,434 @@
+<html>
+    <head>
+        <title>SQL JOIN</title>
+  
+        <style>
+		/*-----------------navbar--------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    background: rgb(169, 51, 216);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+.logo{
+    margin-left:20px;
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700px;
+
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;
+    
+    
+    
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+} 
+.navbar a:hover::before{
+    width: 100%;
+    
+
+}
+/*------------------menu bar--------------------------*/
+
+
+.sidebar{
+    position: fixed;
+    background:rgb(238, 222, 238);
+    width: 250px;
+    height: 100%;
+    top: 75px;
+    left: 0;
+    z-index:1;
+    padding-top:18px;
+}  
+.sidebar h3{
+    text-align:center;
+    font-size:19px;
+    text-transform: uppercase;
+    color:rgb(143, 11, 143);
+    
+}
+.sidebar li{
+    margin-left: 20px;
+    margin-top:35px;
+}
+.sidebar ul li a:hover{
+    color:rgb(204, 130, 56);
+    transition: 0.4s;
+    margin-left: 20px;
+}
+.main{
+
+    margin-top:76px;
+    margin-left: 250px;
+    background-color: rgb(238, 230, 238);
+    padding-left:15px;
+    padding-top: 20px;
+}
+.d1{
+    padding-top: 80px;
+}
+.d1_h2{
+    margin-bottom: 20px;
+    font-size: 38px;
+}
+.image1{
+    margin-left:70px;
+}
+.application{
+    margin-left:70px;
+}
+.keywords{
+    margin-left:70px;
+}
+.comments{
+	color: green;
+}
+            body{
+                color: rgb(85,34,133);
+                overflow-x: hidden;
+            }
+            h1,h2,h3{
+                color: rgb(85,34,133);
+            }
+            h1{
+                font-weight: 900;
+                font-size: 33px;
+            }
+            h2{
+                font-weight: 800;
+                font-size: 25px;
+            }
+            h3{
+                font-weight: 700;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <a href="se_home.php" class="logo" style="margin-right:30px;">Light<span style="color:aqua;">Code</span></a>
+            <nav class="navbar">
+                <a href="sql_intro.html">Introduction</a>
+                <a href="sql_sel1.html">SQL SELECT(I)</a>
+                <a href="sql_sel2.html" >SQL SELECT(II)</a>
+                <a href="sql_join.html" >SQL JOIN</a>
+                <a href="sql_database.html" >SQL Database</a>
+                <a href="sql_in_del.html" >SQL Insert and Delete</a>
+		<a href="sql_interview/interview.html">Examples</a>
+            </nav>
+        </header>
+        <div class="sidebar">
+            <h3>SQL JOIN</h3>
+            <ul class="nav" type="circle">
+                <li><a href="#d1">SQL JOIN</a></li>
+                <li><a href="#d2">SQL INNER JOIN</a></li>
+                <li><a href="#d3">SQL LEFT JOIN</a></li>
+                <li><a href="#d4">SQL RIGHT JOIN</a></li>
+                <li><a href="#d5">SQL FULL OUTER JOIN</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <!--D1-->
+            <div class="d1" id="d1">
+                <h1>SQL JOIN</h1><br>
+                The SQL JOIN joins two tables based on a common column and selects records that have matching values in these columns.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color:magenta">
+SELECT columns_from_both_tables
+FROM table1
+JOIN table2
+ON table1.column1 = table2.column2                    
+
+                </pre>
+<pre>
+Here,
+
+table1 and table2 are the two tables that are to be joined
+
+column1 is the column in table1 that is related to column2 in table2
+
+</pre>
+        <h3>Example:</h3>
+        <pre style="color: magenta;">
+<span class="comments">
+-- join Customers and Orders tables based on
+-- customer_id of Customers and customer column of Orders
+</span>
+SELECT Customers.customer_id, Customers.first_name, Orders.amount
+FROM Customers
+JOIN Orders
+ON Customers.customer_id = Orders.customer;
+
+        </pre>
+        <b>Output:</b><br><br>
+        <center><img src="sel2/Screenshot from 2023-12-15 21-17-48.png"></center><br><br>
+        <h2>SQL JOIN and Aliases</h2><br>
+        We can use AS aliases with table names to make our query short and clean. For example,<br><br>
+        <pre style="color:magenta">
+<span class="comments">
+-- use alias C for Customers table
+-- use alias O for Orders table    
+</span>
+SELECT C.customer_id, C.first_name, O.amount
+FROM Customers AS C
+JOIN Orders AS O
+ON C.customer_id = O.customer;
+
+</pre>
+        Here, the SQL command joins the Customers and Orders tables while assigning the aliases C and O to them, respectively.<br><br>
+            </div>
+            <!--D2-->
+            <div class="d1" id="d2">
+                <h1>SQL INNER JOIN</h1><br>
+                The SQL INNER JOIN command joins two tables based on a common column and selects rows with matching values in those columns.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color: magenta;">
+SELECT columns_from_both_tables
+FROM table1
+INNER JOIN table2
+ON table1.column1 = table2.column2                    
+                </pre>
+                <pre>
+Here,
+
+table1 and table2 are the two tables that are to be joined
+
+column1 is a column in table1 and column2 in a column in table2
+
+                </pre>
+                <h3>Note:</h3><br>
+                <span style="color: rgb(237, 66, 66);">
+                    We can use JOIN instead of INNER JOIN. Basically, these two clauses perform the same task.
+                </span><br><br>
+                <h3>Example:</h3>
+                <pre style="color:magenta">
+<span class="comments">
+-- join the Customers and Orders tables when
+-- the customer_id from Customers matches the customer column in Orders
+</span>
+SELECT Customers.customer_id, Customers.first_name, Orders.amount
+FROM Customers
+JOIN Orders
+ON Customers.customer_id = Orders.customer;
+
+</pre>
+            <b>Output:</b><br><br>
+            <center><img src="sel2/Screenshot from 2023-12-15 21-29-14.png"></center><br><br>
+            <h2>INNER JOIN With WHERE Clause</h2><br>
+            We can use the WHERE clause in conjunction with an INNER JOIN to further filter the rows in the output.<br><br>
+            <h3>Example:</h3>
+            <pre style="color:magenta">
+<span class="comments">
+-- join tables the Customers and Orders tables
+-- return rows if amount is 500 or higher
+</span>
+SELECT Customers.customer_id, Customers.first_name, Orders.amount
+FROM Customers
+INNER JOIN Orders
+ON Customers.customer_id = Orders.customer
+WHERE Orders.amount >= 500;
+
+            </pre>
+            <h2>SQL INNER JOIN With Three Tables</h2><br><br>
+            We can also join more than two tables using INNER JOIN. For example<br>
+            <pre style="color: magenta;">
+<span class="comments">
+-- join three tables: Customers, Orders, and Shippings
+</span>                
+SELECT C.customer_id, C.first_name, O.amount, S.status
+FROM Customers AS C
+INNER JOIN Orders AS O
+ON C.customer_id = O.customer
+INNER JOIN Shippings AS S
+ON C.customer_id = S.customer;                
+            </pre>
+            <pre>
+Here, the SQL command
+
+joins Customers and Orders tables based on customer_id (from the Customers table) and customer (from the Orders table)
+
+and joins Customers and Shippingss tables based on customer_id (from the Customers table) and customer (from the Shippings table)
+            </pre>
+            </div>
+            <!--D3-->
+            <div class="d1" id="d3">
+                <h1>SQL LEFT JOIN</h1><br>
+                The SQL LEFT JOIN joins two tables based on a common column. It selects records that have matching values in these columns and the remaining rows from the left table.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color:magenta">
+SELECT columns_from_both_tables
+FROM table1
+LEFT JOIN table2
+ON table1.column1 = table2.column2
+
+                </pre>
+                <pre>
+Here,
+
+table1 is the left table to be joined
+
+table2 is the right table to be joined
+
+column1 and column2 are the related columns in the two tables                    
+
+                </pre>
+                <h3>Example:</h3><br>
+                <pre style="color:magenta">
+<span class="comments">
+-- left join the Customers and Orders tables
+</span>                    
+SELECT Customers.customer_id, Customers.first_name, Orders.amount
+FROM Customers
+LEFT JOIN Orders
+ON Customers.customer_id = Orders.customer;
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel2/Screenshot from 2023-12-15 21-47-30.png"></center><br><br>
+                <h2>LEFT JOIN With WHERE Clause</h2><br>
+                The SQL LEFT JOIN statement can have an optional WHERE clause. For example,<br><br>
+<pre style="color:magenta">
+SELECT Customers.customer_id, Customers.first_name, Orders.amount
+FROM Customers
+LEFT JOIN Orders
+ON Customers.customer_id = Orders.customer
+WHERE Orders.amount >= 500;
+                    
+                </pre>
+                Here, the SQL command joins the Customers and Orders tables and selects rows where the amount is greater than or equal to 500.<br><br>
+            </div>
+            <!--D4-->
+            <div class="d1" id="d4">
+                <h1>SQL RIGHT JOIN</h1><br>
+                The SQL RIGHT JOIN statement joins two tables based on a common column. It selects records that have matching values in these columns and the remaining rows from the right table.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color:magenta">
+SELECT columns_from_both_tables
+FROM table1
+RIGHT JOIN table2
+ON table1.column1 = table2.column2
+
+                </pre>
+                <pre>
+Here,
+
+table1 is the left table to be joined
+
+table2 is the right table to be joined
+
+column1 and column2 are the related columns in the two tables
+
+                </pre>
+                <h3>Example:</h3>
+                <pre style="color:magenta">
+<span class="comments">
+-- join Customers and Orders tables
+-- based on customer_id of Customers and customer of Orders
+-- Customers is the left table
+-- Orders is the right table
+</span>                    
+SELECT Customers.customer_id, Customers.first_name, Orders.amount
+FROM Customers
+RIGHT JOIN Orders
+ON Customers.customer_id = Orders.customer;
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel2/Screenshot from 2023-12-15 21-59-35.png"></center><br><br>
+                <h2>RIGHT JOIN With WHERE Clause</h2><br>
+                <h3>Example:</h3>
+                <pre style="color:magenta">
+<span class="comments">
+Here, the SQL command joins the Customers and Orders tables and selects rows where the amount is greater than or equal to 500.
+</span>
+SELECT Customers.customer_id, Customers.first_name, Orders.amount
+FROM Customers
+RIGHT JOIN Orders
+ON Customers.customer_id = Orders.customer
+WHERE Orders.amount >= 500;                  
+                </pre>
+            </div>
+            <!--D5-->
+            <div class="d1" id="d5">
+                <h1>SQL FULL OUTER JOIN</h1><br>
+                The SQL FULL OUTER JOIN statement joins two tables based on a common column. It selects records that have matching values in these columns and the remaining rows from both of the tables.<br><br>
+                <h3>Syntax:</h3><br>
+<pre style="color:magenta">
+SELECT columns
+FROM table1
+FULL OUTER JOIN table2
+ON table1.column1 = table2.column2;                    
+
+</pre>
+<pre>
+Here,
+
+table1 and table2 are the tables to be joined
+
+column1 and column2 are the related columns in the two tables
+
+</pre>
+                <h3>Example:</h3><br>
+                <pre style="color:magenta">
+SELECT Customers.customer_id, Customers.first_name, Orders.amount
+FROM Customers
+FULL OUTER JOIN Orders
+ON Customers.customer_id = Orders.customer;                    
+
+</pre>
+<pre>
+Here, the SQL command selects the customer_id and first_name columns (from the Customers table) and the amount column (from the Orders table).
+    
+The result set will contain all rows of both the tables, regardless of whether there is a match between customer_id (of the Customers table) and customer (of the Orders table).
+
+</pre>
+            <b>Output:</b><br><br>
+            <center><img src="sel2/Screenshot from 2023-12-16 21-39-52.png"></center>
+            <center><img src="sel2/Screenshot from 2023-12-16 21-40-49.png"></center><br><br>
+            <h2>FULL OUTER JOIN With WHERE Clause</h2><br>
+
+            The SQL FULL OUTER JOIN statement can have an optional WHERE clause. For example,<br><br>
+            <h3>Example:</h3><br>
+            <pre style="color:magenta">
+SELECT Customers.customer_id, Customers.first_name, Orders.amount
+FROM Customers
+FULL OUTER JOIN Orders
+ON Customers.customer_id = Orders.customer
+WHERE Orders.amount >= 500;                
+            </pre>
+            Here, the SQL command joins two tables and selects rows where the amount is greater than or equal to 500.<br><br>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,292 @@
+<html>
+    <head>
+        <style>
+	*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+
+}
+p{
+    font-size: 19px;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    background: rgb(169, 51, 216);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+.logo{
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;
+    
+    
+    
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+} 
+.navbar a:hover::before{
+    width: 100%;
+    
+
+}
+/*------------------menu bar--------------------------*/
+
+
+.sidebar{
+    position: fixed;
+    background:rgb(238, 222, 238);
+    width: 300px;
+    height: 100%;
+    top: 75px;
+    left: 0;
+    z-index:1;
+    padding-top:18px;
+}  
+.sidebar h3{
+    
+    font-size:19px;
+    text-transform: uppercase;
+    color:rgb(143, 11, 143);
+    
+}
+.sidebar li{
+    margin-left: 20px;
+    margin-top:35px;
+}
+.sidebar ul li a:hover{
+    color:rgb(204, 130, 56);
+    transition: 0.4s;
+    margin-left: 20px;
+}
+.control{
+    margin-top:76px;
+    margin-left: 300px;
+    background-color: rgb(238, 230, 238);
+    padding-left:15px;
+    padding-top: 20px;
+}
+.main{
+    margin-left: 50px;
+}
+.sub{
+    margin-left: 80px;
+    font-size: 19px;
+}
+.img{
+    margin-left: 30px;
+}
+</style>
+    <title>Java control flow</title>
+    </head>
+    <body>
+        <header class="header">
+            <a href="se_home.php" class="logo">Light<span style="color:aqua;">Code</style></a>
+            <nav class="navbar">
+                 <a href="java.html">Introduction</a>
+                <a href="java_con.html">Flow Control</a>
+                <a href="java_object.html" >Object Class</Object></a>
+                <a href="java_inheritence.html" >Inheritance</a>
+                <a href="polymorphism.html" >Polymorphism</a>
+                <a href="Abstraction.html" >Abstraction</a>
+                <a href="Encapsulation.html" >Encapsulation</a>
+                <a href="java_ex.html" >Examples</a>
+            </nav>
+        </header>
+        <div class="sidebar">
+            <h3>Flow Control</h3>
+            <ul class="nav" type="circle">
+                <li ><a href="#1">if-else statements</a></li>
+                <li ><a href="#1">switch statements</a></li>
+                <li ><a href="#3">for loop</a></li>
+                <li ><a href="#4">while loop</a></li>
+                <li ><a href="#5">do while loop</a></li>
+                <li ><a href="#6">for each</a></li>
+                <li ><a href="#7">break statement</a></li>
+                <li ><a href="#8">continue statement</a></li>
+            </ul>
+        </div>
+        <div class="control">
+            <br><br><br><br><br>
+            <h2 class="d1_h2"  style="color: rgb(85,34,133); font-size: 27px;">Control Flow Statements</h2><br>
+            <p>
+
+                The statements inside your source files are generally executed from top to bottom, in the order that they appear. Control <p style="margin-top: 5px;">flow statements, however, break up the flow of execution by employing decision making, looping, and branching, </p><p style="margin-top: 5px;">enabling your program to conditionally execute particular blocks of code. This section describes the decision-making </p><p style="margin-top: 5px;">statements (if-then, if-then-else, switch), the looping statements (for, while, do-while), and the branching statements</p> <p style="margin-top: 5px;">(break, continue, return) supported by the Java programming language.</p></p>
+            </p><br><br>
+            <p>Java provides three types of control flow statements.</p><br><br>
+            <p class="main" style="font-size: 20px;">1.Decision Making statements</p><br>
+            <div class="sub">
+                 Simple if statement<br><br>
+                 if-else statement<br><br>
+                 if...else if…else statement<br><br>
+                 Nested if-statement<br><br>
+                 switch statement<br> 
+            </div><br>
+            <p class="main" style="font-size: 20px;">2.Loop statements</p><br>
+            <div class="sub">
+                 do while loop<br><br>
+                 while loop<br><br> 
+                 for loop<br><br>
+                 for-each loop<br><br>
+            </div>
+            <p class="main" style="font-size: 20px;">3.Branching Statements</p><br>
+            <div class="sub">
+                 break statement<br><br>
+                 continue statement<br><br>   
+            </div><br><br>
+            <h3 id="1" style="color: rgb(85,34,133); font-size: 23px;">Decision Making in Java</h3><br>
+            <p>Decision-making statements are statements that decides what to execute and when. They are similar to decision <p style="margin-top: 5px;">making in real-time. Control flow statements control the flow of a program’s execution. Here flow of execution will be </p><p style="margin-top: 5px;">based on the state of a program. We have 4 decision-making statements available in Java.</p></p>
+            <br><br>
+             
+            <h3 style="color: rgb(85,34,133); font-size: 20px;">1.Simple if statement</h3><br>
+            <p>Simple if the statement is the basis of decision-making statements in Java. It decides if a certain amount of code should be executed based on the condition. </p><br>
+            <h3>Syntax:</h3><br>
+            <img class="img" src="c1.png"><br><br>
+            <h3>Example:</h3><br>
+            <img class="img" src="c2.png"><br><br>
+            <h3>Output:</h3><br>
+            <small style="font-size: 17px;" class="img">After if statement</small> <br><br><br>
+
+
+            <h3 style="color: rgb(85,34,133); font-size: 20px;">2.if-else Statement</h3><br>
+            <p>In if…else statement, if the condition is true then statements in if block will be executed but if it comes out as false then else block will be executed. </p><br>
+            <h3>Syntax:</h3><br>
+            <img class="img" src="c3.png"><br><br>
+            <h3>Example:</h3><br>
+            <img class="img" src="c4.png"><br><br>
+            <h3>Output:</h3><br>
+            <small style="font-size: 17px;" class="img">i is less than 10<br>&emsp;&nbsp;&nbsp;
+                After if else statement</small> <br><br><br>
+
+
+            <h3 style="color: rgb(85,34,133); font-size: 20px;">3.if-else if-else statement</h3><br>
+            <p>if…else if statements will be used when we need to compare the value with more than 2 conditions. They are executed from top to bottom approach. As soon as the code finds the matching condition, that block will be executed. But if no condition is matching then the last else statement will be executed.</p><br>
+            <h3>Syntax:</h3><br>
+            <img class="img" src="c5.png"><br><br>
+            <h3>Example:</h3><br>
+            <img class="img" src="c6.png"><br><br>
+            <h3>Output:</h3><br>
+            <small style="font-size: 17px;" class="img">i is less than 10<br> &emsp;&nbsp;&nbsp;
+                After if else if ladder statement</small> <br><br><br>
+
+            <h3 style="color: rgb(85,34,133); font-size: 20px;">4.Nested if statement</h3><br>
+            <p>Nested if statement is if inside an if block. It is same as normal if…else statement but they are written inside another if…else statement. </p><br>
+            <h3>Syntax:</h3><br>
+            <img class="img" src="c7.png"><br><br>
+            <h3>Example:</h3><br>
+            <img class="img" src="c8.png"><br><br>
+            <h3>Output:</h3><br>
+            <small style="font-size: 17px;" class="img">i is greater than 10 and odd number <br>&emsp;&nbsp;&nbsp;
+                After nested if statement</small> <br><br><br>
+
+
+            <h3 id="2" style="color: rgb(85,34,133); font-size: 20px;">5.Switch statement</h3><br>
+            <p>Java switch statement compares the value and executes one of the case blocks based on the condition. It is same as if…else if ladder. Below are some points to consider while working with switch statements:</p><br>
+            <div class="sub">
+                 case value must be of the same type as expression used in switch statement<br><br>
+                 case value must be a constant or literal. It doesn’t allow variables<br><br>
+                 case values should be unique. If it is duplicate, then program will give compile time error<br><br>
+    
+            </div><br>
+
+            
+            <h3>Let us understand it through one example.</h3><br>
+            <img class="img" src="c9.png"><br><br>
+            <h3>Output:</h3><br>
+            <small style="font-size: 17px;" class="img">i is greater than 10 and odd number <br>&emsp;&nbsp;&nbsp;
+                After nested if statement</small> <br><br><br>
+
+
+            <h3 style="color: rgb(85,34,133); font-size: 23px;">Looping Statements in Java</h3><br>
+            <p>Looping statements are the statements which executes a block of code repeatedly until some condition meet to the criteria. Loops can be considered as repeating if statements. There are 3 types of loops available in Java.<p style="margin-top: 5px;">making in real-time. Control flow statements control the flow of a program’s execution. Here flow of execution will be </p><p style="margin-top: 5px;">based on the state of a program. We have 4 decision-making statements available in Java.</p></p>
+            <br><br>
+
+            <h3 id="3" style="color: rgb(85,34,133); font-size: 20px;">While</h3><br>
+            <p>While loops are simplest kind of loop. It checks and evaluates the condition and if it is true then executes the body of loop. This is repeated until the condition becomes false. Condition in while loop must be given as a Boolean expression. If int or string is used instead, compile will give the error.</p><br>
+            <h3>Syntax:</h3><br>
+            <img class="img" src="c10.png"><br><br>
+            <h3>Example:</h3><br>
+            <img class="img" src="c11.png"><br><br>
+            <h3>Output:</h3><br>
+            <img class="img" src="c12.png"><br><br><br>
+            
+
+            
+            <h3 id="4" style="color: rgb(85,34,133); font-size: 20px;">Do-while</h3><br>
+            <p>Do…while works same as while loop. It has only one difference that in do…while condition is checked after the execution of the loop body. That is why this loop is considered as exit control loop. In do…while loop, body of loop will be executed at least once before checking the condition</p><br>
+            <h3>Syntax:</h3><br>
+            <img class="img" src="c13.png"><br><br>
+            <h3>Example:</h3><br>
+            <img class="img" src="c14.png"><br><br>
+            <h3>Output:</h3><br>
+            <p class="img">10</p><br><br><br>
+            
+
+
+            <h3 id="2" style="color: rgb(85,34,133); font-size: 20px;">For</h3><br>
+            <p>It is the most common and widely used loop in Java. It is the easiest way to construct a loop structure in code as initialization of a variable, a condition and increment/decrement are declared only in a single line of code. It is easy to debug structure in Java.</p><br>
+            <h3>Syntax:</h3><br>
+            <img class="img" src="c15.png"><br><br>
+            <h3>Example:</h3><br>
+            <img class="img" src="c16.png"><br><br>
+            <h3>Output:</h3><br>
+            <img class="img" src="c17.png"><br><br><br>
+            
+
+
+            <h3 id="5" style="color: rgb(85,34,133); font-size: 20px;">For Each</h3><br>
+            <p>For-Each loop is used to traverse through elements in an array. It is easier to use because we don’t have to increment the value. It returns the elements from the array or collection one by one.</p><br>
+            
+            <h3>Example:</h3><br>
+            <img class="img" src="c18.png"><br><br>
+            <h3>Output:</h3><br>
+            <img class="img" src="c19.png"><br><br><br><br>
+
+            <h3 style="color: rgb(85,34,133); font-size: 23px;">Branching Statements in Java</h3><br>
+            <p>Branching statements jump from one statement to another and transfer the execution flow. There are 3 branching statements in Java.</p><br><br>
+
+
+            <h3 id="6" style="color: rgb(85,34,133); font-size: 20px;">Break</h3><br>
+            <p>Break statement is used to terminate the execution and bypass the remaining code in loop. It is mostly used in loop to stop the execution and comes out of loop. When there are nested loops then break will terminate the innermost loop.</p><br>
+            <h3>Example:</h3><br>
+            <img class="img" src="c20.png"><br><br>
+            <h3>Output:</h3><br>
+            <img class="img" src="c21.png"><br><br><br>
+
+
+
+            <h3 id="7" style="color: rgb(85,34,133); font-size: 20px;">Continue</h3><br>
+            <p>Continue statement works same as break but the difference is it only comes out of loop for that iteration and continue to execute the code for next iterations. So it only bypasses the current iteration.</p><br>
+            <h3>Example:</h3><br>
+            <img class="img" src="c22.png"><br><br>
+            <h3>Output:</h3><br>
+            <img class="img" src="c23.png"><br><br><br><br>      
+        </div>
+    </body>
+</html>

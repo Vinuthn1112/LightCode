@@ -1,0 +1,764 @@
+<html>
+    <head>
+        <title>SQL SELECT(II)</title>
+ 
+        <style>
+/*-----------------navbar--------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    background: rgb(169, 51, 216);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+.logo{
+    margin-left:20px;
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700px;
+
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;
+    
+    
+    
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+} 
+.navbar a:hover::before{
+    width: 100%;
+    
+
+}
+/*------------------menu bar--------------------------*/
+
+
+.sidebar{
+    position: fixed;
+    background:rgb(238, 222, 238);
+    width: 250px;
+    height: 100%;
+    top: 75px;
+    left: 0;
+    z-index:1;
+    padding-top:18px;
+}  
+.sidebar h3{
+    text-align:center;
+    font-size:19px;
+    text-transform: uppercase;
+    color:rgb(143, 11, 143);
+    
+}
+.sidebar li{
+    margin-left: 20px;
+    margin-top:35px;
+}
+.sidebar ul li a:hover{
+    color:rgb(204, 130, 56);
+    transition: 0.4s;
+    margin-left: 20px;
+}
+.main{
+
+    margin-top:76px;
+    margin-left: 250px;
+    background-color: rgb(238, 230, 238);
+    padding-left:15px;
+    padding-top: 20px;
+}
+.d1{
+    padding-top: 80px;
+}
+.d1_h2{
+    margin-bottom: 20px;
+    font-size: 38px;
+}
+.image1{
+    margin-left:70px;
+}
+.application{
+    margin-left:70px;
+}
+.keywords{
+    margin-left:70px;
+}
+.comments{
+	color: green;
+}
+            body{
+                color: rgb(85,34,133);
+                overflow-x: hidden;
+            }
+            h1,h2,h3{
+                color: rgb(85,34,133);
+            }
+            h1{
+                font-weight: 900;
+                font-size: 33px;
+            }
+            h2{
+                font-weight: 800;
+                font-size: 25px;
+            }
+            h3{
+                font-weight: 700;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <a href="se_home.php" class="logo" style="margin-right:30px;">Light<span style="color:aqua;">Code</span></a>
+            <nav class="navbar">
+                <a href="sql_intro.html">Introduction</a>
+                <a href="sql_sel1.html">SQL SELECT(I)</a>
+                <a href="sql_sel2.html" >SQL SELECT(II)</a>
+                <a href="sql_join.html" >SQL JOIN</a>
+                <a href="sql_database.html" >SQL Database</a>
+                <a href="sql_in_del.html" >SQL Insert and Delete</a>
+		<a href="sql_join.html">Examples</a>
+            </nav>
+        </header>
+        <div class="sidebar">
+            <h3>SQL SELECT(II)</h3>
+            <ul class="nav" type="circle">
+                <li ><a href="#d1">SQL ORDER BY</a></li>
+                <li ><a href="#d2">SQL GROUP BY</a></li>
+                <li ><a href="#d3">SQL LIKE</a></li>
+                <li ><a href="#d4">SQL UNION</a></li>
+                <li ><a href="#d5">SQL Subquery</a></li>
+                <li ><a href="#d6">SQL ANY and ALL</a></li>
+                <li ><a href="#d7">SQL HAVING</a></li>
+                <li><a href="#d8">SQL EXISTS</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <!--D1-->
+            <div id="d1" class="d1">
+                <h1>SQL ORDER BY</h1><br>
+                The ORDER BY clause in SQL is used to sort the result set in ascending or descending order.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color:magenta">
+SELECT column1, column2, ...
+FROM table
+ORDER BY columnA, columnB, ...;                    
+
+                </pre>
+                <pre>
+Here,
+
+column1, column2, ... are the columns to be included in the result set
+
+table is the name of the table from where the rows are selected
+
+columnA, columnB, ... are the column(s) based on which the rows will be ordered
+
+Lets take the Customers table
+
+<center><img src="sel2/Screenshot from 2023-12-15 19-19-25.png"></center>
+
+<b>Example:</b><br>
+                </pre>
+<pre style="color: magenta;">
+<span class="comments">
+-- orders all rows from Customers in ascending order by country
+</span>
+SELECT *
+FROM Customers
+ORDER BY country;
+
+</pre>
+                    <b>Output:</b><br><br>
+                    <center><img src="sel2/Screenshot from 2023-12-15 19-50-22.png"></center><br><br>
+                    <h3>Note: </h3><br><span style="color:orangered"><b>The ORDER BY clause sorts result set in ascending by default, even without the ASC clause.</b></span><br><br>
+                    <h2>ORDER BY DESC (Descending Order)</h2><br>
+                    We use the DESC keyword to sort the selected records in descending order. For example,<br>
+                    <pre style="color: magenta;">
+<span class="comments">
+-- order all rows from Customers in descending order by age
+</span>
+SELECT *
+FROM Customers
+ORDER BY age DESC;
+
+</pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel2/Screenshot from 2023-12-15 19-51-24.png"></center><br><br>
+                <h2>ORDER BY With Multiple Columns</h2><br>
+                We can also use ORDER BY with multiple columns. For example,<br><br>
+                <pre style="color: magenta;">
+<span class="comments">
+-- sort all rows from Customers, first by first_name and then by age
+</span>
+SELECT *
+FROM Customers
+ORDER BY first_name, age;
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel2/Screenshot from 2023-12-15 19-52-12.png"></center><br><br>
+                <h2>ORDER BY With WHERE</h2><br>
+                We can also use ORDER BY with the SELECT WHERE clause. For example,<br><br>
+                <pre style="color: magenta;">
+<span class="comments">
+-- select last_name and age of customers who don't live in the UK
+-- and sort them by last_name in descending order
+</span>
+SELECT last_name, age
+FROM Customers
+WHERE NOT country = 'UK'
+ORDER BY last_name DESC;
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel2/Screenshot from 2023-12-15 19-53-02.png"></center><br><br>
+            </div>
+                <!--D2-->
+                <div class="d1" id="d2">
+                    <h1>SQL GROUP BY</h1><br>
+                In SQL, the GROUP BY clause is used to group rows by one or more columns.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color: magenta;">
+SELECT column1, column2, ...
+FROM table
+GROUP BY columnA, columnB, ...;
+
+                </pre>
+                <pre>
+Here,
+
+column1, column2 ... are the columns of the table
+
+table is the name of the table from where the rows are selected
+
+columnA, columnB ... are the column(s) based on which the rows will be grouped
+
+<b>Example:</b><br>
+                </pre>
+                <pre style="color: magenta;">
+<span class="comments">
+-- count the number of each country and group the rows by country
+</span>
+SELECT country, COUNT(*) AS number
+FROM Customers
+GROUP BY country;
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel2/Screenshot from 2023-12-15 20-06-01.png"></center><br><br>
+                <h3>Note:</h3><br>
+                <span style="color: orangered;">The GROUP BY clause is used in conjunction with aggregate functions such as MIN() and MAX(), SUM() and AVG(), COUNT(), etc.</span><br><br>
+                <b>Example2:</b><br>
+                <pre style="color: magenta;">
+<span class="comments">
+-- select customer_id and sum of amount from Orders
+-- group the result by customer_id
+</span>
+SELECT customer_id, SUM(amount) AS total
+FROM Orders
+GROUP BY customer_id;
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel2/Screenshot from 2023-12-15 20-08-02.png"></center><br><br>
+                <h2>GROUP BY Clause With JOIN in SQL</h2><br>
+                We can also use the GROUP BY clause with the JOIN clause. For example,<br>
+                <pre style="color: magenta;">
+<span class="comments">
+-- join the Customers and Orders tables
+-- select customer_id and first_name from Customers table
+-- also select the count of order ids from Orders table
+-- group the result by customer_id
+</span>
+SELECT Customers.customer_id, Customers.first_name,
+COUNT(Orders.order_id) AS order_count
+FROM Customers
+LEFT JOIN Orders
+ON Customers.customer_id = Orders.customer_id
+GROUP BY Customers.customer_id;
+
+                </pre>
+                <h2>GROUP BY With Multiple Columns</h2><br>
+                GROUP BY can also be used to group rows based on multiple columns. For example,<br><br>
+                <pre style="color: magenta;">
+<span class="comments">
+-- select country, state, and minimum age from Persons table
+-- group by country and state
+</span>
+SELECT country, state, MIN(age) AS min_age
+FROM Persons
+GROUP BY country, state;
+
+                </pre>
+                <h2>GROUP BY With HAVING Clause</h2><br>
+                We can use the GROUP BY clause with the HAVING clause to filter the result set based on aggregate functions. For example,<br><br>
+                <pre style="color: magenta;">
+<span class="comments">
+-- select the customer_id count and country column from Customers
+-- group by country if the count is greater than 1
+</span>
+SELECT COUNT(customer_id), country
+FROM Customers
+GROUP BY country
+HAVING COUNT(customer_id) > 1;
+
+                </pre>
+                <pre>
+Here, the SQL command:
+
+counts the number of rows by grouping them by country
+
+returns the result set if their count is greater than 1
+
+                </pre>
+            </div>
+            <!--D3-->
+            <div class="d1" id="d3">
+                <h1>SQL LIKE</h1><br>
+                The SQL LIKE operator is used with the WHERE clause to get a result set that matches the given string pattern. It has the following syntax:<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color: magenta;">
+SELECT column1, column2, ...
+FROM table
+WHERE column LIKE value;
+
+                </pre>
+                <pre>
+Here,
+
+column1,column2, ... are the columns to select the data from
+
+table is the name of the table
+
+column is the column we want to apply the filter to
+
+LIKE matches the column with value
+
+value is the pattern you want to match in the specified column    
+
+<b>Example:</b>
+</pre>
+<pre style="color: magenta;">
+<span class="comments">
+-- select customers who live in the UK 
+</span>                    
+SELECT *
+FROM Customers
+WHERE country LIKE 'UK';
+
+</pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel2/Screenshot from 2023-12-15 20-11-50.png"></center><br><br>
+                <h2>SQL LIKE With Wildcards</h2><br>
+                The SQL LIKE query is often used with wildcards to match a pattern of string. For example,<br><br>
+                <pre style="color: magenta;">
+<span class="comments">
+-- SQL LIKE query with wildcard
+</span>
+SELECT *
+FROM Customers
+WHERE last_name LIKE 'R%';
+
+                </pre>
+                Here, % (means zero or more characters) is a wildcard character. Hence, the SQL command selects customers whose last_name starts with R followed by zero or more characters after it.<br><br>
+
+                <b>Output:</b><br><br>
+                <center><img src="sel2/Screenshot from 2023-12-15 20-14-07.png"></center><br><br>
+                <b>Example2:</b><br>
+                <pre style="color: magenta;">
+<span class="comments">
+-- select customers whose country names start with U followed by a single character    
+</span>                    
+SELECT *
+FROM Customers
+WHERE country LIKE 'U_';
+
+                </pre>
+                Here, the SQL command selects customers whose country name starts with U followed by exactly one character.<br><br>
+                <h2>SQL NOT LIKE Operator</h2><br>
+                We can also invert the working of the LIKE operator by using the NOT operator with it. This returns a result set that doesn't match the given string pattern.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color: magenta;">
+SELECT column1, column2, ...
+FROM table_name
+WHERE column NOT LIKE value;  
+
+                </pre>
+                <pre>
+Here,
+
+column1,column2, ... are the columns to select the data from
+
+table_name is the name of the table
+
+column is the column we want to apply the filter to
+
+NOT LIKE ignores the match of the column with the value
+
+value is the pattern you don't want to match in the specified column                    
+
+<b>Example:</b>
+
+                </pre>
+                <pre style="color: magenta;">
+<span class="comments">
+-- select customers who don't live in the USA
+</span>                    
+SELECT * FROM Customers
+WHERE country NOT LIKE 'USA';
+
+                </pre>
+                Here, the SQL command selects all customers except those whose country is USA.<br><br>
+            </div>
+            <!--D4-->
+            <div id="d4" class="d1">
+                <h1>SQL UNION</h1><br>
+                In SQL, the UNION operator selects fields from two or more tables.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color:magenta">
+SELECT column1, column2, ...
+FROM table1
+UNION
+SELECT column1, column2, ...
+FROM table2;          
+
+                </pre>
+                <pre>
+Here,
+
+column1,column2, ... are the column names required for the union
+
+table1 and table2 are the names of the tables to fetch the columns from
+
+UNION combines the columns in the tables
+                    
+                </pre>
+                <h3>Note:</h3><br>If the selected columns from the tables contain the same data, those columns are only included once in the result set.<br><br>
+                <h3>Example:</h3><br>
+                <pre style="color: magenta;">
+<span class="comments">
+-- select the union of age columns from two tables Teachers and Students 
+</span>
+SELECT age
+FROM Teachers
+UNION
+SELECT age
+FROM Students;
+
+                </pre>
+                <center><img src="sel2/Screenshot from 2023-12-15 20-15-19.png"></center><br>
+                <b>Output:</b><br><br>
+                <center><img src="sel2/Screenshot from 2023-12-15 20-16-09.png"></center><br><br>
+                <h2>Things to Note While Using UNION</h2><br>
+                <pre>
+To use UNION in SQL, we must always remember,
+
+The column count in all tables must be the same. For example, both the Teachers and Students tables have three columns.
+
+The data types of columns must be the same. For example, the age column in Teachers is integer, so is the age in the Students table.
+
+The columns must be in the same order in each table. For example, the order of columns is id-name-age in both Teachers and Students tables.                    
+
+                </pre>
+                <h2>SQL UNION ALL Operator</h2><br>
+                The UNION ALL operator selects fields from two or more tables similar to UNION. However, unlike UNION, UNION ALL doesn't ignore duplicate fields.<br><br>
+                <h3>Example:</h3>
+                <pre style="color:magenta">
+<span class="comments">
+-- select the union of age from Teachers and Students tables    
+</span>                    
+SELECT age
+FROM Teachers
+UNION ALL
+SELECT age
+FROM Students;
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel2/Screenshot from 2023-12-15 20-17-29.png"></center><br><br>
+            </div>
+            <!--D5-->
+            <div class="d1" id="d5">
+                <h1>SQL Subquery</h1><br>
+                In SQL, it's possible to place a SQL query inside another query. This inner query is known as a subquery.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color:magenta">
+SELECT column FROM  table
+WHERE  column OPERATOR (
+SELECT column FROM table
+                    );   
+
+                </pre>
+                <pre>
+                    Here,
+
+column is the name of the column(s) to filter
+
+OPERATOR is any SQL operator to connect the two queries
+
+table is the name of the table to fetch the column from
+
+                </pre>
+                <h3>Example:</h3><br>
+                <pre style="color: magenta;">
+<span class="comments">
+-- select all the rows from the Customers table with the minimum age
+</span>                    
+SELECT *
+FROM Customers
+WHERE age = (
+  SELECT MIN(age)
+  FROM Customers
+);
+
+                </pre>
+                <pre>
+In a subquery, the outer query's result depends on the result set of the inner subquery. That's why subqueries are also called nested queries.
+
+Here, the SQL command
+
+executes the subquery first; selects the minimum age from the Customers table.
+executes the outer query; selects the rows where age is equal to the result of subquery.
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel2/Screenshot from 2023-12-15 20-18-34.png"></center><br><br>
+                <h2>SQL Subquery with IN Operator</h2><br>
+                Suppose we want the details of customers who have placed an order. Here's how we can do that using a subquery:<br><br>
+                <pre style="color:magenta">
+<span class="comments">
+-- select the customers who have made orders
+</span>
+SELECT customer_id, first_name
+FROM Customers 
+WHERE customer_id IN (
+  SELECT customer_id
+  FROM Orders
+);
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="sel2/Screenshot from 2023-12-15 20-21-54.png"></center><br><br>
+                <pre>
+Here, the SQL command
+
+selects customer_id from the Orders table
+
+select those rows from the Customers table where customer_id is in the result set of the subquery                    
+
+                </pre>
+            </div>
+            <!--D6-->
+            <div class="d1" id="d6">
+                <h1>SQL ANY and ALL</h1><br>
+                <h2>SQL ANY</h2><br>
+                SQL ANY compares a value of the first table with all values of the second table and returns the row if there is a match with any value.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color:magenta">
+SELECT column
+FROM  table1
+WHERE column OPERATOR ANY (
+SELECT column
+FROM table2
+);                    
+
+</pre>
+<pre>
+Here,
+
+column is the name of the column(s) to filter
+
+table1 and table2 are the two tables to compare
+
+OPERATOR is any SQL operator to connect the two queries
+
+ANY compares table1 and table2 to see if there are any matches
+
+</pre>
+            <h3>Example:</h3><br>
+            <pre style="color:magenta">
+<span class="comments">
+Suppose we want to find teachers whose age is similar to any of the student's age    
+</span>
+SELECT *
+FROM Teachers
+WHERE age = ANY (
+  SELECT age
+  FROM Students
+);
+
+            </pre>
+            <b>Output:</b><br><br>
+            <center><img src="sel2/Screenshot from 2023-12-15 20-31-29.png"></center><br><br>
+            <h3>Example:</h3><br>
+            <pre style="color:magenta">
+<span class="comments">
+Let's look at an example where we want teachers whose age is less than any student.
+</span>
+SELECT * 
+FROM Teachers
+WHERE age < ANY (
+  SELECT age
+  FROM Students
+);
+            </pre>
+            <h2>SQL ALL Operator</h2><br>
+            SQL ALL compares a value of the first table with all values of the second table and returns the row if there is a match with all values.<br><br>
+            <h3>Syntax:</h3><br>
+            <pre style="color:magenta">
+SELECT column
+FROM  table1
+WHERE  column OPERATOR ALL (
+SELECT column
+FROM table2
+);                
+            </pre>
+            <pre>
+Here,
+
+column is the name of the column(s) to filter
+
+table1 and table2 are the two tables to compare
+
+OPERATOR is any SQL operator to connect the two queries
+
+ALL compares table1 and table2 to see if all the values match                
+
+            </pre>
+            <h3>Example:</h3><br>
+            <pre style="color:magenta">
+<span class="comments">
+For example, if we want to find teachers whose age is greater than all students, we can
+</span>
+SELECT * 
+FROM Teachers
+WHERE age >  ALL (
+  SELECT age
+  FROM Students
+);
+
+</pre>
+            <b>Output:</b><br><br>
+            <center><img src="sel2/Screenshot from 2023-12-15 20-40-50.png"></center><br><br>
+            </div>
+            <!--D7-->
+            <div class="d1" id="d7">
+            <h1>SQL HAVING</h1><br>
+            The SQL HAVING clause is used if we need to filter the result set based on aggregate functions such as MIN() and MAX(), SUM() and AVG(), and COUNT().<br><br>
+            <h3>Syntax:</h3><br>
+            <pre style="color: magenta;">
+SELECT AggFunc(column), extra_columns
+FROM table
+GROUP BY target_column
+HAVING condition                
+
+            </pre>
+<pre>
+Here,
+
+AggFunc(column) refers to any aggregate function applied to a column
+
+extra_columns are other extra columns to filter
+
+GROUP BY groups the data by target_column
+
+HAVING condition compares the column to certain conditions that require filtering
+    
+</pre>
+    <h3>Example:</h3>
+<pre style="color:magenta">
+<span class="comments">
+-- select the count of customer ids greater than one and their corresponding country     
+</span>
+SELECT COUNT(customer_id), country
+FROM Customers
+GROUP BY country
+HAVING COUNT(customer_id) > 1;
+
+</pre>
+            <b>Output:</b><br><br>
+            <center><img src="sel2/Screenshot from 2023-12-15 20-49-09.png"></center><br><br>
+            <h3>Example 2:</h3>
+            <pre style="color: magenta;">
+<span class="comments">
+we can use an aggregate function like SUM to calculate the sum of amounts in the order table and get the total order value of less than 500 for each customer:    
+</span>                            
+SELECT customer_id, SUM(amount) AS total
+FROM Orders
+GROUP BY customer_id
+HAVING SUM(amount) < 500;
+
+            </pre>
+            </div>
+            <!--D8-->
+            <div class="d1" id="d8">
+                <h1>SQL EXISTS</h1><br>
+                The SQL EXISTS operator tests the existence of any value in a subquery i.e. it executes the outer SQL query only if the subquery is not NULL (empty result-set).<br><br>
+                <h3>Syntax</h3><br>
+                <pre style="color:magenta">
+SELECT column1, column2, ...
+FROM table
+WHERE EXISTS(SUBQUERY);
+
+                </pre>
+                <pre>
+Here,
+
+column1, column2, ... are the column names to filter
+
+table refers to the name of the table
+
+EXISTS tests the result of the subquery
+
+SUBQUERY can be any SQL query                    
+
+                </pre>
+                <h3>Example:</h3>
+                <pre style="color:magenta">
+<span class="comments">
+-- select customer id and first name of customers from Customers table
+-- if the customer id exists in the Orders table    
+</span>                    
+SELECT customer_id, first_name
+FROM Customers
+WHERE EXISTS (
+  SELECT order_id
+  FROM Orders
+  WHERE Orders.customer_id = Customers.customer_id
+);
+                </pre>
+                <b>Output:</b><br><br>
+            <center><img src="sel2/Screenshot from 2023-12-15 21-00-00.png"></center><br><br>
+            </div>
+        </div>
+    </body>
+</html>

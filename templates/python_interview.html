@@ -1,0 +1,293 @@
+<html>
+    <head>
+        <title>Python Interview Questions</title>
+        <link rel="stylesheet" href="style1.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo">Light<span style="color: aqua;">Code</span></a>
+            <nav class="navbar">
+                <a href="#">Introduction</a>
+                <a href="#">Flow control</a>
+                <a href="#" >Functions</a>
+                <a href="#" >File Handling</a>
+                <a href="#" >class&objects</a>
+                <a href="#" >Examples</a>
+            </nav>
+       </header>
+
+       <div class="sidebar">
+        <h3>PYTHON</h3>
+        <ul class="nav">
+            <li type="circle"><a href="#d1">Introduction to Python </a></li>
+            <li type="circle"><a href="#d2">Basic Interview Questions </a></li>
+            <li type="circle"><a href="#d3">Intermediate Interview Questions</a></li>
+            <li type="circle"><a href="#d4">Advanced Interview Questions</a></li>
+        </ul>
+    </div>
+
+        <div class="intro" id="d1">
+            <p class="para" style="color: blue;">
+                <b>Introduction to Python:</b> <br><br>
+                Python was developed by Guido van Rossum and was released first on February 20, 1991. It is one of the most widely used and loved programming languages and is interpreted in nature thereby providing flexibility in incorporating dynamic semantics. It is also a free and open-source language with very simple and clean syntax. This makes it easy for developers to learn Python. Python also supports object-oriented programming and is most commonly used to perform general-purpose programming. <br><br>
+                Due to its simplistic nature and the ability to achieve multiple functionalities in fewer lines of code, python’s popularity is growing tremendously. Python is also used in Machine Learning, Artificial Intelligence, Web Development, Web Scraping, and various other domains due to its ability to support powerful computations using powerful libraries. Due to this, there is a huge demand for Python developers in India and across the world. Companies are willing to offer amazing perks and benefits to these developers. <br><br>
+                In this article, we will see the most commonly asked Python interview questions and answers which will help you excel and bag amazing job offers.
+            </p>
+        </div><br>
+
+        <div class="interview">
+            <h1 id="d2"> Basic Interview Questions:</h1> <br><br>
+            <h4 >Q1:What is Python? List some popular applications of Python in the world of technology.</h4>
+            <p>
+                Python is a widely-used general-purpose, high-level programming language. It was created by Guido van Rossum in 1991 and further developed by the Python Software Foundation. It was designed with an emphasis on code readability, and its syntax allows programmers to express their concepts in fewer lines of code.
+                    It is used for:  
+                    <ul>
+                        <li>System Scripting</li>
+                        <li>Web Development</li>
+                        <li>Game Development</li>
+                        <li>Software Development</li>
+                        <li>Complex Mathematics</li>
+                    </ul>
+            </p>
+
+            <h4>Q2:What are the benefits of using Python language as a tool in the present scenario?</h4>
+            <p>The following are the benefits of using Python language:
+                <ul>
+                    <li>Object-Oriented Language</li>
+                    <li>High-Level Language</li>
+                    <li>Dynamically Typed language</li>
+                    <li>Extensive support Libraries</li>
+                    <li>Presence of third-party modules</li>
+                    <li>Open source and community development</li>
+                    <li>Portable and Interactive</li>
+                    <li>Portable across Operating systems</li>
+                </ul>
+            </p>
+
+            <h4>Q3:Is Python a compiled language or an interpreted language?</h4>
+            <p>Actually, Python is a partially compiled language and partially interpreted language. The compilation part is done first when we execute our code and this will generate byte code internally this byte code gets converted by the Python virtual machine(p.v.m) according to the underlying platform(machine+operating system).</p>
+
+            <h4>Q4:What does the ‘#’ symbol do in Python?</h4>
+            <p>‘#’ is used to comment on everything that comes after on the line</p>
+
+            <h4>Q5:What is the difference between a Mutable datatype and an Immutable data type?</h4>
+            <p>Mutable data types can be edited i.e., they can change at runtime. Eg – List, Dictionary, etc.
+                Immutable data types can not be edited i.e., they can not change at runtime. Eg – String, Tuple, etc.</p>
+
+            <h4>Q6:How are arguments passed by value or by reference in Python?</h4>
+            <p>Everything in Python is an object and all variables hold references to the objects. The reference values are according to the functions; as a result, you cannot change the value of the references. However, you can change the objects if it is mutable.</p>
+
+            <h4>Q7:What is the difference between a Set and Dictionary?</h4>
+            <p>The set is an unordered collection of data types that is iterable, mutable and has no duplicate elements.
+                A dictionary in Python is an ordered collection of data values, used to store data values like a map.</p>
+
+            <h4>Q8:What is List Comprehension? Give an Example.</h4>
+            <p>List comprehension is a syntax construction to ease the creation of a list based on existing iterable.<br><br>
+
+                For Example:
+                <p class="box">
+                     my_list = [i for i in range(1, 10)]
+                 </p>
+            </p>
+
+            <h4>Q9:What is a lambda function?</h4>
+            <p>A lambda function is an anonymous function. This function can have any number of parameters but, can have just one statement. For Example:
+                <p class="box">a = lambda x, y : x*y
+                    print(a(7, 19))</p>
+            </p>
+
+            <h4>Q10:What is a pass in Python?</h4>
+            <p>Pass means performing no operation or in other words, it is a placeholder in the compound statement, where there should be a blank left and nothing has to be written there.</p>
+
+            <h4>Q11:What is the difference between / and // in Python?</h4>
+            <p>/ represents floor division whereas // represents precise division. For Example:<br><br>
+                 <p class="box">
+                    5//2 = 2 <br>
+                    5/2 = 2.5
+                    
+                 </p>
+            </p>
+
+            <h4>Q12:How is Exceptional handling done in Python?</h4>
+            <p>
+                There are 3 main keywords i.e. try, except, and finally which are used to catch exceptions and handle the recovering mechanism accordingly. Try is the block of a code that is monitored for errors. Except block gets executed when an error occurs. <br><br>
+                The beauty of the final block is to execute the code after trying for an error. This block gets executed irrespective of whether an error occurred or not. Finally, block is used to do the required cleanup activities of objects/variables.
+            </p>
+
+            <h4>Q13:What is swapcase function in Python?</h4>
+            <p>It is a string’s function that converts all uppercase characters into lowercase and vice versa. It is used to alter the existing case of the string. This method creates a copy of the string which contains all the characters in the swap case. For Example:<br>
+                <p class="box">
+                    string = "GeeksforGeeks"
+                    string.swapcase() ---> "gEEKSFORgEEKS"
+                 </p>
+            </p>
+
+            <h4>Q14:Can we Pass a function as an argument in Python?</h4>
+            <p>Yes, Several arguments can be passed to a function, including objects, variables (of the same or distinct data types), and functions. Functions can be passed as parameters to other functions because they are objects. Higher-order functions are functions that can take other functions as arguments.</p>
+
+            <h4>Q15:What are *args and *kwargs?</h4>
+            <p>To pass a variable number of arguments to a function in Python, use the special syntax *args and **kwargs in the function specification. It is used to pass a variable-length, keyword-free argument list. By using the *, the variable we associate with the * becomes iterable, allowing you to do operations on it such as iterating over it and using higher-order operations like map and filter.</p>
+
+            <h4>Q16:Is Indentation Required in Python?</h4>
+            <p>Yes, indentation is required in Python. A Python interpreter can be informed that a group of statements belongs to a specific block of code by using Python indentation. Indentations make the code easy to read for developers in all programming languages but in Python, it is very important to indent the code in a specific order.</p>
+
+            <h4>Q17:What is docstring in Python?</h4>
+            <p>Python documentation strings (or docstrings) provide a convenient way of associating documentation with Python modules, functions, classes, and methods.
+                <ul>
+                    <li>
+                        <b>Declaring Docstrings: </b>The docstrings are declared using ”’triple single quotes”’ or “””triple double quotes””” just below the class, method, or function declaration. All functions should have a docstring.
+                    </li>
+                    <li>
+                        <b>Accessing Docstrings:</b>The docstrings can be accessed using the __doc__ method of the object or using the help function.
+                    </li>
+                </ul>
+            </p>
+
+            <h4>Q18:What is a dynamically typed language?</h4>
+            <p>Typed languages are the languages in which we define the type of data type and it will be known by the machine at the compile-time or at runtime. Typed languages can be classified into two categories:
+                <ul>
+                    <li>
+                        <b>Statically typed languages:</b>In this type of language, the data type of a variable is known at the compile time which means the programmer has to specify the data type of a variable at the time of its declaration. 
+                    </li>
+                    <li>
+                        <b>Dynamically typed languages:</b>These are the languages that do not require any pre-defined data type for any variable as it is interpreted at runtime by the machine itself. In these languages, interpreters assign the data type to a variable at runtime depending on its value.
+                    </li>
+                </ul>
+            </p>
+
+            <h1 id="d3">Intermediate Interview Questions:</h1> <br><br>
+            <h4>Q1:What is the difference between xrange and range functions?</h4>
+            <p>range() and xrange() are two functions that could be used to iterate a certain number of times in for loops in Python. In Python 3, there is no xrange, but the range function behaves like xrange in Python 2.<br><br>
+                <ul>
+                    <li>
+                        <b>range() –</b>This returns a list of numbers created using the range() function.
+                    </li>
+                    <li>
+                        <b>xrange() –</b>This function returns the generator object that can be used to display numbers only by looping. The only particular range is displayed on demand and hence called lazy evaluation.
+                    </li>
+                </ul>
+            </p>
+
+            <h4>Q2:What is Dictionary Comprehension? Give an Example</h4>
+            <p>Dictionary Comprehension is a syntax construction to ease the creation of a dictionary based on the existing iterable.
+
+                <p class="box">
+                    For Example: my_dict = {i:1+7 for i in range(1, 10)}
+                </p>
+            </p>
+
+            <h4>Q3: What is the difference between a shallow copy and a deep copy?</h4>
+            <p>Shallow copy is used when a new instance type gets created and it keeps values that are copied whereas deep copy stores values that are already copied.
+
+                A shallow copy has faster program execution whereas a deep coy makes it slow.</p>
+
+            <h4>Q4:Which sorting technique is used by sort() and sorted() functions of python?</h4>
+            <p>Python uses the Tim Sort algorithm for sorting. It’s a stable sorting whose worst case is O(N log N). It’s a hybrid sorting algorithm, derived from merge sort and insertion sort, designed to perform well on many kinds of real-world data.</p>
+
+            <h4>Q5:What are Decorators?</h4>
+            <p>Decorators are a very powerful and useful tool in Python as they are the specific change that we make in Python syntax to alter functions easily.</p>
+
+            <h4>Q6:How do you debug a Python program?</h4>
+            <p>By using this command we can debug a Python program:
+                <p class="box">
+                    $ python -m pdb python-script.py
+                </p>
+            </p>
+
+            <h4>Q7:What are Iterators in Python?</h4>
+            <p>In Python, iterators are used to iterate a group of elements, containers like a list. Iterators are collections of items, and they can be a list, tuples, or a dictionary. Python iterator implements __itr__ and the next() method to iterate the stored elements. We generally use loops to iterate over the collections (list, tuple) in Python.</p>
+
+            <h4>Q8:What are Generators in Python?</h4>
+            <p>In Python, the generator is a way that specifies how to implement iterators. It is a normal function except that it yields expression in the function. It does not implement __itr__ and next() method and reduces other overheads as well.
+
+                If a function contains at least a yield statement, it becomes a generator. The yield keyword pauses the current execution by saving its states and then resumes from the same when required.</p>
+
+            <h4>Q9:Does Python supports multiple Inheritance?</h4>
+            <p>Python does support multiple inheritances, unlike Java. Multiple inheritances mean that a class can be derived from more than one parent class.</p>
+
+            <h4>Q10:What is Polymorphism in Python?</h4>
+            <p>Polymorphism means the ability to take multiple forms. So, for instance, if the parent class has a method named ABC then the child class also can have a method with the same name ABC having its own parameters and variables. Python allows polymorphism.</p>
+
+            <h4>Q11:Define encapsulation in Python?</h4>
+            <p>Encapsulation means binding the code and the data together. A Python class is an example of encapsulation.</p>
+
+            <h4>Q12:How do you do data abstraction in Python?</h4>
+            <p>Data Abstraction is providing only the required details and hides the implementation from the world. It can be achieved in Python by using interfaces and abstract classes.</p>
+
+            <h4>Q13: How is memory management done in Python?</h4>
+            <p>Python uses its private heap space to manage the memory. Basically, all the objects and data structures are stored in the private heap space. Even the programmer can not access this private space as the interpreter takes care of this space. Python also has an inbuilt garbage collector, which recycles all the unused memory and frees the memory and makes it available to the heap space.</p>
+
+            <h4>Q14:What is slicing in Python?</h4>
+            <p>Python Slicing is a string operation for extracting a part of the string, or some part of a list. With this operator, one can specify where to start the slicing, where to end, and specify the step. List slicing returns a new list from the existing list.
+                <p class="box">
+                    Syntax: Lst[ Initial : End : IndexJump ]
+                </p>
+            </p>
+
+            <h4>Q15:What is a namespace in Python?</h4>
+            <p>A namespace is a naming system used to make sure that names are unique to avoid naming conflicts.</p>
+
+            <h1 id="d4">Advanced Interview Questions:</h1> <br><br>
+            <h4>Q1:What is PIP?</h4>
+            <p>PIP is an acronym for Python Installer Package which provides a seamless interface to install various Python modules. It is a command-line tool that can search for packages over the internet and install them without any user interaction.</p>
+
+            <h4>Q2:What is a zip function?</h4>
+            <p>Python zip() function returns a zip object, which maps a similar index of multiple containers. It takes an iterable, converts it into an iterator and aggregates the elements based on iterables passed. It returns an iterator of tuples.</p>
+
+            <h4>Q3:What are Pickling and Unpickling?</h4>
+            <p>The Pickle module accepts any Python object and converts it into a string representation and dumps it into a file by using the dump function, this process is called pickling. While the process of retrieving original Python objects from the stored string representation is called unpickling.</p>
+
+            <h4>Q4:What is monkey patching in Python?</h4>
+            <p>In Python, the term monkey patch only refers to dynamic modifications of a class or module at run-time.<br><br>
+                    <p class="box">
+                        # g.py  <br>
+                        class GeeksClass:   <br>
+                            def function(self):     <br>
+                                print "function()"  <br><br>
+
+                        import m    <br>
+                        def monkey_function(self):  <br>
+                            print "monkey_function()"  <br><br>
+ 
+                        m.GeeksClass.function = monkey_function <br>
+                        obj = m.GeeksClass()    <br>
+                        obj.function()      <br><br>
+                    </p>
+            </p>
+
+            <h4>Q5:What is __init__() in Python?</h4>
+            <p>Equivalent to constructors in OOP terminology, __init__ is a reserved method in Python classes. The __init__ method is called automatically whenever a new object is initiated. This method allocates memory to the new object as soon as it is created. This method can also be used to initialize variables.</p>
+
+            <h4>Q6:What are Access Specifiers in Python?</h4>
+            <p>Python uses the ‘_’ symbol to determine the access control for a specific data member or a member function of a class. A Class in Python has three types of Python access modifiers:
+                <ul>
+                    <li>
+                        <b>Public Access Modifier:</b>The members of a class that are declared public are easily accessible from any part of the program. All data members and member functions of a class are public by default. 
+                    </li>
+                    <li>
+                        <b>Protected Access Modifier:</b>The members of a class that are declared protected are only accessible to a class derived from it. All data members of a class are declared protected by adding a single underscore ‘_’ symbol before the data members of that class. 
+                    </li>
+                    <li>
+                        <b>Private Access Modifier:</b>The members of a class that are declared private are accessible within the class only, the private access modifier is the most secure access modifier. Data members of a class are declared private by adding a double underscore ‘__’ symbol before the data member of that class. 
+                    </li>
+                </ul>
+            </p>
+
+            <h4>Q7:What are unit tests in Python?</h4>
+            <p>Unit Testing is the first level of software testing where the smallest testable parts of the software are tested. This is used to validate that each unit of the software performs as designed. The unit test framework is Python’s xUnit style framework. The White Box Testing method is used for Unit testing.</p>
+
+            <h4>Q8:Python Global Interpreter Lock (GIL)?</h4>
+            <p>Python Global Interpreter Lock (GIL) is a type of process lock that is used by Python whenever it deals with processes. Generally, Python only uses only one thread to execute the set of written statements. The performance of the single-threaded process and the multi-threaded process will be the same in Python and this is because of GIL in Python. We can not achieve multithreading in Python because we have a global interpreter lock that restricts the threads and works as a single thread.</p>
+
+            <h4>Q9: What are Function Annotations in Python?</h4>
+            <p>Function Annotation is a feature that allows you to add metadata to function parameters and return values. This way you can specify the input type of the function parameters and the return type of the value the function returns.
+
+                Function annotations are arbitrary Python expressions that are associated with various parts of functions. These expressions are evaluated at compile time and have no life in Python’s runtime environment. Python does not attach any meaning to these annotations. They take life when interpreted by third-party libraries, for example, mypy.
+            </p>
+            <br><br>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,469 @@
+<html>
+    <head>
+        <title>JAVA Crash Course</title>
+    </head>
+	<style>
+		*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+
+}
+p{
+    font-size: 19px;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    background: rgb(169, 51, 216);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+.logo{
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;
+    
+    
+    
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+} 
+.navbar a:hover::before{
+    width: 100%;
+    
+
+}
+/*------------------menu bar--------------------------*/
+
+
+.sidebar{
+    position: fixed;
+    background:rgb(238, 222, 238);
+    width: 300px;
+    height: 100%;
+    top: 75px;
+    left: 0;
+    z-index:1;
+    padding-top:18px;
+}  
+.sidebar h3{
+    
+    font-size:19px;
+    text-transform: uppercase;
+    color:rgb(143, 11, 143);
+    
+}
+.sidebar li{
+    margin-left: 20px;
+    margin-top:35px;
+}
+.sidebar ul li a:hover{
+    color:rgb(204, 130, 56);
+    transition: 0.4s;
+    margin-left: 20px;
+}
+.main{
+    margin-top:76px;
+    margin-left: 300px;
+    background-color: rgb(238, 230, 238);
+    padding-left:15px;
+    padding-top: 20px;
+}
+.d1_h2{
+    margin-bottom: 20px;
+    
+}
+.image1{
+    margin-left:70px;
+}
+.keywords{
+    margin-left: 50px;
+}
+.keywords span{
+    color: blueviolet;
+    font-weight: 30px;
+}
+</style>
+    <body>
+        <header class="header" style="height:77px;">
+            <a href="se_home.php" class="logo">Light<span style="color:aqua;">Code</span></a>
+            <nav class="navbar">
+                <a href="java.html">Introduction</a>
+                <a href="java_con.html">Flow Control</a>
+                <a href="java_object.html" >Object Class</Object></a>
+                <a href="java_inheritence.html" >Inheritance</a>
+                <a href="polymorphism.html" >Polymorphism</a>
+                <a href="Abstraction.html" >Abstraction</a>
+                <a href="Encapsulation.html" >Encapsulation</a>
+                <a href="java_ex.html" >Examples</a>
+            </nav>
+        </header>
+        <div class="sidebar">
+            <h3>JAVA Introduction</h3>
+            <ul class="nav" type="circle">
+                <li ><a href="#1">What is Java</a></li>
+                <li ><a href="#2">Historyof Java</a></li>
+                <li ><a href="#3">Features of Java</a></li>
+                <li ><a href="#4">JDK,JRE and JVM</a></li>
+                <li ><a href="#5">Java Data Types </a></li>
+                <li ><a href="#6">Java Variables</a></li>
+                <li ><a href="#7">Java Operators</a></li>
+                <li ><a href="#8">Java Keywords</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="d1">
+                <br><br><br><br><br>
+                <h2 class="d1_h2" id="1" style="color: rgb(85,34,133);">What is Java</h2>
+                <p>
+                    Java is a programming language and a platform. Java is a high level, robust, object-oriented and secure programming language.<br><br>
+                     It is a fast, secure, reliable programming language for coding everything from mobile apps and enterprise software to big data applications and <p style="margin-top: 5px;">&nbsp;server-side technologies.</p><br>
+                    Many popular mobile, computer, and video games are built in Java. Even modern games that integrate advanced technology like machine &emsp;&nbsp;&nbsp;&nbsp;&nbsp;<p style="margin-top: 5px;">&nbsp;learning or virtual reality are built with Java technology.</p><br>
+                    Java is used for data processing engines that can work with complex data sets and massive amounts of real-time data.<br><br>
+                    
+                    Java is a powerhouse of machine learning libraries. Its stability and speed make it perfect for artificial intelligence application development like <p style="margin-top: 5px;">&nbsp;natural language processing and deep learning.</p><br><br><br>
+                </p>
+                <h2 id="2" style="color: rgb(85,34,133);">History Of Java</h2><br>
+                <p>
+                    Java was developed by James Gosling, who is known as the father of Java, in 1995. James Gosling and his team members started the project in<p style="margin-top: 5px;">&nbsp;the early '90s.</p><br>
+                  Initially it was designed for small, embedded systems in electronic appliances like set-top boxes.<br><br>
+                     Firstly, it was called "Greentalk" by James Gosling, and the file extension was .gt.<br><br>
+                    After that, it was called Oak and was developed as a part of the Green project.<br><br>
+                    Why Oak? Oak is a symbol of strength and chosen as a national tree of many countries like the U.S.A., France, Germany, Romania, etc.<br><br>
+                    In 1995, Oak was renamed as "Java" because it was already a trademark by Oak Technologies.<br><br><br><br>
+                </p>
+                <h2 id="3" style="color: rgb(85,34,133);">Features of Java</h2><br>
+                
+                <h3>Simple</h3><br>
+                <p>
+                    Java is very easy to learn, and its syntax is simple, clean and easy to understand Because....<br><br>
+                    1.Java syntax is based on C++ (so easier for programmers to learn it after C++).<br><br>
+                    2.Java has removed many complicated and rarely-used features, for example, explicit pointers, operator overloading, etc.<br><br>
+                    3.There is no need to remove unreferenced objects because there is an Automatic Garbage Collection in Java.<br><br><br>
+
+                </p>
+                <h3>Object-oriented</h3><br>
+                <p>
+                    Java is an object-oriented programming language. Everything in Java is an object. Object-oriented means we organize our software as a <br><p style="margin-top: 5px;">different types of objects that incorporate both data and behavior.</p><br><br>
+                </p>
+
+                <h3>Robust</h3><br>
+                <p>
+                    The English mining of Robust is strong. Java is robust because:<br><br>
+                    1.It uses strong memory management.<br><br>
+                    2.There is a lack of pointers that avoids security problems.<br><br>
+                    3.Java provides automatic garbage collection which runs on the Java Virtual Machine to get rid of objects which are not being used by a Java &emsp;&nbsp;&nbsp;&nbsp;<p style="margin-top: 5px;">application anymore.</p><br>
+                    4.There are exception handling and the type checking mechanism in Java. All these points make Java robust.<br><br><br>
+
+                </p>
+                <h3>Secure</h3><br>
+                <p>
+                    When it comes to security, Java is always the first choice. With java secure features it enable us to develop virus free, temper free system. Java <p style="margin-top: 5px;">program always runs in Java runtime environment with almost null interaction with system OS, hence it is more secure. </p><br><br>
+                </p>
+                <h3>Portable</h3><br>
+                <p>
+                    Java Byte code can be carried to any platform. No implementation dependent features. Everything related to storage is predefined, example: size of <p style="margin-top: 5px;">primitive data types </p><br><br>
+                </p>
+                <h3>Platform Independent</h3><br>
+                <p>
+                    Unlike other programming languages such as C, C++ etc which are compiled into platform specific machines. Java is guaranteed to be write-once, <p style="margin-top: 5px;">run-anywhere language.</p><br><br>
+                </p>
+
+                <h3>Multi Threading</h3><br>
+                <p>
+                    Java multithreading feature makes it possible to write program that can do many tasks simultaneously. Benefit of multithreading is that it utilizes <p style="margin-top: 5px;">same memory and other resources to execute multiple threads at the same time, like While typing, grammatical errors are checked along.<br><br><br>
+
+                </p>
+                <h3>Distributed</h3><br>
+                <p>
+                    Using java programming language we can create distributed applications. RMI(Remote Method Invocation) and EJB(Enterprise Java Beans) are <p style="margin-top: 5px;">used for creating distributed applications in java.</p> <br><br>
+                </p>
+                <h3>Dynamic</h3><br>
+                <p>
+                    Java is a dynamic programming language. OOPs allows developers to add new classes to the existing packages, add new methods to the existing  <p style="margin-top: 5px;">classes as well as modifying the method without changing the original method code by using the concept of method overriding. </p><br><br>
+                </p>
+                <h3> Architectural Neutral</h3><br>
+                <p>
+                    As we know Java is a platform independent language, which means program written and compiled on one machine can run on any other machine <p style="margin-top: 5px;">having different operating system. Java follows the principle of “Write once run anywhere“</p><br><br>
+                </p>
+                <h3>Performance</h3><br>
+                <p>
+                    Java is significantly faster than other traditional interpreted programming languages. Compiled java code which is known as byte code is like a <p style="margin-top: 5px;">machine code, that allows a faster execution. Java uses Just in Time compiler which can execute the code on demand, this allows to execute only </p><p style="margin-top: 5px;">the method that is being called, which makes it faster and efficient.</p>
+                </p>
+                <br><br><br>
+                <h2 id="4" style="color: rgb(85,34,133); font-size: 30px;">Java JDK, JRE and JVM</h2><br>
+                <h3 style="color: rgb(85,34,133); font-size: 23px;">What is JVM?</h3>
+                <p style="margin-top: 15px;">
+                    JVM (Java Virtual Machine) is an abstract machine that enables your computer to run a Java program.<br><br>
+                    When you run the Java program, Java compiler first compiles your Java code to bytecode. Then, the JVM translates bytecode into native machine <p style="margin-top: 5px;">code (set of instructions that a computer's CPU executes directly).</p><br>
+                    Java is a platform-independent language. It's because when you write Java code, it's ultimately written for JVM but not your physical machine  <p style="margin-top: 5px;">(computer). Since JVM ​executes the Java bytecode which is platform-independent, Java is platform-independent.</p><br>
+                    <img src="j1.png">
+                    <br><br>
+                </p>
+                <h3 style="color: rgb(85,34,133); font-size: 23px;">What is JRE?</h3>
+                <p style="margin-top: 15px;">
+                    JRE (Java Runtime Environment) is a software package that provides Java class libraries, Java Virtual Machine (JVM), and other components that <p style="margin-top: 5px;">are required to run Java applications.</p>
+                    <br><br>
+                    <p>JRE is the superset of JVM.</p><br><br>
+                    <img src="j2.png">
+                    <br><br>
+                </p>
+                <h3 style="color: rgb(85,34,133); font-size: 23px;">What is JDE?</h3>
+                <p style="margin-top: 15px;">
+                    JDK (Java Development Kit) is a software development kit required to develop applications in Java. When you download JDK, JRE is also <p style="margin-top: 5px;">downloaded with it.
+
+                        In addition to JRE, JDK also contains a number of development tools (compilers, JavaDoc, Java Debugger, etc).</p><br>
+                    <img src="j3.png">
+                    <br><br><br><br>
+                </p>
+                <h2 align="center" style="color: rgb(85,34,133); font-size: 30px;">Relationship between JVM, JRE, and JDK.</h2><br><br><br>
+                <center>
+                    <img src="j4.png">
+
+                </center>
+                <br><br><br>
+                <h2 id="5" style="color: rgb(85,34,133); font-size: 27px;">Data Types in Java – Primitive and Non-Primitive Data Types Explained</h2><br>
+                <h3 style="font-size: 20px;">What are Data Types in Java?</h3><br>
+                <p>
+                    Data types in Java specify how memory stores the values of the variable. Each variable has a data type that decides the value the variable will hold. <p style="margin-top: 5px;">Moreover, Primitive Data Types are also used with functions to define their return type.</p>
+                    <br>
+                </p>
+                <h3 style="font-size: 20px;">Data Types in Java</h3><br>
+                <p>Data types in Java are divided into 2 categories:</p><br>
+                <a style="text-decoration: none;" href=""><b></b> Primitive Data Types</a><br><br>
+                <a style="text-decoration: none;" href=""><b></b> Non-Primitive Data Types</a><br><br>
+                <center>
+                    <img src="j5.png">
+                </center>
+                <br>
+                <h3 style="font-size: 20px;">Primitive Data Types</h3><br>
+                <p>
+                    Primitive data types specify the size and type of variable values. They are the building blocks of data manipulation and cannot be further divided into <p style="margin-top: 5px;">simpler data types.</p>
+                </p><br>
+                <img src="j6.png"><br><br>
+                <p>There are 8 Primitive data types in Java – Boolean, char, byte, int, short, long, float, and double.</p>
+                <br><br>
+                <h2>Boolean type : Boolean</h2><br>
+                <p>
+                    <span style="color:  rgb(85,34,133);;">A boolean data type can store either True or False.</span> They can be used to check whether two values are equal or not (basically in conditional <p style="margin-top: 5px;">statements to return True or False). Typically, programmers use it as a flag variable to track true or false conditions.</p><br>
+                    he default boolean value is False. Moreover, the boolean type’s size depends on the Java Virtual Machine. Therefore, it fluctuates on different <p style="margin-top: 5px;">platforms.</p>
+                </p><br>
+                <h2>Character type : char</h2><br>
+                <p>
+                    The char data type stores a single character. It stores lowercase and uppercase characters, which must be enclosed in single quotes. The char data <p style="margin-top: 5px;">type in Java supports Unicode characters and provides provision to multiple languages like English, French, German, etc. It takes memory space of </p><p style="margin-top: 5px;">16 bits or 2 bytes. The values stored range between 0 to 65536.</p>
+                </p><br>
+                <h2>Integer type</h2><br>
+                <p>An integer type stores an integer number with no fractional or decimal places. Java has four integer types – byte, short, int, and long.</p>
+                <br>
+                <h3>Byte</h3><br>
+                <p>The byte is the smallest data type among all the integer data types. It is an 8-bit signed two’s complement integer. It stores whole numbers ranging <p style="margin-top: 5px;">from -128 to 127.</p></p><br>
+                <h4 style="color: blueviolet;">Syntax:</h4><br>
+                <p>byte byteVariable;</p><br>
+                <h3>Short</h3><br>
+                <p>Short is a 16-bit signed two’s complement integer. It stores whole numbers with values ranging from -32768 to 32767. Its default value is 0.</p><br>
+                <h4 style="color: blueviolet;">Syntax:</h4><br>
+                <p>short shortVariable;</p><br>
+                <h3>Int</h3><br>
+                <p>Int is a 32-bit signed two’s complement integer that stores integral values ranging from 2147483648 (-2^31) to 2147483647 (2^31 -1). Its default <p style="margin-top: 5px;"></p>value is 0.</p><br>
+                <h4 style="color: blueviolet;">Syntax:</h4><br>
+                <p>int intVariable;</p><br>
+                <h3>Long</h3><br>
+                <p>long is a 64-bit signed two’s complement integer that stores values ranging from -9223372036854775808(-2^63) to 9223372036854775807(2^63 <p style="margin-top: 5px;">-1). It is used when we need a range of values more than those provided by int. Its default value is 0L. This data type ends with ‘L’ or ‘l’.</p></p><br>
+                <h4 style="color: blueviolet;">Syntax:</h4><br>
+                <p>long longVariable;</p><br>
+                <h2>Float type :</h2><br>
+                <p>Floating-point is used for expressions involving fractional precision. It has two types: float and double.</p><br>
+                <h3>Float</h3><br>
+                <p>It is a floating-point data type that stores the values, including their decimal precision. It is not used for precise data such as currency or research <p style="margin-top: 5px;">data.</p></p><br>
+                <h3 style="color: cornflowerblue;">A Float value:</h3><br>
+                <p> is a single-precision 32-bit or 4 bytes IEEE 754 floating-point</p><br>
+                <p> can have a 7-digit decimal precision</p><br>
+                <p> ends with an ‘f’ or ‘F’</p><br>
+                <p> default value = 0.0f</p><br>
+                <p> stores fractional numbers ranging from 3.4e-038 to 3.4e+038</p><br>
+                <h4 style="color: blueviolet;">Syntax:</h4><br>
+                <p>float floatVariable;</p><br>
+
+                <h3>Double</h3><br>
+                <p>The double data type is similar to float. The difference between the two is that is double twice the float in the case of decimal precision. It is used for <p style="margin-top: 5px;">decimal values just like float and should not be used for precise values.</p></p><br>
+                <h3 style="color: cornflowerblue;">A Double value:</h3><br>
+                <p> is a double-precision 64-bit or 8 bytes IEEE 754 floating-point</p><br>
+                <p> can have a 15-digit decimal precision</p><br>
+                <p> default value = 0.0d</p><br>
+                <p> stores fractional numbers ranging from 1.7e-308 to 1.7e+308</p><br>
+                
+                <h4 style="color: blueviolet;">Syntax:</h4><br>
+                <p>double doubleVariable;</p><br><br><br>
+                <img src="j7.png"><br><br><br><br>
+                <h3 style="font-size: 20px;">Primitive Data Types</h3><br>
+                <p>Non-primitive data types or reference data types refer to instances or objects. They cannot store the value of a variable directly in memory. They <p style="margin-top: 5px;">store a memory address of the variable. Unlike primitive data types we define by Java, data types are user-defined. Programmers-primitive data <p style="margin-top: 5px;">types are user-defined. Programmers create them and can be assigned with null. All non-primitive data types are of equal size.</p></p></p>
+                <br>
+                <h2>Array</h2><br>
+                <p>An array holds elements of the same type. It is an object in Java, and the array name (used for declaration) is a reference value that carries the <p style="margin-top: 5px;">base address of the continuous location of elements of an array.</p></p><br>
+                <h2>String</h2><br>
+                <p>The String data type stores a sequence or array of characters. A string is a non-primitive data type, but it is predefined in Java. String literals are <p style="margin-top: 5px;">enclosed in double quotes.</p></p><br>
+                <h2>Class</h2><br>
+                <p>A class is a user-defined data type from which objects are created. It describes the set of properties or methods common to all objects of the same <p style="margin-top: 5px;">type. It contains fields and methods that represent the behaviour of an object. A class gets invoked by the creation of the respective object.</p></p><br>
+                <p>There are two types of classes: a blueprint and a template. For instance, the architectural diagram of a building is a class, and the building itself is <p style="margin-top: 5px;"></p>an object created using the architectural diagram.</p><br>
+                <h2>Interface</h2><br>
+                <p>An interface is declared like a class. The key difference is that the interface contains abstract methods by default; they have nobody.</p><br>
+                <h2>Enum</h2><br>
+                <p>An enum, similar to a class, has attributes and methods. However, unlike classes, enum constants are public, static, and final (unchangeable – <p style="margin-top: 5px;">cannot be overridden). Developers cannot use an enum to create objects, and it cannot extend other classes. But, the enum can implement </p><p style="margin-top: 5px;">interfaces.</p></p><br><br><br>
+
+                <h3 id="6" style="color: rgb(85,34,133); font-size: 27px;">Java Variables</h3><br>
+                <p>Variables are containers that store information that can be manipulated and referenced later by the programmer within the code. Java variables <p style="margin-top: 5px;">have a data type associated with them which can tell us about the size and layout of the variable’s memory.</p></p><br>
+                <h4 style="color: blueviolet;">Syntax:</h4><br>
+                <img src="j8.png"><br><br>
+                <h4>There are three types of variables in java:</h4><br>
+                <p> Local variable</p><br>
+                <p> Instance variable</p><br>
+                <p> Class/Static variable</p><br><br>
+                <h2>Local Variable</h2><br>
+                <p>A variable that is declared inside the body of the method or constructor is called a local variable. It is called so because the extent of a local variable <p style="margin-top: 5px;">lies only within the method or constructor within which it is created and other methods in the class cannot access it.</p></p><br>
+                <p>Inside the method body, local variable is declared using the static keyword.</p><br>
+                <p>Example:</p><br>
+                <img src="j9.png"><br><br>
+                <p>Output:</p><br>
+                <img src="j10.png"><br><br><br>
+                <h2>Instance Variable</h2><br>
+                <p>An instance variable is declared inside the class but outside a method or a constructor. It is similar to a static variable except that it is declared <p style="margin-top: 5px;">without using the keyword static. These variables are accessible by all methods or constructors that are inside the class.</p></p><br>
+                <p>Example:</p><br>
+                <img src="j11.png"><br><br>
+                <p>Output:</p><br>
+                <img src="j12.png">
+                <br><br><br>
+                <h2>Class/Static Variables:</h2><br>
+                <p>An static variable is declared inside the class but outside a method or a constructor. It is similar to a instance variable except that it is declared using <p style="margin-top: 5px;">the keyword static. These variables are accessible by all methods or constructors that are inside the class.</p></p><br>
+                <p>Example:</p><br>
+                <img src="j13.png"><br><br>
+                <p>Output:</p><br>
+                <img src="j14.png"><br><br><br><br>
+                <h2 id="7" style="color: rgb(85,34,133); font-size: 27px;">Java Operators: Meaning and Types Explained</h2><br>
+                <p>While learning Java, you will come across the concept of operators. What is a Java operator? Java operators are symbols useful for performing operations on variables. They also help manipulate the values of the operands.
+                The different Java operators are useful for performing various functions. Dive into this article to learn more about Java operators, their types, and their importance.</p><br><br>
+                <h2>Major Types of Operators in Java </h2><br>
+                <p>Now that you know what is a Java operator, you should learn about the different types of operators in Java.</p><br>
+                <p> Arithmetic Operators</p><br>
+                <p>Ternary Operators</p><br>
+                <p>Bitwise Operator</p><br>
+                <p>Relational Operators</p><br>
+                <p>Logical Operators</p><br>
+                <p>Unary Operators</p><br>
+                <p> Assignment Operator</p><br>
+                <p>Shift Operator in Java</p><br><br>
+                <h2>1.Arithmetic Operators in Java</h2><br>
+                <p>Arithmetic operators in Java are useful for executing addition, multiplication, division, subtraction, and modulus. As you can see, these operators in <p style="margin-top: 5px;">Java are valuable for mathematical operations.</p></p><br>
+                <p>Examples of Arithmetic Operators:</p><br>
+                <img src="j15.png"><br><br><br>
+                <h2>2.Ternary Operators in Java</h2><br>
+                <p>The ternary operator in Java is conditional. These Java operators can help minimize the line of code while making comparisons. The ternary <p style="margin-top: 5px;">operator in Java is a replacement for nested if-else or if-else statements. Sometimes, the ternary operator in Java is also called the conditional</p><p style="margin-top: 5px;">operator, inline if, or ternary if.</p></p><br>
+                <p>Examples of Ternary Operator:</p><br>
+                <img src="j16.png"><br><br><br>
+                <h2>3.Bitwise Operator in Java</h2><br>
+                <p>The bitwise operator in Java operates on a bit array, bit string, or binary number. The fast and simple operator in Java is directly supported by the <p style="margin-top: 5px;"></p>processor. You can also refer to the bitwise operation as bit-level programming.</p><br>
+                <p>Examples of Bitwise Operator:</p><br>
+                <img src="j17.png"><br><br><br>
+                <h2>4.Relational Operators in Java</h2><br>
+                <p>The relational operators in Java can compare two numbers to deliver a boolean value. This operator can be useful for defining a test or relation <p style="margin-top: 5px;"></p>between two operands. </p><br>
+                <p>Examples of Relational Operators:</p><br>
+                <img src="j18.png"><br><br><br>
+                <h2>5.Logical Operators in Java</h2><br>
+                <p>Logical operators in Java help combine two or more conditions. It is useful for performing the original condition under consideration. </p><br>
+                <p>Examples of Logical Operators:</p><br>
+                <img src="j19.png"><br><br><br>
+                <h2>6.Unary Operators in Java</h2><br>
+                <p>The unary operators in Java demand a single operand. These Java operators can increase or decrease the value. As a result, an expression <p style="margin-top: 5px;"></p>becomes negative, or the boolean value gets inverted. </p><br>
+                <p>Examples of Unary Operators:</p><br>
+                <img src="j22.png"><br><br><br>
+                <h2>7.Assignment Operators in Java</h2><br>
+                <p>The assignment operators in Java are beneficial for allocating new values to a variable. In assignment operators in Java, the left side is called <p style="margin-top: 5px;">a variable. The right side of these Java operators is called value.</p></p><br>
+                <p>Examples of Assignment Operators:</p><br>
+                <img src="j20.png"><br><br><br>
+                <h2>8.Shift Operator in Java</h2><br>
+                <p>The shift operator in Java can transfer bits of a number to the left or right. The shift can be performed by dividing or multiplying the numbers. </p><br>
+                <p>Examples of Shift Operators:</p><br>
+                <img src="j21.png"><br><br><br><br>
+                <h3 id="8" style="color: rgb(85,34,133); font-size: 27px;">Java Keywords</h3><br>
+                <p>Keywords are reserved words in Java that have specific meanings and cannot be used for any other purpose, such as variable names or method <p style="margin-top: 5px;">names. Java has a total of 50 keywords, which are used to define the syntax and structure of Java programming language.</p></p><br>
+                <p style="color: cornflowerblue; font-size: 20px;">Here’s a list of Java keywords:</p><br>
+                <div class="keywords">
+                   <p><span class="key">abstract:</span> used to declare a class or method as abstract. An abstract class is a class that cannot be instantiated, and an abstract method is a <p style="margin-top: 5px;">method without a body that must be implemented in a subclass.</p></p><br>
+                   <p><span class="key">assert:</span> used to perform assertion testing in Java. An assertion is a statement that should always be true, and if it is false, then an <p style="margin-top: 5px;">AssertionError is thrown.</p></p><br>
+                   <p><span class="key">boolean:</span> used to declare a boolean variable, which can only have two values: true or false.</p><br>
+                   <p><span class="key">break:</span> used to break out of a loop or switch statement.</p><br>
+                   <p><span class="key">byte:</span> used to declare a byte variable, which is a data type that can store values from -128 to 127.</p><br>
+                   <p><span class="key">case:</span> used in a switch statement to define a case label.</p><br>
+                   <p><span class="key">catch: </span> used to catch and handle exceptions in Java.</p><br>
+                   <p><span class="key">char:</span>  used to declare a char variable, which is a data type that can store a single character.</p><br>
+                   <p><span class="key">class: </span>  used to declare a class in Java.</p><br>
+                   <p><span class="key">const:</span> a keyword that was reserved but never implemented in Java.</p><br>
+                   <p><span class="key">continue:</span>  used to skip the current iteration of a loop and continue to the next iteration.</p><br>
+                   <p><span class="key">default:</span> used in a switch statement to define a default case.</p><br>
+                   <p><span class="key">do: </span> used to start a do-while loop.</p><br>
+                   <p><span class="key">double: </span> used to declare a double variable, which is a data type that can store decimal values.</p><br>
+                   <p><span class="key">else:</span> used in an if statement to define an alternative block of code to execute if the condition is false.</p><br>
+                   <p><span class="key">enum:</span> used to declare an enumeration, which is a type that consists of a set of named constants.</p><br>
+                   <p><span class="key">extends:</span>  used to extend a class in Java.</p><br>
+                   <p><span class="key">final: </span>  used to declare a variable or method as final, which means that its value or implementation cannot be changed.</p><br>
+                   <p><span class="key">finally:</span> used in a try-catch block to define a block of code that will always be executed, regardless of whether an exception is thrown or not.</p><br>
+                   <p><span class="key">float: </span>  used to declare a float variable, which is a data type that can store decimal values with less precision than double.</p><br>
+                   <p><span class="key">for: </span> used to start a for loop.</p><br>
+                   <p><span class="key">goto:</span> a keyword that was reserved but never implemented in Java.</p><br>
+                   <p><span class="key">if:</span> used to define a conditional statement in Java.</p><br>
+                   <p><span class="key">implements:</span>  used to implement an interface in Java.</p><br>
+                   <p><span class="key">import:</span>  used to import a package or class into a Java program.</p><br>
+                   <p><span class="key">instanceof:</span> used to check if an object is an instance of a particular class or interface.</p><br>
+                   <p><span class="key">int:</span>  used to declare an int variable, which is a data type that can store whole numbers.</p><br>
+                   <p><span class="key">interface:</span> used to declare an interface in Java.</p><br>
+                   <p><span class="key">long:</span> used to declare a long variable, which is a data type that can store larger whole numbers than int.</p><br>
+                   <p><span class="key">native:</span> used to declare a method as native, which means that its implementation is provided by the underlying platform, rather than in Java code.</p><br>
+                   <p><span class="key">new:</span>  used to create a new object in Java.</p><br>
+                   <p><span class="key">package:</span>  used to define a package in Java.</p><br>
+                   <p><span class="key">private:</span> used to declare a variable or method as private, which means that it can only be accessed within the same class.</p><br>
+                   <p><span class="key">protected:</span> used to declare a variable or method as protected, which means that it can be accessed within the same class or any subclass.</p><br>
+                   <p><span class="key">public:</span> used to declare a variable or method as public, which means that it can be accessed from anywhere in the Java program.</p><br>
+                   <p><span class="key">return:</span> used to return a value from a method or exit a method without returning a value.</p><br>
+                   <p><span class="key">short:</span>  used to declare a short variable, which is a data type that can store smaller whole numbers than int.</p><br>
+                   <p><span class="key">static: </span> used to declare a variable or method as static, which means that it belongs to the class rather than to individual objects of the class.</p><br>
+                   <p><span class="key">strictfp:</span> used to enforce strict floating-point precision in Java.</p><br>
+                   <p><span class="key">super:</span> used to call a method or constructor in the superclass.</p><br>
+                   <p><span class="key">switch:</span> used to start a switch statement in Java.</p><br>
+                   <p><span class="key">synchronized:</span> used to ensure that only one thread can access a block of code or object at a time in Java.</p><br>
+                   <p><span class="key">this:</span> used to refer to the current object in Java.</p><br>
+                   <p><span class="key">throw: </span> used to throw an exception in Java.</p><br>
+                   <p><span class="key">throws:</span> used to declare that a method may throw an exception in Java.</p><br>
+                   <p><span class="key">transient: </span>used to declare a variable as transient, which means that it will not be serialized when the object is written to a file or transmitted <p style="margin-top: 5px;">over a network.</p></p><br>
+                   <p><span class="key">try:</span> used to start a try-catch block in Java.</p><br>
+                   <p><span class="key">void:</span> used to declare a method that does not return a value.</p><br>
+                   <p><span class="key">volatile: </span> used to declare a variable as volatile, which means that it is subject to optimization by the Java Virtual Machine.</p><br>
+                </div>
+                <br><br><br><br><br> 
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,539 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </head>
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    background: rgb(169, 51, 216);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+.logo{
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    position: relative;
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+} 
+.navbar a:hover::before{
+    width: 100%;
+}
+.intro .para{
+    margin-top: 125px;
+    margin-left: 50px;
+    font-size: 20px;
+    color: black;
+}
+.cheatsheet {
+       margin-left: 25px;
+}
+.interview h4{
+    margin-top: 40px;
+    margin-left: 50px;
+    color: rgb(85,34,133);
+    font-size: 30px;
+}
+.interview p{
+    margin-top: 10px;
+    color: black;
+    margin-left: 50px;
+    font-size: 20px;
+}
+.interview li{
+    margin-left: 95px;
+}
+.interview .box{
+    background-color: white;
+    width: 800px;
+    border: 5px solid black;
+    padding: 50px;
+    margin: 20px;
+    margin-left: 95px;
+    color: rgb(169, 51, 216);
+}
+</style>
+    <body>
+        <header class="header">
+             <a href="se_home.php" class="logo" style="margin-right:30px;">Light<span style="color:aqua;">Code</span></a>
+            <nav class="navbar">
+                <a href="sql_intro.html">Introduction</a>
+                <a href="sql_sel1.html">SQL SELECT(I)</a>
+                <a href="sql_sel2.html" >SQL SELECT(II)</a>
+                <a href="sql_join.html" >SQL JOIN</a>
+                <a href="sql_database.html" >SQL Database</a>
+                <a href="sql_in_del.html" >SQL Insert and Delete</a>
+		<a href="sql_interview.html">Examples</a>
+            </nav>
+        </header>
+        
+            <div class="intro">
+                <p class="para" style="color: blue;">Are you preparing for your SQL developer interview?<br><br>
+                    Then you have come to the right place.<br><br>
+                    This guide will help you to brush up on your SQL skills, regain your confidence and be job-ready!<br><br>
+                    Here, you will find a collection of real-world Interview questions asked in companies like Google, Oracle, Amazon, and Microsoft, etc. <br>Each question comes with a perfectly written answer inline, saving your interview preparation time.<br><br>
+                    It also covers practice problems to help you understand the basic <b style="color:rgb(31, 31, 155)">concepts of SQL.</b></p>
+            </div><br>
+             
+            
+
+
+            <div class="interview">
+                <h4 class="q1"> Q1: What is Database? </h4>
+                <p>A database is an organized collection of data, stored and retrieved digitally from a remote or local computer system. Databases can be vast and <br>complex, and such databases are developed using fixed design and modeling approaches.</p>
+
+                <h4 class="q2"> Q2:What is DBMS?  </h4>
+                <p>
+                     DBMS stands for Database Management System. DBMS is a system software responsible for the creation, retrieval, updation, and management of the database. It ensures that our data is consistent, organized, and is easily accessible by serving as an interface between the database and its end-users or application software.
+                </p>
+   
+                <h4 class="q3"> Q3:What is RDBMS? How is it different from DBMS?  </h4>
+                <p> 
+                    RDBMS stands for Relational Database Management System. The key difference here, compared to DBMS, is that RDBMS stores data in the form of a collection of tables, and relations can be defined between the common fields of these tables. Most modern database management systems like MySQL, Microsoft SQL Server, Oracle, IBM DB2, and Amazon Redshift are based on RDBMS.<br>
+                    <img src="dbms.jpg" width="400px" height="150px">
+                </p>
+
+                <h4 class="q4"> Q4:What is SQL?  </h4>
+                <p>
+                   SQL stands for Structured Query Language. It is the standard language for relational database management systems. It is especially useful in handling organized data comprised of entities (variables) and relations between different entities of the data.
+                </p>
+
+                <h4 class="q5"> Q5:What is the difference between SQL and MySQL?  </h4>
+                <p>
+                    SQL is a standard language for retrieving and manipulating structured databases. On the contrary, MySQL is a relational database management system, like SQL Server, Oracle or IBM DB2, that is used to manage SQL databases. <br>
+                    <img src="sql.jpg" width="400px" height="150px">
+                </p>
+
+                <h4 class="q6"> Q6: What are Tables and Fields?  </h4>
+                <p>
+                    A table is an organized collection of data stored in the form of rows and columns. Columns can be categorized as vertical and rows as horizontal. The columns in a table are called fields while the rows can be referred to as records.
+                </p>
+
+                <h4 class="q7"> Q7:What are Constraints in SQL?  </h4>
+                <p>Constraints are used to specify the rules concerning data in the table. It can be applied for single or multiple fields in an SQL table during the creation of the table or after creating using the ALTER TABLE command. The constraints are: <br> <br>
+                    <ul>
+                        <li><b>NOT NULL</b> - Restricts NULL value from being inserted into a column.</li>
+                        <li><b>CHECK</b> - Verifies that all values in a field satisfy a condition.</li>
+                        <li><b>DEFAULT</b> - Automatically assigns a default value if no value has been specified for the field</li>
+                        <li><b>UNIQUE</b> - Ensures unique values to be inserted into the field.</li>
+                        <li><b>INDEX</b> - Indexes a field providing faster retrieval of records.</li>
+                        <li><b>PRIMARY KEY</b> - Uniquely identifies each record in a table.</li>
+                        <li><b>FOREIGN KEY</b> - Ensures referential integrity for a record in another table.</li>
+                    </ul> </p>
+                
+               <h4 class="q8"> Q8:What is a Primary Key?  </h4>
+                <p>The PRIMARY KEY constraint uniquely identifies each row in a table. It must contain UNIQUE values and has an implicit NOT NULL constraint.<br><br>
+                    A table in SQL is strictly restricted to have one and only one primary key, which is comprised of single or multiple fields (columns).<br><br>
+                    
+                    <p class="box">
+                        <b>CREATE TABLE</b> Students (   /* Create table with a single field as primary key */ <br>
+                        ID INT <b>NOT NULL</b>      <br>
+                        Name VARCHAR(255)      <br>
+                        <b>PRIMARY </b>KEY (ID)     <br>
+                 );    <br><br>
+                 
+                 CREATE TABLE Students (   /* Create table with multiple fields as primary key */    <br>
+                    ID INT <b>NOT NULL</b>      <br>
+                    LastName VARCHAR(255)      <br>
+                    FirstName VARCHAR(255) <b>NOT NULL</b> ,        <br>
+                    <b>CONSTRAINT</b> PK_Student      <br>
+                    <b>PRIMARY </b>KEY (ID, FirstName)     <br>
+                 );    <br><br>
+                 
+                 <b>ALTER TABLE</b> Students   /* Set a column as primary key */      <br>
+                 <b>ADD PRIMARY</b> KEY (ID);    <br>
+                 <b>ALTER TABLE</b> Students   /* Set multiple columns as primary key */     <br>
+                 <b>ADD CONSTRAINT</b> PK_Student   /*Naming a Primary Key*/       <br>
+                 <b>PRIMARY</b> KEY (ID, FirstName);
+                    </p> 
+                </p>
+                <h4 class="q9">Q9:What is a UNIQUE constraint?</h4>
+                <p>A UNIQUE constraint ensures that all values in a column are different. This provides uniqueness for the column(s) and helps identify each row uniquely. Unlike primary key, there can be multiple unique constraints defined per table. The code syntax for UNIQUE is quite similar to that of PRIMARY KEY and can be used interchangeably.
+                    <p class="box">
+                        <b>CREATE TABLE</b> Students (   /* Create table with a single field as unique */ <br>
+                        ID INT <b>NOT NULL UNIQUE</b>  <br>
+                        Name VARCHAR(255)    <br>
+                        );<br><br>
+                    </p>
+
+                        <p class="box">
+                            <b>CREATE TABLE</b> Students (   /* Create table with multiple fields as unique */  <br>
+                            ID INT <b>NOT NULL</b>  <br> 
+                            LastName VARCHAR(255)    <br>
+                            FirstName VARCHAR(255) <b>NOT NULL </b>  <br>
+                            <b>CONSTRAINT</b> PK_Student       <br>
+                            <b>UNIQUE</b> (ID, FirstName)  <br>
+                            );      <br><br>
+                        </p>
+
+                        <p class="box">
+                            <b>ALTER TABLE</b> Students   /* Set a column as unique */     <br>
+                            <b>ADD UNIQUE</b> (ID);        <br>
+                            <b>ALTER TABLE</b> Students   /* Set multiple columns as unique */     <br>
+                            <b>ADD CONSTRAINT</b> PK_Student   /* Naming a unique constraint */    <br>
+                            <b>UNIQUE</b> (ID, FirstName);     <br>
+                        </p>
+                </p>
+
+                <h4 class="q10"> Q10:What is a Foreign Key?  </h4>
+                <p>A FOREIGN KEY comprises of single or collection of fields in a table that essentially refers to the PRIMARY KEY in another table. Foreign key constraint ensures referential integrity in the relation between two tables.<br>
+                    The table with the foreign key constraint is labeled as the child table, and the table containing the candidate key is labeled as the referenced or parent table.  <br><br>
+                
+                    <p class="box">
+                        <b>CREATE TABLE</b> Students (   /* Create table with foreign key - Way 1 */     <br>
+                    ID INT <b>NOT NULL</b>      <br>
+                    Name VARCHAR(255)       <br>
+                    LibraryID INT      <br>
+                    <b>PRIMARY</b> KEY (ID)        <br>
+                    <b>FOREIGN</b> KEY (Library_ID) <b>REFERENCES</b> Library(LibraryID)  <br>
+                 );  <br><br>
+                 
+                 <b>CREATE TABLE</b> Students (   /* Create table with foreign key - Way 2 */      <br>
+                    ID INT <b>NOT NULL PRIMARY</b> KEY      <br>
+                    Name VARCHAR(255)        <br>
+                    LibraryID INT <b>FOREIGN</b> KEY (Library_ID) <b>REFERENCES</b> Library(LibraryID)  <br>
+                 );    <br><br>
+                 
+                 <b>ALTER TABLE</b> Students   /* Add a new foreign key */     <br>
+                 ADD <b>FOREIGN</b> KEY (LibraryID)    <br>
+                 <b>REFERENCES</b> Library (LibraryID);
+                </p> 
+                    </p>      <br>
+
+                <h4 class="q11"> Q11:What is a Join? List its different types.  </h4>
+                <p>The SQL Join clause is used to combine records (rows) from two or more tables in a SQL database based on a related column between the two.
+                    <img src="join.jpg" width="400px" height="400px" class="box"> <br><br>
+                    There are four different types of JOINs in SQL: <br><br>
+                       <ul>
+                        <li>
+                            <b>(INNER) JOIN</b>: Retrieves records that have matching values in both tables involved in the join. This is the widely used join for queries.
+                            <p class="box">
+                               <b> SELECT</b> *  <br>
+                                <b>FROM</b> Table_A    <br>
+                                <b>JOIN</b> Table_B;  <br>
+                                <b>SELECT</b> *        <br>
+                                <b>FROM</b> Table_A       <br>
+                                <b>INNER JOIN</b> Table_B;</p> 
+                        </li>  <br>
+                        <li>
+                            <b>LEFT (OUTER) JOIN</b>: Retrieves all the records/rows from the left and the matched records/rows from the right table.<br>
+                            <p class="box">
+                                <b>SELECT</b> *   <br>
+                                <b>FROM</b> Table_A A   <br>
+                                <b>LEFT JOIN</b> Table_B B   <br>
+                                <b>ON</b> A.col = B.col;    <br>
+                            </p>
+                        </li>  <br>
+                        <li>
+                            <b>RIGHT (OUTER) JOIN:</b> Retrieves all the records/rows from the right and the matched records/rows from the left table. <br>
+                            <p class="box">
+                                <b>SELECT</b> *   <br>
+                                <b>FROM</b> Table_A A   <br>
+                                <b>RIGHT JOIN</b> Table_B B   <br>
+                                <b>ON</b> A.col = B.col;    <br>
+                            </p>
+                        </li> <br>
+                        <li>
+                            <b>FULL (OUTER) JOIN:</b> Retrieves all the records where there is a match in either the left or right table. <br>
+                            <p class="box">
+                                <b>SELECT</b> *  <br>
+                                <b>FROM </b>Table_A A  <br>
+                                <b>FULL JOIN</b> Table_B B    <br>
+                                <b>ON</b> A.col = B.col;    <br>
+                            </p>
+                        </li>
+                       </ul>
+                </p>
+
+                <h4 class="q12"> Q12:What is a Self-Join?  </h4>
+                <p>
+                    A <b>self JOIN</b> is a case of regular join where a table is joined to itself based on some relation between its own column(s). Self-join uses the INNER JOIN or LEFT JOIN clause and a table alias is used to assign different names to the table within the query.<br> <br>
+                    <p class="box">
+                        <b>SELECT</b> A.emp_id <b>AS</b> "Emp_ID",A.emp_name <b>AS</b> "Employee",  <br>
+                        B.emp_id <b>AS</b> "Sup_ID",B.emp_name <b>AS</b> "Supervisor"     <br>
+                        <b>FROM</b> employee A, employee B     <br>
+                        <b>WHERE</b> A.emp_sup = B.emp_id;    <br>
+                    </p>
+              </p>
+
+                <h4 class="q13"> Q13:What is a Cross-Join?  </h4>
+                <p>Cross join can be defined as a cartesian product of the two tables included in the join. The table after join contains the same number of rows as in the cross-product of the number of rows in the two tables. If a WHERE clause is used in cross join then the query will work like an INNER JOIN.<br><br>
+                    
+                    <p class="box">
+                        <b>SELECT</b> stu.name, sub.subject  <br>
+                        <b>FROM</b> students <b>AS</b> stu  <br>
+                        <b>CROSS JOIN</b> subjects <b>AS</b> sub; <br>
+                    </p>
+                    <p>
+                        <img src="cross_join.jpg" width="450px" height="200px">
+                    </p>
+                </p>
+
+                <h4 class="q14"> Q14:What is an Index? Explain its different types.  </h4>
+                <p>A database index is a data structure that provides a quick lookup of data in a column or columns of a table. It enhances the speed of operations accessing data from a database table at the cost of additional writes and memory to maintain the index data structure.<br><br>
+                    <p class="box">
+                        <b>CREATE</b> INDEX index_name   /* Create Index */  <br>
+                        <b>ON</b> table_name (column_1, column_2);    <br>
+                        <b>DROP</b> INDEX index_name;   /* Drop Index */ <br> <br>
+                    </p>
+                
+                   <p> There are different types of indexes that can be created for different purposes:<br><br></p>
+                    <ul>
+                        <li>
+                            <h3>Unique and Non-Unique Index:</h3>
+                            <p>
+                                Unique indexes are indexes that help maintain data integrity by ensuring that no two rows of data in a table have identical key values. Once a unique index has been defined for a table, uniqueness is enforced whenever keys are added or changed within the index.
+                            </p> <br>
+                            <b>CREATE UNIQUE</b> INDEX myIndex  <br>
+                            <b>ON</b> students (enroll_no);  <br> 
+                        </li> <br>
+                       <p>
+                        Non-unique indexes, on the other hand, are not used to enforce constraints on the tables with which they are associated. Instead, non-unique indexes are used solely to improve query performance by maintaining a sorted order of data values that are used frequently.
+                       </p>
+                       <li> <br>
+                           <h3>Clustered and Non-Clustered Index:</h3>
+                           <p>
+                               Clustered indexes are indexes whose order of the rows in the database corresponds to the order of the rows in the index. This is why only one clustered index can exist in a given table, whereas, multiple non-clustered indexes can exist in the table.  <br><br>
+
+                               The only difference between clustered and non-clustered indexes is that the database manager attempts to keep the data in the database in the same order as the corresponding keys appear in the clustered index.  <br><br>
+
+                              Clustering indexes can improve the performance of most query operations because they provide a linear-access path to data stored in the database. <br><br> 
+                           </p>
+                       </li>
+                    </ul>
+                 </p>
+
+                <h4 class="q15"> Q15:What is the difference between Clustered and Non-clustered index?  </h4>
+                <p>As explained above, the differences can be broken down into three small factors -<br><br>
+                <ul>
+                    <li>
+                        Clustered index modifies the way records are stored in a database based on the indexed column. A non-clustered index creates a separate entity within the table which references the original table.
+                    </li>
+                    <li>
+                        Clustered index is used for easy and speedy retrieval of data from the database, whereas, fetching records from the non-clustered index is relatively slower
+                    </li>
+                    <li>
+                        In SQL, a table can have a single clustered index whereas it can have multiple non-clustered indexes.
+                    </li>
+                </ul> </p>
+
+                <h4 class="q16"> Q16: What is Data Integrity?  </h4>
+                <p>
+                   Data Integrity is the assurance of accuracy and consistency of data over its entire life-cycle and is a critical aspect of the design, implementation, and usage of any system which stores, processes, or retrieves data. It also defines integrity constraints to enforce business rules on the data when it is entered into an application or a database.
+                </p>
+
+                <h4 class="q17"> Q17: What is a Query?  </h4>
+                <p>
+                   A query is a request for data or information from a database table or combination of tables. A database query can be either a select query or an action query. <br><br>
+                    
+                    <p class="box">
+                        <b>SELECT</b> fname, lname    /* select query */   <br>
+                        <b>FROM</b> myDb.students   <br>
+                        <b>WHERE</b> student_id = 1;  <br><br>
+                    </p>
+                    <p class="box">
+                        <b>UPDATE</b> myDB.students    /* action query */  <br> 
+                        <b>SET</b> fname = 'Captain', lname = 'America'  <br>
+                        <b>WHERE</b> student_id = 1;   <br>
+                    </p>
+                    
+               </p>
+
+                <h4 class="q18"> Q18:What is a Subquery? What are its types?  </h4>
+                <p>A subquery is a query within another query, also known as a nested query or inner query. It is used to restrict or enhance the data to be queried by the main query, thus restricting or enhancing the output of the main query respectively. For example, here we fetch the contact information for students who have enrolled for the maths subject:<br> <br>
+                     
+                     <p class="box">
+                        <b>SELECT</b> name, email, mob, address  <br>
+                        <b>FROM</b> myDb.contacts   <br>
+                        <b>WHERE</b> roll_no IN (    <br>
+                        <b>SELECT</b> roll_no    <br>
+                        <b>FROM</b> myDb.students   <br>
+                        <b>WHERE</b> subject = 'Maths');
+                     </p> 
+                </p>
+
+                <h4 class="q19"> Q19:What is the SELECT statement?  </h4>
+                <p>
+                    SELECT operator in SQL is used to select data from a database. The data returned is stored in a result table, called the result-set. <br><br>
+                    
+                    <b>SELECT * FROM</b> myDB.students;
+                    
+                     </p>
+
+                <h4 class="q20"> Q20:What are some common clauses used with SELECT query in SQL?  </h4> <br>
+                <p>Some common SQL clauses used in conjuction with a SELECT query are as follows: <br><br>
+                    <ul>
+                        <li>
+                           <b>WHERE</b> clause in SQL is used to filter records that are necessary, based on specific conditions. <br>
+                        </li>
+                        <li>
+                            <b>ORDER BY</b> clause in SQL is used to sort the records based on some field(s) in ascending <b>(ASC)</b> or descending order <b>(DESC)</b>.   <br>
+                        </li>
+                    </ul>  <br>
+                    <p class="box">
+                        <b>SELECT * </b>  <br>
+                        <b>FROM </b>myDB.students    <br>
+                       <b> WHERE</b> graduation_year = 2019   <br>
+                        <b>ORDER BY</b> studentID <b>DESC</b>;   <br>
+                    </p> <br>
+                    <ul>
+                        <li>
+                            <b>GROUP BY </b>clause in SQL is used to group records with identical data and can be used in conjunction with some aggregation functions to produce summarized results from the database.<br>
+                        </li>
+                        <li>
+                            <b>HAVING clause</b> in SQL is used to filter records in combination with the GROUP BY clause. It is different from WHERE, since the WHERE clause cannot filter aggregated records.<br>
+                        </li>
+                    </ul> <br>
+                    <p class="box">
+                        <b>SELECT</b> COUNT(studentId), country    <br>
+                        <b>FROM</b> myDB.students     <br>
+                        <b>WHERE</b> country != "INDIA"  <br>
+                        <b>GROUP BY</b> country   <br>
+                        <b>HAVING</b> COUNT(studentID) > 5;   <br>
+                    </p>
+                </p>
+
+                <h4 class="q21"> Q21:What are UNION, MINUS and INTERSECT commands?  </h4>
+                <p>
+                   The <b>UNION</b> operator combines and returns the result-set retrieved by two or more SELECT statements. <br>
+                   The <b>MINUS</b> operator in SQL is used to remove duplicates from the result-set obtained by the second SELECT query from the result-set obtained by the first SELECT query and then return the filtered results from the first.<br>
+                   The <b>INTERSECT</b> clause in SQL combines the result-set fetched by the two SELECT statements where records from one match the other and then returns this intersection of result-sets.<br><br>
+
+                   Certain conditions need to be met before executing either of the above statements in SQL - <br><br>
+                   <ul>
+                    <li>
+                        Each SELECT statement within the clause must have the same number of columns
+                    </li>
+                    <li>
+                        The columns must also have similar data types
+                    </li>
+                    <li>
+                        The columns in each SELECT statement should necessarily have the same order.
+                    </li>
+                   </ul> <br>
+                    <p class="box">
+                        <b>SELECT</b> name <b>FROM</b> Students   /* Fetch the union of queries */  <br>
+                        <b>UNION</b>   <br>
+                        <b>SELECT</b> name <b>FROM</b> Contacts;    <br>
+                        <b>SELECT</b> name <b>FROM</b> Students   /* Fetch the union of queries with duplicates*/   <br>
+                        <b>UNION ALL</b>      <br>
+                        <b>SELECT</b> name <b>FROM</b> Contacts;  <br><br>
+                   </p>
+                   <p class="box">
+                        <b>SELECT</b> name <b>FROM</b> Students   /* Fetch names from students */  <br>
+                        <b>MINUS</b> /* that aren't present in contacts */  <br>
+                         <b>SELECT</b> name <b>FROM</b> Contacts;    <br><br>
+                   </p>
+                   <p class="box">
+                    <b>SELECT</b> name <b>FROM</b> Students   /* Fetch names from students */  <br>
+                    <b>INTERSECT</b>    /* that are present in contacts as well */   <br>
+                    <b>SELECT</b> name <b>FROM</b> Contacts;   <br>
+                   </p>
+                </p>
+
+                <h4 class="q22"> Q22:What are Entities and Relationships?  </h4>
+                <p>
+                    <b>Entity:</b> An entity can be a real-world object, either tangible or intangible, that can be easily identifiable. For example, in a college database, students, professors, workers, departments, and projects can be referred to as entities. Each entity has some associated properties that provide it an identity.<br><br>
+
+                    <b>Relationships:</b> Relations or links between entities that have something to do with each other. For example - The employee's table in a company's database can be associated with the salary table in the same database. 
+                    
+                </p>
+                <img class="box" src="ER.jpg" width="650px" height="400px">
+
+                <h4 class="q23"> Q23:List the different types of relationships in SQL.  </h4>
+                <p>
+                    <b>One-to-One :</b>This can be defined as the relationship between two tables where each record in one table is associated with the maximum of one record in the other table. <br>
+                    <b>One-to-Many & Many-to-One -</b>This is the most commonly used relationship where a record in a table is associated with multiple records in the other table.<br>
+                    <b>Many-to-Many:</b>    This is used in cases when multiple instances on both sides are needed for defining a relationship. <br>
+                    <b>Self-Referencing Relationships: </b>This is used when a table needs to define a relationship with itself.
+                </p>
+
+                <h4 class="q24"> Q24:What is an Alias in SQL?  </h4>
+                <p>An alias is a feature of SQL that is supported by most, if not all, RDBMSs. It is a temporary name assigned to the table or table column for the purpose of a particular SQL query. In addition, aliasing can be employed as an obfuscation technique to secure the real names of database fields. A table alias is also called a correlation name.<br><br>
+
+                    An alias is represented explicitly by the AS keyword but in some cases, the same can be performed without it as well. Nevertheless, using the AS keyword is always a good practice.
+                    <p class="box">
+                        <b>SELECT</b> A.emp_name <b>AS</b> "Employee"  /* Alias using AS keyword */
+                        B.emp_name <b>AS</b> "Supervisor"
+                        <b>FROM</b> employee A, employee B   /* Alias without AS keyword */
+                        <b>WHERE</b> A.emp_sup = B.emp_id;
+                    </p>
+                </p>
+
+                <h4 class="q25"> Q25:What is a View?  </h4>
+                <p>A view in SQL is a virtual table based on the result-set of an SQL statement. A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database. </p>
+                <img class="box" src="table.jpg" width="650px" height="400px">
+
+                <h4 class="q26"> Q26:What is Normalization?  </h4>
+                <p>
+                    Normalization represents the way of organizing structured data in the database efficiently. It includes the creation of tables, establishing relationships between them, and defining rules for those relationships. Inconsistency and redundancy can be kept in check based on these rules, hence, adding flexibility to the database.
+                </p>
+
+                <h4 class="q27"> Q27:What is Denormalization?  </h4>
+                <p>
+                     Denormalization is the inverse process of normalization, where the normalized schema is converted into a schema that has redundant information. The performance is improved by using redundancy and keeping the redundant data consistent. The reason for performing denormalization is the overheads produced in the query processor by an over-normalized structure.
+                </p>
+
+                <h4 class="q28"> Q28:What are the differences between OLTP and OLAP?  </h4>
+                <p>OLTP stands for Online Transaction Processing, is a class of software applications capable of supporting transaction-oriented programs. An important attribute of an OLTP system is its ability to maintain concurrency. OLTP systems often follow a decentralized architecture to avoid single points of failure. These systems are generally designed for a large audience of end-users who conduct short transactions. Queries involved in such databases are generally simple, need fast response times, and return relatively few records. A number of transactions per second acts as an effective measure for such systems.<br><br>
+
+                    OLAP stands for Online Analytical Processing, a class of software programs that are characterized by the relatively low frequency of online transactions. Queries are often too complex and involve a bunch of aggregations. For OLAP systems, the effectiveness measure relies highly on response time. Such systems are widely used for data mining or maintaining aggregated, historical data, usually in multi-dimensional schemas. </p>
+
+                <h4 class="q29"> Q29:What are the TRUNCATE, DELETE and DROP statements?  </h4>
+                <p><b>DELETE </b>statement is used to delete rows from a table.
+
+                    <p class="box">
+                         <b>DELETE FROM</b> Candidates
+                         <b>WHERE</b> CandidateId > 1000;
+                    </p>
+                    
+                    <p><b>TRUNCATE</b> command is used to delete all the rows from the table and free the space containing the table.</p>
+                    
+                    <p class="box">
+                        TRUNCATE TABLE Candidates;
+                    </p>
+                    
+                   <p><b> DROP</b> command is used to remove an object from the database. If you drop a table, all the rows in the table are deleted and the table structure is removed from the database.</p> 
+                </p>
+
+                <h4 class="q30"> Q30:What is the difference between DROP and TRUNCATE statements?  </h4>
+                <p>
+                   If a table is dropped, all things associated with the tables are dropped as well. This includes - the relationships defined on the table with other tables, the integrity checks and constraints, access privileges and other grants that the table has. To create and use the table again in its original form, all these relations, checks, constraints, privileges and relationships need to be redefined. However, if a table is truncated, none of the above problems exist and the table retains its original structure.
+                </p> <br> <br>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SQL INSERT and DELETE</title>
+        <style>
+		*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    background: rgb(169, 51, 216);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+.logo{
+    margin-left:20px;
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700px;
+
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;
+    
+    
+    
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+} 
+.navbar a:hover::before{
+    width: 100%;
+    
+
+}
+/*------------------menu bar--------------------------*/
+
+
+.sidebar{
+    position: fixed;
+    background:rgb(238, 222, 238);
+    width: 280px;
+    height: 100%;
+    top: 75px;
+    left: 0;
+    z-index:1;
+    padding-top:18px;
+}  
+.sidebar h3{
+    text-align:center;
+    font-size:19px;
+    text-transform: uppercase;
+    color:rgb(143, 11, 143);
+    
+}
+.sidebar li{
+    margin-left: 20px;
+    margin-top:35px;
+}
+.sidebar ul li a:hover{
+    color:rgb(204, 130, 56);
+    transition: 0.4s;
+    margin-left: 20px;
+}
+.main{
+
+    margin-top:76px;
+    margin-left: 280px;
+    background-color: rgb(238, 230, 238);
+    padding-left:20px;
+    padding-top: 20px;
+}
+.d1{
+    padding-top: 80px;
+}
+.d1_h2{
+    margin-bottom: 20px;
+    font-size: 38px;
+}
+.image1{
+    margin-left:70px;
+}
+.application{
+    margin-left:70px;
+}
+.keywords{
+    margin-left:70px;
+}
+.comments{
+	color: green;
+}
+       
+            body{
+                color: rgb(85,34,133);
+                overflow-x: hidden;
+                background-color:  rgb(238, 230, 238);
+            }
+            h1,h2,h3{
+                color: rgb(85,34,133);
+            }
+            h1{
+                font-weight: 900;
+                font-size: 33px;
+            }
+            h2{
+                font-weight: 800;
+                font-size: 25px;
+            }
+            h3{
+                font-weight: 700;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <a href="se_home.php" class="logo">Light<span style="color:aqua;">Code</span></a>
+            <nav class="navbar">
+                <a href="sql_intro.html">Introduction</a>
+                <a href="sql_sel1.html">SQL SELECT(I)</a>
+                <a href="sql_sel2.html" >SQL SELECT(II)</a>
+                <a href="sql_join.html" >SQL JOIN</a>
+                <a href="sql_database.html" >SQL Database</a>
+                <a href="sql_in_del.html" >SQL Insert and Delete</a>
+		<a href="sql_join.html">Examples</a>
+            </nav>
+        </header>
+        <div class="sidebar">
+            <h3>SQL Insert and Delete</h3>
+            <ul class="nav" type="circle">
+                <li><a href="#d1">SQL Insert Into</a></li>
+                <li><a href="#d2">SQL Update</a></li>
+                <li><a href="#d3">SQL Select Into</a></li>
+                <li><a href="#d4">SQL Delete and Truncate Rows</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <!--D1-->
+            <div class="d1" id="d1">
+                <h1>SQL INSERT INTO Statement</h1><br>
+                In SQL, the INSERT INTO statement is used to insert new rows in a database table.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color:magenta">
+INSERT INTO table_name(column1, column2, column3, ...)
+VALUES
+(value11, value12, value13, ...)
+(value21, value22, value23, ...)
+... ;                    
+
+</pre>
+<pre>
+Here,
+
+table_name is the name of the table into which the rows are to be inserted
+
+column1, column2, column3, ... are the names of columns where the values are to be inserted
+
+value11, value12, value13, ..., value21, value22, value23, ... are the values to be inserted
+
+</pre>
+            <h2>Insert Row Into a Table</h2><br>
+            In SQL, the INSERT INTO statement is used to insert new row(s) into a database table.<br>
+            <pre style="color:magenta">
+<span class="comments">
+-- insert a row in the Customers table
+</span> 
+INSERT INTO Customers(customer_id, first_name, last_name, age, country)
+VALUES
+(5, 'Harry', 'Potter', 31, 'USA');
+
+            </pre>
+            <b>Output:</b><br><br>
+            <center><img src="in_del/Screenshot from 2023-12-16 22-46-33.png"></center><br><br>
+            <h2>Insert Multiple Rows at Once in SQL</h2><br>
+            It's also possible to insert multiple rows to a database table at once. For example,<br><br>
+            <pre style="color:magenta">
+INSERT INTO Customers(first_name, last_name, age, country)
+VALUES
+('Harry', 'Potter', 31, 'USA'),
+('Chris', 'Hemsworth', 43, 'USA'),
+('Tom', 'Holland', 26, 'UK');       
+
+            </pre>
+            </div>
+            <!--D2-->
+            <div class="d1" id="d2">
+                <h1>SQL UPDATE Statement</h1><br>
+                The SQL UPDATE statement is used to edit an existing row in a database table.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color:magenta">
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+[WHERE condition]    
+
+ </pre>
+ <pre>
+Here,
+
+table_name is the name of the table to be edited
+
+column1, column2, ... are the names of the columns to be edited
+
+value1, value2, ... are values to be set to the respective columns
+
+[...] signifies that the clause inside is optional
+
+condition is the condition for the values to be changed
+
+ </pre>
+            <h3>Example:</h3><br>
+            <pre style="color: magenta;">
+<span class="comments">
+-- update a single value in the given row
+</span>     
+UPDATE Customers
+SET first_name = 'Johnny'
+WHERE customer_id = 1;
+
+            </pre>
+            <center><img src="Screenshot from 2023-12-16 22-56-31.png"></center><br><br>
+            <b>Output:</b><br><br>
+            <center><img src="Screenshot from 2023-12-16 22-57-16.png"></center><br><br>
+            <h2>Update Multiple Values in a Row</h2><br>
+            We can also update multiple values in a single row at once. For example,<br>
+            <pre style="color:magenta">
+<span class="comments">
+-- update multiple values in the given row
+</span>   
+UPDATE Customers
+SET first_name = 'Johnny', last_name = 'Depp'
+WHERE customer_id = 1;
+
+            </pre>
+            <h2>Update all Rows</h2>
+            <pre style="color: magenta;">
+<span class="comments">
+-- update all rows    
+</span>                
+UPDATE Customers
+SET country = 'NP';
+
+            </pre>
+            </div>
+            <!--D3-->
+            <div class="d1" id="d3">
+                <h1>SQL SELECT INTO (Copy Table)</h1><br>
+                In SQL, the SELECT INTO statement is used to copy data from one table to another.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color:magenta">
+SELECT column1, column2, column3, ...
+INTO destination_table
+FROM source_table;                    
+</pre>
+<pre>
+
+Here,
+
+column1, column2, column3, ... are the columns to be copied
+
+destination_table is the new table where the data is to be copied to
+
+source_table is the table where the data is to be copied from
+                    
+</pre>
+            <h3>Example:</h3><br>
+            <pre style="color:magenta">
+<span class="comments">
+-- copy all the contents of a table to a new table    
+</span>                
+SELECT *
+INTO CustomersCopy
+FROM Customers;
+
+            </pre>
+            Here, the SQL command copies all data from the Customers table to the new CustomersCopy table.<br><br>
+            <h2>Copy Records Matching a Condition</h2><br>
+            We can use the WHERE clause with SELECT INTO to copy those rows that match the specified condition. For example,<br>
+            <pre style="color:magenta">
+<span class="comments">
+-- copy rows where country is USA
+</span>                
+SELECT customer_id, age
+INTO USACustomersAge
+FROM Customers
+WHERE country = 'USA';
+
+            </pre>
+            <pre>
+Here, the SQL command
+
+creates the USACustomersAge table with customer_id and age columns
+
+copies rows from the Customers table if the value of the country column is USA
+
+            </pre>
+            <h2>Copy From Two Tables to One</h2><br>
+            We can also copy records from two different tables to a new table using the JOIN clause with SELECT INTO. For example,<br>
+            <pre style="color:magenta">
+<span class="comments">
+-- copy rows from Customers and Orders tables
+</span>                
+SELECT Customers.customer_id, Customers.first_name, Orders.amount
+INTO CustomerOrders
+FROM Customers
+JOIN Orders
+ON Customers.customer_id = Orders.customer_id;
+
+            </pre>
+            </div>
+            <div class="d1" id="d4">
+                <h1>SQL DELETE and TRUNCATE</h1><br>
+                <h2>SQL DELETE</h2><br>
+                In SQL, the DELETE clause is used to delete row(s) from a database table.<br><br>
+                <h3>Syntax:</h3><br>
+                <pre style="color:magenta">
+DELETE FROM table_name
+[WHERE condition];
+                    
+</pre>
+<pre>
+Here,
+
+table_name is the name of the table from which rows are to be deleted
+
+condition specifies which rows should be deleted
+
+[] indicates that the WHERE clause is optional.
+
+                </pre>
+                <h2>Delete a Single Row in a Table</h2><br>
+                We can delete a single row in a table using the DELETE command. For example,<br><br>
+                <pre style="color:magenta">
+DELETE FROM Customers
+WHERE customer_id = 5;
+
+                </pre>
+                <b>Output:</b><br><br>
+                <center><img src="Screenshot from 2023-12-16 23-21-20.png"></center><br><br>
+                <h2>Delete all Rows in a Table</h2><br>
+                The WHERE clause determines which rows to delete. However, we can delete all rows at once if we omit the WHERE clause. For example,<br><br>
+                <span style="color:magenta">DELETE FROM Customers;</span><br><br>
+                <h2>TRUNCATE TABLE in SQL</h2><br>
+                The TRUNCATE TABLE clause is another way to delete all rows from a table at once. For example,<br><br>
+                <span style="color:magenta">TRUNCATE TABLE Customers;</span><br><br>
+            </div>
+        </div>
+    </body>
+</html>

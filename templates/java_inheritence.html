@@ -1,0 +1,226 @@
+<html>
+    <head>
+        <title>Java inheritence</title>
+        <style>
+		*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+
+}
+p{
+    font-size: 19px;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    background: rgb(169, 51, 216);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+.logo{
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;
+    
+    
+    
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+} 
+.navbar a:hover::before{
+    width: 100%;
+    
+
+}
+/*------------------menu bar--------------------------*/
+
+
+.sidebar{
+    position: fixed;
+    background:rgb(238, 222, 238);
+    width: 280px;
+    height: 100%;
+    top: 75px;
+    left: 0;
+    z-index:1;
+    padding-top:18px;
+}  
+.sidebar h3{
+    
+    font-size:19px;
+    text-transform: uppercase;
+    color:rgb(143, 11, 143);
+    
+}
+.sidebar li{
+    margin-left: 20px;
+    margin-top:35px;
+}
+.sidebar ul li a:hover{
+    color:rgb(204, 130, 56);
+    transition: 0.4s;
+    margin-left: 20px;
+}
+.inheritence{
+    margin-top: 100px;
+    margin-left: 290px;
+}
+	</style>
+    </head>
+    <body>
+        <header class="header">
+           <a href="se_home.php" class="logo">Light<span style="color:aqua;">Code</style></a>
+            <nav class="navbar">
+                 <a href="java.html">Introduction</a>
+                <a href="java_con.html">Flow Control</a>
+                <a href="java_object.html" >Object Class</Object></a>
+                <a href="java_inheritence.html" >Inheritance</a>
+                <a href="polymorphism.html" >Polymorphism</a>
+                <a href="Abstraction.html" >Abstraction</a>
+                <a href="Encapsulation.html" >Encapsulation</a>
+                <a href="java_ex.html" >Examples</a>
+
+            </nav>
+        </header>
+        <div class="inheritence">
+            <div class="sidebar">
+                <h3>JAVA Inheritence</h3>
+                <ul class="nav" type="circle">
+                    <li ><a href="#1">Inheritence</a></li>
+                    <li ><a href="#2">Types of Inheritence</a></li>
+                    <div style="margin-left: 20px;">
+                        <li ><a href="#3">Single Inheritence</a></li>
+                        <li ><a href="#4">Multilevel Inheritence</a></li>
+                        <li ><a href="#5">Hierarchical Inheritence</a></li>
+                        <li ><a href="#6">Multiple Inheritence</a></li>
+                        <li ><a href="#7">Hybrid Inheritance</a></li>
+                    </div>  
+                    <li ><a href="#8">Java IS-A type of Relationship</a></li>
+                </ul>
+            </div>
+            <br><br><br><br>
+            <h2 class="d1_h2" id="1" style="color: rgb(85,34,133);">Inheritance in Java</h2><br>
+            <p>Java, Inheritance is an important pillar of OOP(Object-Oriented Programming). It is the mechanism in Java by which one class is allowed to inherit the features(fields and methods) of another class. In Java, Inheritance means creating new classes based on existing ones. A class that inherits from another class can reuse the methods and fields of that class. In addition, you can add new fields and methods to your current class as well.  </p><br><br>
+            <h3 class="d1_h2" style="color: rgb(85,34,133);">Why Do We Need Java Inheritance?</h3><br>
+           <p><b>Code Reusability: </b>The code written in the Superclass is common to all subclasses. Child classes can directly use the parent class code.</p><br>
+           <p><b>Method Overriding: </b> Method Overriding is achievable only through Inheritance. It is one of the ways by which Java achieves Run Time Polymorphism.</p><br>
+           <p><b>Abstraction: </b> The concept of abstract where we do not have to provide all details is achieved through inheritance. Abstraction only shows the functionality to the user.</p><br><br>
+
+           <h3 style="color: rgb(85,34,133);"><b>Important Terminologies Used in Java Inheritance</b></h3><br>
+            <p><b>Class: </b>Class is a set of objects which shares common characteristics/ behavior and common properties/ attributes. Class is not a real-world entity. It is just a template or blueprint or prototype from which objects are created.</p><br>
+            <p><b>Super Class/Parent Class: </b>The class whose features are inherited is known as a superclass(or a base class or a parent class).</p><br>
+            <p><b>Sub Class/Child Class: </b> The class that inherits the other class is known as a subclass(or a derived class, extended class, or child class). The subclass can add its own fields and methods in addition to the superclass fields and methods.</p><br>
+            <p><b>Reusability: </b>    Inheritance supports the concept of “reusability”, i.e. when we want to create a new class and there is already a class that includes some of the code that we want, we can derive our new class from the existing class. By doing this, we are reusing the fields and methods of the existing class.</p><br> 
+
+            <h3 style="color: rgb(85,34,133);">How to Use Inheritance in Java?</h3><br>
+            <p>The <b>extends</b> keyword is used for inheritance in Java. Using the extends keyword indicates you are derived from an existing class. In other words, “extends” refers to increased functionality.</p><br>
+            <h4 style="color: blueviolet;">Syntax:</h4><br>
+            <img src="i1.png"><br>
+
+            <h4 style="color: blueviolet;">Inheritance in Java Example</h4><br>
+            <img src="i2.png">
+            <h4>Output</h4><br>
+            <p>Salary : 60000<br><p style="margin-top: 5px;">Benefits : 10000</p></p><br><br>
+
+            <h2 class="d1_h2" id="2" style="color: rgb(85,34,133);">Java Inheritance Types</h2><br>
+            <p>Below are the different types of inheritance which are supported by Java.</p><br><br>
+            <div style="margin-left: 30px;">
+                <p>1.Single Inheritance</p><br>
+                <p>2.Multilevel Inheritance</p><br>
+                <p>3.Hierarchical Inheritance</p><br>
+                <p>4.Multiple Inheritance</p><br>
+                <p>5.Hybrid Inheritance</p><br><br>
+            </div>
+
+            <h3 id="3" style="color: rgb(85,34,133);">Single Inheritance</h3><br>
+            <p>In single inheritance, subclasses inherit the features of one superclass. In the image below, class A serves as a base class for the derived class B.</p><br>
+            <img src="i3.png"><br><br>
+            <h4>Example:</h4><br>
+            <img src="i4.png"><br><br>
+            <h4>Output:</h4><br>
+            <img src="i5.png"><br><br>
+
+
+            <h3 id="4" style="color: rgb(85,34,133);">Multilevel Inheritance</h3><br>
+            <p>In Multilevel Inheritance, a derived class will be inheriting a base class, and as well as the derived class also acts as the base class for other classes. In the below image, class A serves as a base class for the derived class B, which in turn serves as a base class for the derived class C. In Java, a class cannot directly access the grandparent’s members.</p><br>
+            <img src="i6.png"><br><br>
+            <h4>Example:</h4><br>
+            <img src="i7.png"><br><br>
+            <h4>Output:</h4><br>
+            <img src="i8.png"><br><br>
+
+
+            <h3 id="5" style="color: rgb(85,34,133);">.Hierarchical Inheritance</h3><br>
+            <p>In Hierarchical Inheritance, one class serves as a superclass (base class) for more than one subclass. In the below image, class A serves as a base class for the derived classes B, C, and </p><br>
+            <img src="i9.png"><br><br>
+            <h4>Example:</h4><br>
+            <img src="i10.png"><br><br>
+            <h4>Output:</h4><br>
+            <img src="i11.png"><br><br>
+
+            <h3 id="6" style="color: rgb(85,34,133);">Multiple Inheritance</h3><br>
+            <p>In Multiple inheritances, one class can have more than one superclass and inherit features from all parent classes. Please note that Java does not support multiple inheritances with classes. In Java, we can achieve multiple inheritances only through Interfaces. In the image below, Class C is derived from interfaces A and B.</p><br>
+            <img src="i12.png"><br><br>
+            <h4>Example:</h4><br>
+            <img src="i13.png"><br><br>
+            <h4>Output:</h4><br>
+            <img src="i14.png"><br><br>
+
+            <h3 id="7" style="color: rgb(85,34,133);">Hybrid Inheritance</h3><br>
+            <p>t is a mix of two or more of the above types of inheritance. Since Java doesn’t support multiple inheritances with classes, hybrid inheritance involving multiple inheritance is also not possible with classes. In Java, we can achieve hybrid inheritance only through Interfaces if we want to involve multiple inheritance to implement Hybrid inheritance.</p><br>
+            <img src="i15.png"><br><br><br>
+
+            <h3 id="8" style="color: rgb(85,34,133);">Java IS-A type of Relationship</h3><br>
+            <p>IS-A is a way of saying: This object is a type of that object. Let us see how the extends keyword is used to achieve inheritance.</p><br>
+            <br>
+            <h4>Example:</h4><br>
+            <img src="i16.png"><br><br>
+            <h4>Output:</h4><br>
+            <img src="i17.png"><br><br>
+
+
+            
+
+
+
+            
+
+
+
+
+
+
+    
+        </div>
+        
+
+
+
+
+    </body>
+</html>

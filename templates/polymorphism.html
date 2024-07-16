@@ -1,0 +1,170 @@
+<html>
+    <head>
+         <style>
+	*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+
+}
+p{
+    font-size: 19px;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    background: rgb(169, 51, 216);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+.logo{
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;
+    
+    
+    
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+} 
+.navbar a:hover::before{
+    width: 100%;
+    
+
+}
+/*------------------menu bar--------------------------*/
+
+
+.sidebar{
+    position: fixed;
+    background:rgb(238, 222, 238);
+    width: 300px;
+    height: 100%;
+    top: 75px;
+    left: 0;
+    z-index:1;
+    padding-top:18px;
+}  
+.sidebar h3{
+    
+    font-size:19px;
+    text-transform: uppercase;
+    color:rgb(143, 11, 143);
+    
+}
+.sidebar li{
+    margin-left: 20px;
+    margin-top:35px;
+}
+.sidebar ul li a:hover{
+    color:rgb(204, 130, 56);
+    transition: 0.4s;
+    margin-left: 20px;
+}
+.polymorphism{
+    margin-top: 150px;
+    margin-left: 320px;
+    
+}
+</style>
+    </head>
+    <body>
+        <header class="header">
+            <a href="se_home.php" class="logo">Light<span style="color:aqua;">Code</style></a>
+            <nav class="navbar">
+                 <a href="java.html">Introduction</a>
+                <a href="java_con.html">Flow Control</a>
+                <a href="java_object.html" >Object Class</Object></a>
+                <a href="java_inheritence.html" >Inheritance</a>
+                <a href="polymorphism.html" >Polymorphism</a>
+                <a href="Abstraction.html" >Abstraction</a>
+                <a href="Encapsulation.html" >Encapsulation</a>
+                <a href="java_ex.html" >Examples</a>
+    
+            </nav>
+        </header>
+        
+            <div class="sidebar">
+                <h3>JAVA Polymorphism</h3>
+                <ul class="nav" type="circle">
+                    <li ><a href="#1">Polymorphism</a></li>
+                    <li ><a href="#2">Types of Polymorphism</a></li>
+                    <div style="margin-left: 20px;">
+                        
+                        <li ><a href="#3">Compile-Time Polymorphism</a></li>
+                        <li ><a href="#4">Runtime Polymorphism</a></li>
+                    </div>  
+                    <li ><a href="#5">Method Overloading</a></li>
+                    <li ><a href="#6">Method Overriding</a></li>
+                </ul>
+            </div>
+            <div class="polymorphism">
+                <h2 class="d1_h2" id="1" style="color: rgb(85,34,133);">What is Polymorphism in Java?</h2><br>
+                <p>Polymorphism is considered one of the important features of Object-Oriented Programming. Polymorphism allows us to perform a single action in different ways. In other words, polymorphism allows you to define one interface and have multiple implementations. The word “poly” means many and “morphs” means forms, So it means many forms.</p><br><br>
+
+                <h2 class="d1_h2" id="2" style="color: rgb(85,34,133);">Types of Java Polymorphism</h2><br>
+                <div style="margin-left: 30px;">
+                    <p><b>Compile-time Polymorphism</b></p><br>
+                    <p><b>Runtime Polymorphism</b></p>
+                </div><br><br>
+                <h3 class="d1_h2" id="3" style="color: rgb(85,34,133);">Compile-Time Polymorphism in Java</h3><br>
+                <p>It is also known as static polymorphism. This type of polymorphism is achieved by function overloading or operator overloading. </p><br><br>
+                <img src="p1.png"><br><br>
+                <h4>Example:</h4><br>
+                <img src="p5.png"><br><br>
+                <h4>Output</h4><br>
+                <img src="p6.png"><br><br>
+
+                <h3 class="d1_h2" id="4" style="color: rgb(85,34,133);">Runtime Polymorphism in Java</h3><br>
+                <p>Runtime polymorphism in Java is also popularly known as Dynamic Binding or Dynamic Method Dispatch. In this process, the call to an overridden method is resolved dynamically at runtime rather than at compile-time. You can achieve Runtime polymorphism via Method Overriding.</p><br><br>
+                <img src="p3.png"><br><br>
+                <h4>Output</h4><br>
+                <img src="p4.png"><br><br>
+
+                <h3 class="d1_h2" id="5" style="color: rgb(85,34,133);">Method Overloading</h3><br>
+                <p>When there are multiple functions with the same name but different parameters then these functions are said to be overloaded. Functions can be overloaded by changes in the number of arguments or/and a change in the type of arguments.</p><br><br>
+                <img src="p2.png"><br><br>
+
+
+                <h3 class="d1_h2" id="6" style="color: rgb(85,34,133);">Method Overriding</h3><br>
+                <p>Method overriding is the process when the subclass or a child class has the same method as declared in the parent class.</p><br><br>
+                <img src="p7.png"><br><br><br><br>
+
+                <h3><b>Advantages of Polymorphism in Java</b></h3><br>
+                <p>1.Increases code reusability by allowing objects of different classes to be treated as objects of a common class.</p><br>
+                <p>2.Improves readability and maintainability of code by reducing the amount of code that needs to be written and maintained</p><br>
+                <p>3.Supports dynamic binding, enabling the correct method to be called at runtime, based on the actual class of the object.</p><br>
+                <p>4.Enables objects to be treated as a single type, making it easier to write generic code that can handle objects of different types.</p><br><br>
+
+                <h3><b>Disadvantages of Polymorphism in Java</b></h3><br>
+                <p>1.Can make it more difficult to understand the behavior of an object, especially if the code is complex.</p><br>
+                <p>2.This may lead to performance issues, as polymorphic behavior may require additional computations at runtime.</p><br><br>
+            </div>
+            <br><br><br>
+
+    </body>
+</html>

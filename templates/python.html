@@ -1,0 +1,680 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Python Crash Code</title>
+    </head>
+    <body>
+        <header class="header">
+           
+            <a href="se_home.php" class="logo">Light<span style="color:aqua;">Code</span></a>
+            <nav class="navbar">
+                <a href="python.html" >Introduction</a>
+                <a href="flow_control.html" >Flow control</a>
+                <a href="python_functions.html" >Functions</a>
+                
+                <a href="filehandling.html" >File Handling</a>
+                <a href="class&objects.html" >class&objects</a>
+                
+                <a href="python_ex.html" >Examples</a>
+              
+
+            </nav>
+        </header>
+        <div class="sidebar">
+            <h3>Python Introduction</h3>
+            <ul class="nav" type="circle">
+                <li ><a href="#d1">Get started with python</a></li>
+                <li ><a href="#d2">Keywords and Identifiers</a></li>
+                <li ><a href="#d3">Python comments</a></li>
+                <li ><a href="#d4">Python Variables</a></li>
+                <li ><a href="#d5">Python Datatypes</a></li>
+                <li ><a href="#d6">Type Conversion</a></li>
+                <li ><a href="#d7">Python I/O </a></li>
+                <li ><a href="#d8">Python operators</a></li>
+            </ul>
+        </div>
+        <div class="main" >
+            <div class="d1" id="d1">
+                <h2 class="d1_h2">Introduction</h2><br><br>
+                <p>
+                    <b>1.</b> Python is an interpreted, object-oriented, high-level programming language with dynamic
+                    semantics(substance).<br><br>
+                    <b>2.</b>Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of
+                    program maintenance.<br><br>
+                   <b>3.</b>Python supports modules and packages, which encourages program modularity and code reuse<br><br>
+                    <b>4.</b> Its consists of high-level built in data structures, combined with dynamic typing and dynamic
+                    binding, make it very attractive for Rapid Application <br><br>&emsp;Development, as well as for use as a
+                    scripting or glue language to connect existing components together.<br><br>
+                    <b>5.</b> Python is an open source programming language made to both look good and be easy to read.<br><br><br>
+                </p>
+                <h2>History Of Python</h2><br>
+                <p>
+                    <b>1.</b>Python is a an old language created by Guido Van Rossum. The design began in the late
+                    1980s and was first released in February 1991.<br><br>
+                    <b>2.</b>Python is influenced by following programming languages:<br><br>
+                    ABC language.<br><br>
+                    Modula-3<br><br>
+                </p>
+                <h2>Why Python Was Created</h2><br>
+                <p>
+                    <b>1.</b>In late 1980s, Guido Van Rossum was working on the Amoeba distributed operating system
+                    group.<br><br>
+                    <b>2.</b>He wanted to use an interpreted language like ABC (ABC has simple easy-to-understand
+                    syntax) that could access the Amoeba system calls.<br><br>
+                    <b>3.</b >So, he decided to create a language that was extensible. This led to a design of new language
+                    which was later named Python.<br><br>
+                    <b>4.</b>Python drew inspiration from other programming languages like C, C++, Java, Perl, and
+                    Lisp.<br><br>
+                </p>
+                <h2>Why the name was python?</h2><br>
+                <p>
+                    <b>1.</b>No. It wasn't named after a dangerous snake. Rossum was fan of a comedy series Monty
+                    Python's Flying Circus in late seventies.<br><br>
+                    <b>2.</b>The name "Python" was adopted from the same series "Monty Python's Flying Circus".<br><br>
+                </p>
+                <h2>Features Of Python Programming</h2><br>
+                <p>
+                   <b>A simple and easy to learn</b> <br><br>
+                    <p>Python has a very simple and elegant (graceful) syntax. It's much easier to read
+                    and write Python programs compared to other languages like:<br><br> C++, Java, C#.</p> <br><br><br>
+                    <img src="simple.png" class="image1"> <br><br>
+                    <b>Free and open-source</b><br><br>
+                    <p>
+                        You can move Python programs from one platform to another, and run it without any
+                        changes. It runs smoothly on almost all platforms including<br><br> Windows, Mac OS X and Linux
+                    </p><br><br>
+                    <b>Protability</b><br><br>
+                    <p>You can move Python programs from one platform to another, and run it without any
+                        changes. It runs smoothly on almost all platforms including <br><br>Windows, Mac OS X and Linux
+                    </p><br><br>
+                    <b>Extensible and Embeddable</b>  <br><br>
+                    <p> Suppose an application requires high performance. You can easily combine pieces of C/C++
+                        or other languages with Python code and other<br><br> languages may not provide out of the box
+                    </p><br><br>
+                    <b>A high-level, interpreted language</b> <br><br>
+                    <p> Unlike C/C++, you don't have to worry about daunting (Cause to lose courage) tasks like
+                    
+                        memory management, garbage collection and so on,<br><br>automatically converts your code to the language your computer understands. You don't need
+                        to worry about any lower-level operations likewise,<br><br> when you run Python code, it
+                    </p><br>=><br>
+                    <b>Large standard libraries to solve common tasks</b><br><br>
+                    <p>
+                        <b>=></b>Python has a number of standard libraries which makes life of a programmer much easier
+                        since you don't have to write all the code yourself<br><br>
+                        <b>=></b>For example: Need to connect MySQL database on a Web server? You can use
+                        MySQLdb library using import MySQLdb
+                    </p><br><br>
+                    <b>Object-oriented</b><br><br>
+                    <p>
+                        <b>=></b> Everything in Python is an object. Object oriented programming (OOP) helps you solve a
+                        complex problem intuitively.<br><br>
+                        <b>=></b> With OOP, you are able to divide these complex problems into smaller sets by creating objects.
+                    </p><br><br>
+                    <b>Images For Applications of Python</b><br><br><br>
+                    <p>
+                        <img src="applications.png" class="application">
+                    </p><br><br>
+                    <b>Web Applications</b><br><br>
+                    <p>
+                        <b>=></b> You can create scalable Web Apps using frameworks and CMS (Content Management
+                        System) that are built on Python.<br><br>
+                        <b>=></b>Some of the popular platforms for creating Web Apps are: Django, Flask, Pyramid,
+                        Plone, Django CMS.<br><br>
+                        <b>=></b> Sites like Mozilla, Reddit, Instagram and PBS are written in Python.
+                    </p><br><br>
+                    <b>Scientific and Numeric Computing</b><br><br>
+                    <p>
+                        <b>=></b> There are numerous libraries available in Python for scientific and numeric computing.<br><br>
+                        There are libraries like: SciPy and NumPy that are used in general purpose computing.
+                        And,<br><br>
+                        <b>=></b>there are specific libraries like: EarthPy for earth science, AstroPy for Astronomy and
+                        so on.<br><br>
+                        <b>=></b> Also, the language is heavily used in machine learning, data mining and deep learning.<br><br>
+                    </p><br><br>
+                    
+                    <h2>How To Install Python In Unbuntu</h2><br><br>
+                    <p>
+                        1. Install the following dependencies:<br><br>
+                        <mark>$ sudo apt-get install build-essential checkinstall<br><br></mark>
+                        <mark>$sudo apt-get install libsqlite3-dev$ sudo apt-get install libbz2-dev</mark><br><br>
+                        (libreadline-gplv2-dev libncursesw5-dev libssl-dev tk-dev libgdbm-dev libc6-dev)<br><br>
+                        Video Link:<a href="https://www.youtube.com/watch?v=sKiDjO_0dCQ">https://www.youtube.com/watch?v=sKiDjO_0dCQ</a> <br><br>
+                        2. Go to Download Python page on the official site and click Download Python 3.4.3<br><br>
+                        3. In the terminal, go to the directory where the file is downloaded and run the command:<br><br>
+                        i.<mark>$ tar -xvf Python-3.4.3.tgz</mark> <br><br>
+                        ii. This will extract your zipped file.<br><br>
+                        Note: The filename will be different if you've downloaded a different version. Use the
+                        appropriate filename<br><br>
+                        4. Go to the extracted directory.<br><br>
+                        <mark>$ cd Python-3.4.3</mark><br><br>
+                        5. Issue the following commands to compile Python source code on your Operating system<br><br>
+                        <mark>$./configure</mark><br><br>
+                        <mark>$ make</mark><br><br>
+                        <mark>$ make install</mark><br><br>
+                        6. Go to Terminal and type the following to run sample ‘ hello world ‘ Program<br><br>
+                        ubuntu@~$ python3.4.3<br><br>
+                        >>>print(‘Hellow World’)<br><br>
+                            Hello World<br><br>
+                        >>><br><br>
+                    </p><br><br>
+                    <h2>Windows</h2><br><br>
+                    <p>
+                        1. Go to Download Python page on the official site and click Download Python 3.4.3<br><br>
+                        2. When the download is completed, double-click the file and follow the instructions to install
+                        it<br><br>
+                        3. When Python is installed, a program called IDLE is also installed along with it. It provides
+                        graphical user interface to work with Python<br><br>
+                        4. Open IDLE, copy the following code below and press enter<br><br>
+                        print ("Hello, World ")<br><br>
+                        5. To create a file in IDLE, go to File > New Window (Shortcut: Ctrl+N).<br><br>
+                        6. Write Python code (you can copy the code below for now) and save (Shortcut: Ctrl+S)<br><br>
+                        with .py file extension like: hello.py or your-first-program.py<br><br>
+                        print ("Hello, World ")<br><br>
+                        7. Go to Run > Run module (Shortcut: F5) and you can see the output. Congratulations,
+                        you've successfully run your first Python program.
+                    </p>
+                    
+
+               
+            </div>
+            <div class="d1" id="d2">
+                <h2 class="d1_h2">Keywords & Identifiers</h2><br>
+                <h3 style="font-size: 25px;" >Keywords</h3><br><br>
+                <p>
+                     Keywords are the reserved words in Python and we cannot use a keyword as variable name,
+                    function name or any other identifier.<br><br>
+                     They are used to define the syntax and structure of the Python language.<br><br>
+                    In Python, keywords are case sensitive.<br><br>
+                     There are 35 keywords in Python 3.7.3 This number keep on growing with the new features
+                    coming in python<br><br>
+                     All the keywords except True, False and None are in lowercase and they must be written as it
+                    is.<br><br>
+                    The list of all the keywords are given below<br><br>
+                    We can get the complete list of keywords using python interpreter help utility.<br><br>
+                    <mark>$ python3</mark><br><br>
+                    <mark>>>> help()</mark><br><br>
+                    <mark>help> keywords</mark><br><br>
+                    <img src="keywords.png" class="keywords"><br><br>
+                </p>
+                <h3 style="font-size: 25px;">Identifiers</h3><br><br>
+                <p>
+                    Identifier is the name given to entities like class, functions, variables etc. in Python. It helps
+                    differentiating one entity from another.<br><br>
+                    <b>Rules for writing identifiers</b><br><br>
+                     Identifiers can be a combination of letters in lowercase (a to z) or uppercase (A to Z) or digits<br><br>
+                    (0 to 9) or an underscore (_).<br><br>
+                     Names like myClass, var_1 and print_this_to_screen, all are valid example.<br><br>
+                    An identifier cannot start with a digit. 1variable is invalid, but variable1 is perfectly fine.<br><br>
+                    Keywords cannot be used as identifiers.<br><br>
+                    >>> global = 1 File "<interactive input>", line 1<br><br>
+                    global = 1<br><br>
+                    ^SyntaxError: invalid syntax<br><br>
+                    We cannot use special symbols like !, @, #, $, % etc. in our identifier. >>> a@ = 0<br><br>
+                </p><br><br>
+                <h3 style="font-size: 25px;" >Things To Take Care About</h3><br><br>
+                <p>
+                     Python is a case-sensitive language. This means, Variable and variable are not the same.
+                    Always give a valid name to<br><br> identifiers so that it make sense.<br><br>
+                     While, c = 10 is valid. Writing count = 10 would make more sense and it would be easier to
+                    figure out what it does even<br><br> when you look at your code after a long gap.<br><br>
+                     Multiple words can be separated using an underscore, this_is_a_long_variable.<br><br>
+                     We can also use camel-case style of writing,<br><br>
+                     i.e., capitalize every first letter of the word except the initial word without any spaces.<br><br>
+                    For example: camelCase Example.<br><br>
+                </p>
+
+            </div>
+            
+            <div class="d1" id="d4">
+                <h2 class="d1_h2">Variable</h2><br><br>
+                <p>
+                     A variable is a location in memory used to store some data.<br><br>
+                     Variables are nothing but reserved memory locations to store values ,this means that when
+                    we create a variable we reserved some space in memory.<br><br>
+                    They are given unique names to differentiate between different memory locations.<br><br>
+                     The rules for writing a variable name is same as the rules for writing identifiers in Python.<br><br>
+                     We don't need to declare a variable before using it.<br><br>
+                     In Python, we simply assign a value to a variable and it will exist.<br><br>
+                     We don't even have to declare the type of the variable. This is handled internally according to
+                    the type of value we assign to the variable.<br><br>
+                </p>
+                <b style="font-size: 20px;">Variable Assignment</b><br><br>
+                <p>
+                     We use the assignment operator (=) to assign values to a variable. Any type of value can
+                    be assigned to any valid variable.<br><br>
+                    <mark>a = 5</mark><br><br>
+                    <mark>b = 3.2</mark><br><br>
+                    <mark>c = "Hello"</mark><br><br>
+                     Here, we have three assignment statements. 5 is an integer assigned to the variable a.<br><br>
+                     Similarly, 3.2 is a floating-point number and "Hello" is a string (sequence of characters)
+                    assigned to the variables b and c respectively.<br><br>
+                </p>
+                <b style="font-size: 20px;">Multiple Assignment</b><br><br>
+                <p>
+                     In Python, multiple assignments can be made in a single statement as follows: a, b, c = 5,
+                    3.2, "Hello"<br><br>
+                    If we want to assign the same value to multiple variables at once, we can do this as x = y
+                    = z = "same"<br><br>
+                    This assigns the "same" string to all the three variables.<br><br>
+                </p>
+                <b style="font-size: 20px;">Constant</b><br><br>
+                <p>
+                    A constant is a type of variable whose value cannot be changed. It is helpful to think of
+                    constants as containers that hold information<br><br> which cannot be changed later.<br><br>
+                    You can think of constants as a bag to store some books which cannot be replaced once
+                    placed inside the bag.<br><br>
+                </p>
+                <p style="font-size: 20px; color: blue;"> Assigning value to constant in Python</p><br><br>
+                <p>In Python, constants are usually declared and assigned in a module. Here, the module is a
+                    new file containing variables, functions,<br><br> etc which is imported to the main file. Inside the
+                    module, constants are written in all capital letters and underscores separating the words.</p><br><br>
+                    <p style="font-size: 20px; color: blue;">Example 1: Declaring and assigning value to a constant</p><br><br>
+                    <p style="margin-left:90px;">
+                        Create a <b>constant.py:</b> <br><br>
+                        &emsp;&ensp;PI = 3.14<br><br>
+                        &emsp;&ensp;GRAVITY = 9.8<br><br>
+                        Create a <b>main.py:</b><br><br>
+                        &emsp;&ensp;import constant<br><br>
+                        &emsp;&ensp;print(constant.PI)<br><br>
+                        &emsp;&ensp;print(constant.GRAVITY)<br><br>
+                        <b>Output</b><br><br>
+                        &emsp;&ensp;3.14<br><br>
+                        &emsp;&ensp;9.8<br><br></p>
+                        <p>In the above program, we create a constant.py module file. Then, we assign the constant
+                        value to PI and GRAVITY. After that, we create a main.py <br><br>file and import the constant
+                        module. Finally, we print the constant value.<br><br>
+                        Note: In reality, we don't use constants in Python. Naming them in all capital letters is a
+                        convention to separate them from variables, however, it does <br><br>not actually prevent
+                        reassignment.<br><br>
+                    </p>
+                    <div class="d1" id="d3" >
+                    
+                    <h2 class="d1_h2">Python Comments</h2><br><br>
+
+                    <p>
+                        Comments can be used to explain Python code.<br><br>
+
+                        Comments can be used to make the code more readable.<br><br>
+
+                        Comments can be used to prevent execution when testing code.<br><br>
+                        <b style="font-size: 18px;">Creating a Comment</b><br><br>
+                        <p>Comments starts with a #, and Python will ignore them:</p><br>
+                        <p style="font-family:Arial, Helvetica, sans-serif;font-size: 19px;color:Blue ">Example</p><br>
+                        <p><img src="comment1.png"></p><br>
+                        <p>Comments can be placed at the end of a line, and Python will ignore the rest of the line:</p><br>
+                        <p style="font-family:Arial, Helvetica, sans-serif;font-size: 19px;color:Blue ">Example</p><br>
+                        <p><img src="comment2.png"></p><br>
+                        <p>A comment does not have to be text that explains the code, it can also be used to prevent Python from executing code:</p><br>
+                        <p style="font-family:Arial, Helvetica, sans-serif;font-size: 19px;color:Blue ">Example</p><br>
+                        <p><img src="comment3.png"></p><br>
+                        <b style="font-size: 18px;">MultiLine Comment</b><br><br>
+                        <p>Python does not really have a syntax for multiline comments.<br><br>
+
+                            To add a multiline comment you could insert a # for each line:</p><br>
+                            <p style="font-family:Arial, Helvetica, sans-serif;font-size: 19px;color:Blue ">Example</p><br>
+                            <p><img src="comment4.png"></p><br>
+                            <p>
+                                Or, not quite as intended, you can use a multiline string.<br><br>
+
+                                Since Python will ignore string literals that are not assigned to a variable, you can add a multiline string (triple quotes) in your code,<br><br> and place your comment inside it:<br><br>
+                            <p style="font-family:Arial, Helvetica,sans-serif;font-size: 19px;color:Blue ">Example</p><br>
+                            <p><img src="comment5.png"></p>
+                            </p>
+                        </div>
+                        
+                        
+                    </p>
+
+            </div>
+            <div class="d1" id="d5" >
+                <h2 class="d1_h2">Python DataTypes</h2><br>
+                <p>
+                    A data type is a data storage format that can contain a specific type or range of values.
+                    Variables can store data of different types, and <br><br> different types can do different things.<br><br>
+                    Python has the following data types built-in by default, in these categories:<br><br>
+                    <img src="DT1.png"><br><br>
+                    <b style="font-size: 20px;">Numeric Type</b><br><br>
+                    <p>
+                        There are three numeric types in Python:<br><br>
+                        <ul type="circle" style="margin-left:50px;color:rgb(185, 46, 74)">
+                            <li>int</li><br><br>
+                            <li>float</li><br><br>
+                            <li>Complex</li><br><br>
+                        </ul>
+                        Variables of numeric types are created when you assign a value to them<br><br>
+                        <b>Example</b><br><br>
+                        <p style="margin-left:50px;color:rgb(185, 46, 74)">
+                            x = 1  # int<br><br>
+                            y = 2.8 # float<br><br>
+                            z = 1j # complex<br><br>
+                        </p>
+                        
+                       
+                        
+                        
+                        <b>Int</b>
+                        Int, or integer, is a whole number, positive or negative, without decimals, of unlimited
+                        length.<br><br>
+                        <b>Example</b><br><br>
+                        <p style="margin-left:50px;color:rgb(185, 46, 74)">
+                        x = 1<br><br>
+                        y = 35656222554887711<br><br>
+                        z = -3255522Float<br><br>
+                        </p>
+                        Float, or "floating point number" is a number, positive or negative, containing one or
+                        more decimals.<br><br>
+                        <b>Example</b><br><br>
+                        <p style="margin-left:50px;color:rgb(185, 46, 74)">
+                        x = 1.10<br><br>
+                        y = 1.0<br><br>
+                        z = -35.59<br><br>
+                        </p>
+                        <b>Float</b> &nbsp;can also be scientific numbers with an "e" to indicate the power of 10.
+                        <b >Example</b><br><br>
+                        x = 35e3<br><br>
+                        y = 12E4<br><br>
+                        z = -87.7e100<br><br>
+                        <b>Complex</b><br><br>
+                        Complex numbers are written with a "j" as the imaginary part:<br><br>
+                        <b>Example</b><br><br>
+                        x = 3+5j<br><br>
+                        y = 5j<br><br>
+                        z = -5j<br><br>
+                    </p>
+                    <b style="font-size: 20px;">Sequence Type</b><br><br>
+                    <p>
+                        <p>In Python, sequence is the generic term for an ordered set. There are several types of
+                        sequences in Python, the following are the most important.</p><br><br>
+                        <b>String:</b><br><br>
+                        <p>Strings in python are surrounded by either single quotation marks, or double
+                        quotation marks.
+                        </p><br><br>
+                        <p style="margin-left:50px;color:rgb(185, 46, 74)">'hello' is the same as "hello".</p>
+                        You can display a string literal with the print() function:<br><br>
+                        <b>Example</b><br><br>
+                        <p style="margin-left:50px;color:rgb(185, 46, 74)">print("Hello")<br><br>
+                        print('Hello')<br><br>
+                        </p>
+                        
+                        Assigning a string to a variable is done with the variable name followed by an
+                        equal sign and the string:<br><br>
+                        <b>Example</b><br><br>
+                       <p style="margin-left:50px;color:rgb(185, 46, 74)"> a = "Hello"<br><br>
+                        print(a)<br><br></p>
+                        <b>Multiline Strings</b><br><br>
+                        You can assign a multiline string to a variable by using three quotes:<br><br>
+                        <b>Example</b><br><br>
+                        You can use three double quotes:Example<br><br>
+                        <p style="margin-left:50px;color:rgb(185, 46, 74)">a = """Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod empor incididunt ut labore et dolore magna aliqua."""</p><br><br>
+                        print(a)<br><br>
+                        Or three single quotes:<br><br>
+                        <p style="margin-left:50px;color:rgb(185, 46, 74)">a = '''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.'''</p>
+                        print(a)<br><br>
+                        <p>However, Python does not have a character data type, a single character is simply
+                        a string with a length of 1.</p><br><br>
+                    </p>
+                    <p>
+                        <b>Lists:</b>
+                        List is an ordered sequence of items. All the items in a list do not need to be of the
+                        same type and lists are mutable - they can be <br><br>changed.<br><br> Elements can be
+                        reassigned or removed, and new elements can be inserted.<br><br>
+                        Declaring a list is pretty straight forward. Items separated by commas are
+                        enclosed within brackets [ ] .<br><br>
+                        <p style="margin-left:50px;color:rgb(185, 46, 74)">a = [1, 2.2, 'python']</p><br><br>
+                        <b>Tuples:</b>
+                        Tuple is an ordered sequence of items same as a list. The only difference is that
+                        tuples are immutable. Tuples once created <br><br>cannot be modified.<br><br>
+                        Tuples are used to write-protect data and are usually faster than lists as they
+                        cannot change dynamically.<br><br>
+                        It is defined within parentheses () where items are separated by commas.<br><br>
+                        <p style="margin-left:50px;color:rgb(185, 46, 74)">Tuples:t = (5,'program', 1+3j)</p><br><br>
+                        <b>range():</b><br><br>
+                        The range() type returns an immutable sequence of numbers between the given start
+                        integer to the stop integer.<br><br>
+                        <p style="margin-left:50px;color:rgb(185, 46, 74)">print(list(range(10)))</p><br><br>
+                    </p>
+                    <b style="font-size: 20px;">Mapping Type</b><br><br>
+                    <p>
+                        Dictionary is an unordered collection of key-value pairs. In python there is mapping type
+                        called dictionary. It is mutable.<br><br>
+                        In Python, dictionaries are defined within braces {} with each item being a pair in the
+                        form key:value .<br><br> Key and value can be of any type.
+                        The values of the dictionary can be any type, but the key must be of any immutable <br><br> data
+                        type such as strings, numbers, and tuples.<br><br>
+                        <p style="margin-left:50px;color:rgb(185, 46, 74)">>>> d = {1:'value','key':2}<br><br>
+                        >>> type(d)<br><br></p>
+                    </p>
+                    <b style="font-size: 20px;">Set Type</b><br><br>
+                    <p>
+                        Set is an unordered collection of unique items. Set is defined by values separated by
+                        comma inside braces { } .<br><br> Items in a set are not ordered.<br><br>
+                        <p style="margin-left:50px;color:rgb(185, 46, 74)">a = {5,2,3,1,4}<br><br>
+                        # printing set variable<br><br>
+                        print("a = ", a)<br><br>
+                        # data type of variable a<br><br>
+                        print(type(a))<br><br>
+                        </p>
+                        We can use the set for some mathematical operations like set union, intersection,
+                        difference etc. <br><br>We can also use set to remove duplicates from a collection.<br><br>
+                    </p>
+                    <b style="font-size: 25px;">Getting the data type</b><br><br>
+                    <p>
+                        We can use the type() function to know which class a variable or a value belongs to.<br><br>
+                        Similarly, the isinstance() function is used to check if an object belongs to a particular
+                        type.<br><br>
+                        <img src="type().png"><br><BR>
+                        <b style="font-size: 20px;">OUTPUT</b><br><br>
+                        <img src="type()output1.png"><br><br>
+                    </p>
+                </p> 
+                <div class="d1" id="d6">  
+                    <h2 class="d1_h2">Type Conversion</h2><br> <br>
+                   
+                    <p>
+                        The process of converting the value of one data type (integer, string, float, etc.) to another
+                            data type is called type conversion.<br><br> Python has two types of type conversion.<br><br>
+                           <b> 1. Implicit Type Conversion<br><br>
+                            2. Explicit Type Conversion<br><br></b>
+                            <b  style="font-size:23px">1. Implicit Type Conversion</b><br><br>
+                            In Implicit type conversion, Python automatically converts one data type to another
+                            data type. This process doesn't need any user involvement.<br><br>
+                            Let's see an example where Python promotes the conversion of the lower data type
+                            (integer) to the higher data type (float) to avoid data loss.<br><br>
+                            <p style="color:rgb(168, 61, 168)">Example 1: Converting integer to float<br><br>
+                            When we run the above program, the output will be:<br><br>
+                            <img src="type_conversion1.png" style="margin-left:50px;"><br><br>
+                            </p>
+                            <p style="padding-left: 40px;">
+                                In the above program,<br><br>
+
+                                We add two variables num_int and num_flo, storing the value in num_new.
+                                We will look at the data type of all three objects respectively.<br><br>
+                                In the output, we can see the data type of num_int is an integer while the data<br><br>
+                                type of num_flo is a float.<br><br>
+                                Also, we can see the num_new has a float data type because Python always<br><br>
+                                converts smaller data types to larger data types to avoid the loss of data.<br><br>
+                                Now, let's try adding a string and an integer, and see how Python deals with it.<br><br>
+                            </p>
+                            <p style="color:darkblue;font-size: 19px;">Example 2: Addition of string(higher) data type and integer(lower) datatype</p><br><br>
+                            <img sr="TC2.png" style="padding-left: 40px;"><br><br>
+                            <b>When we run the above program, the output will be:</b><br><br>
+                            <img src="TC3.png" style="padding-left: 40px;"><br><br>
+                            In the above program,<br><br>
+
+                            We add two variables num_int and num_str.<br><br>
+                            As we can see from the output, we got TypeError.<br><br> Python is not able to use Implicit
+                            Conversion in such conditions.<br><br> 
+                            However, Python has a solution for these types of situations which is known as
+                            Explicit Conversion.<br><br>
+                            <b  style="font-size:23px">2. Explicit Type Conversion</b><br><br>
+                            In Explicit Type Conversion, users convert the data type of an object to required data
+                            type.<br><br> We use the predefined functions like int(), float(), str(), etc to perform explicit type
+                            conversion.<br><br>
+                            This type of conversion is also called typecasting because the user casts (changes) the
+                            data type of the objects.<br><br>
+                            Syntax :<br><br>
+                           <p style="color:blue"> required_datatype(expression)<br><br></p> 
+                            Typecasting can be done by assigning the required data type function to the expression.<br><br>
+                            <p style="color:rgb(107, 79, 7);font-size:25px">Example 3: Addition of string and integer using explicit conversion</p><br><br>
+                            <p style="color:rgb(4, 85, 117);padding-left: 40px;">num_int = 123<br><br>
+                            num_str = "456"<br><br>
+                            print("Data type of num_int:",type(num_int))<br><br>
+                            print("Data type of num_str before Type Casting:",type(num_str))<br><br>
+                            num_str = int(num_str)<br><br>
+                            print("Data type of num_str after Type Casting:",type(num_str))<br><br>
+                            num_sum = num_int + num_str<br><br>
+                            print("Sum of num_int and num_str:",num_sum)<br><br>
+                            print("Data type of the sum:",type(num_sum))<br><br>
+                            </p>
+                            When we run the above program, the output will be:<br><br>
+                           <p style="color:rgb(17, 101, 134);padding-left: 40px;">Data type of num_int: <class 'int'><br><br>
+                            Data type of num_str before Type Casting: <class 'str'><br><br>
+                            Data type of num_str after Type Casting: <class 'int'><br><br>
+                            Sum of num_int and num_str: 579<br><br>
+                            Data type of the sum: <class 'int'><br><br>
+                            </p> 
+                            In the above program,<br><br>
+                            
+                            <p style="padding-left:40px;">We add num_str and num_int variable.<br><br>
+                            We converted num_str from string(higher) to integer(lower) type using int() function to
+                            perform the addition.<br><br>
+                            After converting num_str to an integer value, Python is able to add these two variables.<br><br>
+                            We got the num_sum value and data type to be an integer.<br><br>
+                            </p>
+                            <ul ><b>Key Points to Remember</b><br><br>
+                            <li style="margin-left: 70px;">Type Conversion is the conversion of object from one data type to another data type.</li><br><br>
+                            <li style="margin-left: 70px;">Implicit Type Conversion is automatically performed by the Python interpreter.</li><br><br>
+                            <li style="margin-left: 70px;">Python avoids the loss of data in Implicit Type Conversion.</li><br><br>
+                            <li style="margin-left: 70px;">Explicit Type Conversion is also called Type Casting, the data types of objects are</li><br><br>
+                            <li style="margin-left: 70px;">converted using predefined functions by the user.</li><br><br>
+                            <li style="margin-left: 70px;">In Type Casting, loss of data may occur as we enforce the object to a specific data type.</li><br>
+                            
+                            </ul>
+                            
+                    </p>
+                </div>
+            </div>
+            <div class="d1" id="d7">
+                <h2 class="d1_h2">Python I/O</h2><br><br>
+                <p>
+                    <b style="font-size:25px">Input and Output Operations and Formats</b><br><br>
+                    <p style="color:rgb(104, 104, 6)">Python provides numerous built-in functions that are readily available at the Python prompt.<br><br>
+                    Some of the functions like input() and print() are widely used for standard input and output operations
+                    respectively.<br><br>
+                    </p>
+                    <p style="color:black;font-size: x-large;">Python Output Using print() function</p><br><br>
+                    <img src="Python_I|O.png"><br><br>
+                </p>
+                <p>
+                    
+                    <p style="color:black;font-size: x-large;">Python Input Using input() function</p><br><br>
+                    <p>
+                        Until now, our programs were static. The value of variables was defined or hard coded into the source
+                        code.<br><br>
+                        To allow flexibility, we might want to take the input from the user.<br><br>
+                        In Python, we have the input()
+                        function to allow this. <br><br>The syntax for input() is:<br><br>
+                        <img src="input.png" style="padding-left: 40px;"><br><br>
+                    </p>
+                    
+                </p>
+
+
+            </div>
+            <div class="d1" id="d8">
+                 <h2 class="d1_h2" style="color:rgb(75, 22, 124)">Python Operators</h2><br><br>
+                 <p style="color:rgb(75, 22, 124)">
+                    <b>Get Started With Python Operators</b><br><br>
+                    <p style="color:rgb(75, 22, 124)">
+                         Operators are special symbols in Python that carry out arithmetic or logical computation.<br><br>
+                         The
+                        value that the operator operates on is called the operand.<br><br>
+                        <b>For example:</b><br><br>
+                        <p style="color:rgb(4, 4, 107)">>>> 2+3<br><br>
+                        5<br><br>
+                        </p>
+                        
+                        <p style="color:rgb(75, 22, 124)"> Here, + is the operator that performs addition. 2 and 3 are the operands and 5 is the output of
+                        the operation.<br><br>
+                         Python has a number of operators which are classified below.</p><br><br><br>
+                        <ul type="disk" style="padding-left:150px;color:rgb(4, 4, 107)">
+                        <li>Arithmetic operators</li> <br><br>
+                        <li>Assignment operators</li><br><br>
+                        <li>Comparison (Relational) operators</li><br><br>
+                        <li>Logical (Boolean) operators</li><br><br>
+                        <li>Bitwise operators</li> <br><br>
+                        <li>Membership operators</li><br><br>
+                        <li>Special operators</li><br><br>
+                        </ul>
+                    </p>
+                    <P style="color:rgb(75, 22, 124)">
+                        <b style="font-size:x-large">1.Arithmetic Operator</b><br><br>
+                        Arithmetic operators are used to perform mathematical operations like addition, subtraction, multiplication, etc. For example,<br><br>
+                        <img src="operator1.png"><br><br>
+                        Here, - is an arithmetic operator that subtracts two values or variables.<br><br>
+                        <img src="operator2.png"><br><br>
+
+                    </P>
+                    <p style="color:rgb(75, 22, 124)">
+                        <b style="font-size:x-large">2.Assignment Operator</b><br><br>
+                        Assignment operators are used to assign values to variables. For example,<br><br>
+                        <img src="assignment1.png"><br><br>
+                        Here, = is an assignment operator that assigns 5 to x.<br><br>
+
+                        Here's a list of different assignment operators available in Python.<br><br>
+                        <img src="assignment2.png"><br><br>
+                    </p>
+                    <p style="color:rgb(75, 22, 124)">
+                        <b style="font-size:x-large">3.Comparison Operator</b><br><br> 
+                        Comparison operators compare two values/variables and return a boolean result: True or False. For example,<br><br>
+                        <img src="comparison1.png"><br><br>
+                        Here, the > comparison operator is used to compare whether a is greater than b or not.<br><br> 
+                        <img src="comparison2.png"><br><br> 
+                        <b>Note:</b> Comparison operators are used in decision-making and loops.<br><br> 
+
+
+                    </p>
+                    <p style="color:rgb(75, 22, 124)">
+                        <b style="font-size:x-large">4.Logical Operator</b><br><br> 
+                        Logical operators are used to check whether an expression is True or False. They are used in decision-making. For example,<br><br> 
+                        <img src="logical1.png"><br><br> 
+                        Here, and is the logical operator AND. Since both a > 2 and b >= 6 are True, the result is True.<br><br>
+                        <img src="logical2.png"><br><br> 
+                    </p>
+                    <p style="color:rgb(75, 22, 124)">
+                        <b style="font-size:x-large">5.Bitwise Operator</b><br><br> 
+                        Bitwise operators act on operands as if they were strings of binary digits. They operate bit by bit, hence the name.<br><br>
+
+                        For example, 2 is 10 in binary and 7 is 111.<br><br>
+
+                        In the table below: Let x = 10 (0000 1010 in binary) and y = 4 (0000 0100 in binary)<br><br>
+                        <img src="bitwise1.png"><br><br>
+
+                    </p>
+                    <p style="color:rgb(75, 22, 124)">
+                        <b style="font-size:x-large">6. Python Special operators</b><br><br> 
+                        Python language offers some special types of operators like the identity operator and the membership operator.<br><br> 
+                         They are described below with examples.<br><br> 
+                         <p style="font-size:  20px;color:rgb(75, 22, 124);font-stretch:extra-expanded;">Identity operators</p><br><br>
+                         In Python, is and is not are used to check if two values are located on the same part of the memory. <br><br>Two variables that are equal does not imply that they are identical.<br><br>
+                         <img src="special_operator1.png"><br><br>
+                    </p>
+                    <p style="color:rgb(75, 22, 124)">
+                        <b style="font-size:x-large">7.Membership Operator</b><br><br>
+                        In Python, in and not in are the membership operators.<br><br> They are used to test whether a value or variable is found in a sequence (string, list, tuple, set and dictionary).<br><br>
+
+                        In a dictionary we can only test for presence of key, not the value <br><br>
+                        <img src="membership1.png"><br><br>
+
+                    </p>
+
+                 </p>
+                
+            </div>
+            
+
+        </div>
+    </body>
+</html>
